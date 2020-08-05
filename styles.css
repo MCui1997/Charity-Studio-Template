@@ -62,7 +62,7 @@ body{
     border-radius: 0 0 50% 50%/0 0 100% 100%;
     transform: scaleX(1.8);
 
-    background-image: url("header.png");
+    background-image: url("assets/header.png");
     background-size: cover;
   }
 
