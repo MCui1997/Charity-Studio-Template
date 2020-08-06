@@ -96,8 +96,8 @@
 
     
     <!--Navbar-->
-      <div class = "row" style = "margin-bottom:100px; background: linear-gradient(90deg, #3D6186 0%, #6487AC 100%); border-radius: 30px;" id = "centeredRow"> 
-      <nav id="navbar" class = "navbar navbar-expand-xs">
+      <div class = "row" style = "margin-bottom:100px;" id = "centeredRow"> 
+      <nav id="navbar" style = "background: linear-gradient(90deg, #3D6186 0%, #6487AC 100%); border-radius: 30px;">
     
         <ul class="nav nav-pills">
           <li class="nav-item">
@@ -111,6 +111,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#matchers">MATCHERS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#donateNow"><button type = "input">DONATE</button></a>
           </li>
       
           </ul>
@@ -198,41 +201,75 @@
       </div>
       <div class="row">
         
-        <div class = "col-sm-6">
+        <div class = "col-md-6">
         <div class="card mb-3">
           <div class="row no-gutters">
+            
             <div class="col-md-4">
               <div class="img-square-wrapper">
                 <img class="" src="http://via.placeholder.com/160x140" alt="Card image cap">
             </div>
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h2 class="card-title">Abenheim Family</h2>
-                <progress id="file" value="32" max="100"> 32% </progress>
-   
-              </div>
+            
+            <div class="col-md-5">
+              <div class = "card-body">
+                <div class = "row">
+                <h6 style = "font-size: 20px; font-weight: normal;">Abenheim Family</h6>
+                </div>
+                <div class = "row">
+                <progress id="file" value="32" max="100" style = "width: 272px;"> 32% </progress>
+                </div>
+                <div class = "row">
+                  <h7>10%</h7>
+                </div>
+                <div class = "row">
+                  <h8>Complete</h8>
+                </div>
+        
             </div>
+            </div>
+
+            <div class = "col-md-2">
+              <button type = "input" style = "margin-left: 20px; width: 100px;">Donate</button>
+            </div>
+
+            
           </div>
         </div>
     
       </div>
 
-      <div class = "col-sm-6">
+      <div class = "col-md-6">
         <div class="card mb-3">
           <div class="row no-gutters">
+            
             <div class="col-md-4">
               <div class="img-square-wrapper">
                 <img class="" src="http://via.placeholder.com/160x140" alt="Card image cap">
             </div>
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h2 class="card-title">Abraham Family</h2>
-                <progress id="file" value="32" max="100"> 32% </progress>
-                <button type = "input">Donate</button>
-   
-              </div>
+            
+            <div class="col-md-5">
+              <div class = "card-body">
+                <div class = "row">
+                <h6 style = "font-size: 20px; font-weight: normal;">Abenheim Family</h6>
+                </div>
+                <div class = "row">
+                <progress id="file" value="32" max="100" style = "width: 272px;"> 32% </progress>
+                </div>
+                <div class = "row">
+                  <h7>10%</h7>
+                </div>
+                <div class = "row">
+                  <h8>Complete</h8>
+                </div>
+        
+            </div>
+
+            <div class = "col-md-2">
+              <button type = "input" style = "margin-left: 20px; width: 100px;">Donate</button>
+            </div>
+
             </div>
           </div>
         </div>
@@ -343,6 +380,8 @@
       </div>
 
     </footer>
+
+    <script src = "script.js"></script>   
 
    </body>
    </html>
