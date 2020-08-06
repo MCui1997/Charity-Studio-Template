@@ -36,4 +36,4 @@ https://www.figma.com/proto/TWvcHzxjz9zCaFiR3P5DDF/Live-Learn-Lead-Desktop?node-
 9. Matchers- looks fine (need to vertically center card)
   -Possible scroll back up button
   
-10. Footer - looks great (change color of upper button to same as navbar).
+<del>10. Footer - looks great (change color of upper button to same as navbar).</del>
