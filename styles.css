@@ -123,3 +123,8 @@ body{
     
   }
   
+
+  .card{
+
+    justify-content: center;
+  }
