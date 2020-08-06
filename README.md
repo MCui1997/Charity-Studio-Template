@@ -28,12 +28,12 @@ https://www.figma.com/proto/TWvcHzxjz9zCaFiR3P5DDF/Live-Learn-Lead-Desktop?node-
 6. About section - looks fine
   - Need to add grafitti and (x3) background
   
-7. Teams (cards could use some polishing)
+<del> 7. Teams (cards could use some polishing)</del>
 
 
 8. Thank you Donors - Need to complete this section, haven't started
 
-9. Matchers- looks fine (need to vertically center card)
+<del>9. Matchers- looks fine (need to vertically center card)</del>
   -Possible scroll back up button
   
 <del>10. Footer - looks great (change color of upper button to same as navbar).</del>
