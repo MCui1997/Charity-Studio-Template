@@ -18,6 +18,15 @@ body{
       color: white;
       border-style: solid;
       border-color: white;
+
+ 
+  }
+
+  #dbtn{
+
+    background-color: white;
+    border-radius: 40px;
+    border-color: #E95252;
   }
 
   button:hover{
@@ -65,7 +74,8 @@ body{
     height: 100%;
 
     border-radius: 0 0 50% 50%/0 0 100% 100%;
-    transform: scaleX(1.8);
+    transform: scaleX(2);
+  
 
     background-image: url("assets/header.png");
     background-size: cover;
