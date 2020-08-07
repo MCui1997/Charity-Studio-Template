@@ -23,10 +23,10 @@ https://www.figma.com/proto/TWvcHzxjz9zCaFiR3P5DDF/Live-Learn-Lead-Desktop?node-
 3. Need to add progress bar for campaign 
 4. Buttons in header do not look great in mobile
 
-5. Navbar, need to vertically align the hrefs (looks bad in mobile)
+<del>5. Navbar, need to vertically align the hrefs (looks bad in mobile)</del>
 
 6. About section - looks fine
-  - Need to add grafitti and (x3) background
+  - Need to add grafitti and <del>(x3) background</del>
   
 <del> 7. Teams (cards could use some polishing)</del>
 
