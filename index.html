@@ -30,7 +30,7 @@
             <h8 style = "font-size: 12px; font-weight: bolder;">CHARITY RALLY</h8>
             <h1 style = "font-size: 100px; font-weight: 100;">Live, Learn, Lead!</h1><br><br>
   
-            <button style = "width: 260px; height: 64px;" type = "input">DONATE</button><br><br><br>
+            <button id = "btn" style = "width: 260px; height: 64px;" type = "input">DONATE</button><br><br><br>
   
             <h6>CAMPAIGN ENDS IN: </h6>
           </div>
@@ -60,27 +60,27 @@
         
         <div class = "row" style = "margin-top: 15px; text-align: center;" id = "centeredRow">
           <div class = "col-md-4">
-          <button type = "input"  style="width: 130px; height: 60px; margin-right: 30px;">2500</button>
+          <button id = "btn" type = "input"  style="width: 130px; height: 60px; margin-right: 30px;">2500</button>
           <br>
-          <button type = "input" style="width: 130px; height: 60px; margin-right: 30px;">1800</button>
+          <button id = "btn" type = "input" style="width: 130px; height: 60px; margin-right: 30px;">1800</button>
         </div>
 
         <div class = "col-md-4">
-          <button type = "input"  style="width: 130px; height: 60px; margin-right: 30px;">2500</button>
+          <button id = "btn" type = "input"  style="width: 130px; height: 60px; margin-right: 30px;">2500</button>
           <br>
-          <button type = "input" style="width: 130px; height: 60px; margin-right: 30px;">1800</button>
+          <button id = "btn" type = "input" style="width: 130px; height: 60px; margin-right: 30px;">1800</button>
           
         </div>
 
         <div class = "col-md-4">
-          <button type = "input"  style="width: 130px; height: 60px; margin-right: 30px;">2500</button>
+          <button id = "btn" type = "input"  style="width: 130px; height: 60px; margin-right: 30px;">2500</button>
           <br>
-          <button type = "input" style="width: 130px; height: 60px; margin-right: 30px;">1800</button>
+          <button id = "btn" type = "input" style="width: 130px; height: 60px; margin-right: 30px;">1800</button>
         </div>
         
 
       </div>
-      <button type = "input" style = "width: 448px; height: 60px">DONATE NOW</button>
+      <button id = "btn" type = "input" style = "width: 448px; height: 60px">DONATE NOW</button>
         
         </div>
       </div>
@@ -89,9 +89,14 @@
     
     <!--Navbar-->
       <div class = "row" style = "margin-bottom:100px;" id = "centeredRow"> 
-      <nav id="navbar" style = "background: linear-gradient(90deg, #3D6186 0%, #6487AC 100%); border-radius: 30px;">
-    
-        <ul class="nav nav-pills">
+      <nav class = "navbar navbar-expand-sm"  id="navbar" style = "justify-content:center; background: linear-gradient(90deg, #3D6186 0%, #6487AC 100%); border-radius: 30px;">
+  
+        <button class="navbar-toggler"  style = "border-color: white; color: white;" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="nav nav-pills" style= "justify-content: center;"> 
           <li class="nav-item">
             <a class="nav-link" href="#about">ABOUT THE CAMPAIGN</a>
           </li>
@@ -105,10 +110,11 @@
             <a class="nav-link" href="#matchers">MATCHERS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#donateNow"><button type = "input">DONATE</button></a>
+            <a class="nav-link" href="#donateNow"><button id = "btn" type = "input">DONATE</button></a>
           </li>
       
           </ul>
+        </div>
       </nav>
       </div>
      
@@ -118,7 +124,9 @@
   
 
     <!--About Section-->
-    <div class = "container-fluid" style = "background-color: white;" id = "about">
+    <div class = "container-fluid">
+    <a class= "anchor" id="about"></a>
+    <div class = "container-fluid" style = " padding-top: 100px; background-color: white;">
    
       <div class = "row" id = "centeredRow">
       <h3 style = "font-size: 60px; font-weight: 200; margin-bottom: 50px; text-align: center;">About the Campaign</h3>
@@ -171,7 +179,7 @@
         <p>Every dollar you donate is TRIPLED! For $1 you give, Farber Hebrew Day School - Yeshivat Akiva will get $3. Every Donation is Tripled!</p>
       </div>
 
-      <div class = "col-sm-4" style = "text-align: center;">
+      <div class = "col-sm-4" style = "text-align: center; background-image: url(assets/x3.png); background-repeat: no-repeat; background-position: bottom; background-size: contain;">
 
         <h5 style = "margin-top: 137px; font-size: 30px; color: red;">All donations tripled!</h5>
         <h1 style = "font-size: 60px; color: red;">$1 = 3!</h1>
@@ -180,14 +188,17 @@
       </div>
       
       <div class = "row" id = "centeredRow">
-      <button type = "input" style = "margin-top: 40px; height: 60px; width: 280px; margin-bottom: 80px;">DONATE NOW</button>
+      <button id = "btn" type = "input" style = "margin-top: 40px; height: 60px; width: 280px; margin-bottom: 80px;">DONATE NOW</button>
         </div>
+
+    </div>
 
     </div>
 
 
     <!--Our Teams Section-->
     <div class="container-fluid">
+      <a class= "anchor" id="teams"></a>
       <div class = "row" id = "centeredRow">
       <h3 style = "margin-top: 100px; margin-bottom: 60px; font-weight: 200; font-size: 60px; text-align: center;">Our Teams</h3>
       </div>
@@ -222,7 +233,7 @@
             </div>
 
             <div class = "col-md-2 my-auto">
-              <button type = "input" style = "margin-left: 20px; width: 100px;">Donate</button>
+              <button  id = "btn" type = "input" style = "margin-left: 20px; width: 100px;">Donate</button>
             </div>
 
             
@@ -260,7 +271,7 @@
             </div>
 
             <div class = "col-md-2 my-auto">
-              <button type = "input" style = "margin-left: 20px; width: 100px;">Donate</button>
+              <button id = "btn" type = "input" style = "margin-left: 20px; width: 100px;">Donate</button>
             </div>
 
             
@@ -275,6 +286,7 @@
     <!--Our Donors Section-->
 
     <div class = "container-fluid" style = "background-color: white;">
+      <a class= "anchor" id="donors"></a>
       <div class = "row" id = "centeredRow">
         <h3 style = "margin-top: 100px; margin-bottom: 60px; font-weight: 200; font-size: 60px; text-align: center;">Thank You Donors!</h3>
       </div>
@@ -288,6 +300,7 @@
     <!--Our Matchers Section-->
 
     <div class = "container-fluid">
+      <a class= "anchor" id="matchers"></a>
       <div class = "row" id = "centeredRow">
         <h3 style = "margin-top: 100px; margin-bottom: 60px; font-weight: 200; font-size: 60px; text-align: center;">Thank You Matchers!</h3>
       </div>
@@ -377,9 +390,9 @@
       <div class = "wrapper" style = "text-align: center;">
         <img src = "assets/logo.PNG" style = "width: 300px; height: 103px; margin-bottom: 30px; margin-top: 80px;">
         <br>
-        <button type = "input" style="width:280px; height: 60px; margin-bottom: 30px; background: linear-gradient(90deg, #3D6186 0%, #6487AC 100%)">FARBERHDS.ORG</button>
+        <button id = "btn" type = "input" style="width:280px; height: 60px; margin-bottom: 30px; background: linear-gradient(90deg, #3D6186 0%, #6487AC 100%)">FARBERHDS.ORG</button>
         <br>
-        <button type = "input" style = "width: 280px; height: 60px; margin-bottom: 80px;">DONATE NOW</button>
+        <button id = "btn" type = "input" style = "width: 280px; height: 60px; margin-bottom: 80px;">DONATE NOW</button>
       </div>
 
     </footer>
