@@ -1,0 +1,15 @@
+/* If the screen size is 400px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 400px) {
+    #slogan  {
+      font-size: 100px;
+      font-weight: 200;
+    }
+  }
+  
+  /* If the screen size is 400px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 400px) {
+    #slogan {
+      font-size: 50px;
+      font-weight: 200;
+    }
+  }
