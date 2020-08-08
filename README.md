@@ -22,7 +22,7 @@ https://www.figma.com/proto/TWvcHzxjz9zCaFiR3P5DDF/Live-Learn-Lead-Desktop?node-
 
 <del >2. Jumbotron rounded picture does not look great on mobile </del>
 
-3. Need to add progress bar for campaign 
+<del> 3. Need to add progress bar for campaign </del>
 
 <del> 4. Buttons in header do not look great in mobile </del>
 
@@ -46,5 +46,6 @@ https://www.figma.com/proto/TWvcHzxjz9zCaFiR3P5DDF/Live-Learn-Lead-Desktop?node-
 ## To Do List for Next Work Session
 
 Finish the campaign header and section
+
 Start going from the top down, media query everything that needs to be done
 (Media queries for iphone x11 pro vs Desktop)
