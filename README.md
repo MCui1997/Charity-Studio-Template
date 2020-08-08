@@ -18,10 +18,10 @@ https://www.figma.com/proto/TWvcHzxjz9zCaFiR3P5DDF/Live-Learn-Lead-Desktop?node-
 
 ## Rough Draft - Needs Fixing
 
-1. Add logo to the top of header
-2. Jumbotron rounded picture does not look great on mobile
+<del> 1. Add logo to the top of header</del>
+<del >2. Jumbotron rounded picture does not look great on mobile </del>
 3. Need to add progress bar for campaign 
-4. Buttons in header do not look great in mobile
+<del >4. Buttons in header do not look great in mobile </del>
 
 <del>5. Navbar, need to vertically align the hrefs (looks bad in mobile)</del>
 
