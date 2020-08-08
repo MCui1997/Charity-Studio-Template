@@ -40,3 +40,11 @@ https://www.figma.com/proto/TWvcHzxjz9zCaFiR3P5DDF/Live-Learn-Lead-Desktop?node-
   -Possible scroll back up button
   
 <del>10. Footer - looks great (change color of upper button to same as navbar).</del>
+
+
+
+## To Do List for Next Work Session
+
+Finish the campaign header and section
+Start going from the top down, media query everything that needs to be done
+(Media queries for iphone x11 pro vs Desktop)
