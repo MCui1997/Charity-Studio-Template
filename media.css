@@ -1,24 +1,26 @@
+section {
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+section .content{
+
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  
+}
+
 
 /* If the screen size is 450px wide or less*/
-@media screen and (max-width: 450px) {
-
-  section {
-
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
+@media screen and (max-width: 768px) {
 
 
-  section .content{
-
-    position: relative;
-    z-index: 1;
-    margin: 0 auto;
-    text-align: center;
-    color: white;
-    
-  }
 
   section:before{
 
@@ -91,7 +93,7 @@
 
   #clockDay{
 
-    margin-left: 20px;
+    margin-left: 28px;
     margin-right: 30px;
   }
   #clockHour{
@@ -103,7 +105,7 @@
 
 
   #clockMinute{
-
+    margin-left: 10px;
     margin-right: 30px;
   }
 
@@ -113,25 +115,27 @@
     font-size: normal; 
     font-weight: normal; 
     font-size: 14px;
+    margin-bottom: 20px;
 
     
   }
 
   #day{
 
-    margin-left: 40px;
+    margin-left: 50px;
     margin-right: 30px;
   }
   #hour{
 
-    margin-left: 30px;
-    margin-right: 35px;
+    margin-left: 25px;
+    margin-right: 30px;
 
   }
 
 
   #minute{
 
+    margin-left: 15px;
     margin-right: 38px;
   }
 
@@ -214,6 +218,28 @@
     border-style: none;
   }
 
+  .nav-link{
+
+    font-size: 14px;
+    margin:0 auto;
+  }
+
+  #navbar{
+
+
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    
+  }
+
+
+  #abtTitle{
+    font-size: 30px; 
+    font-weight: 200; 
+    margin-bottom: 50px; 
+    text-align: center;
+  }
 }
 
 
@@ -228,12 +254,61 @@
 
 
 /* If the screen size is 450px wide or more*/
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 770px) {
+
+
+  section:before{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0 0 50% 50%/0 0 100% 100%;
+    transform: scaleX(3.5);
+    background-color: black;
+
+  }
+
+  
+  #logostar{
+
+    height: 80px;
+
+  }
+
+
   #schoolName{
     font-size: 20px;
     font-weight: normal;
   }
+
+  #rallyName{
+
+    font-size: 12px;
+    font-weight: 800;
+    font-weight: normal;
+  }
   
+
+  #slogan{
+
+    font-size: 100px;
+    font-weight: 200;
+    line-height: 120px;
+    font-style: normal;
+    margin-bottom: 40px;
+  }
+
+  #btn{
+
+    width: 260px;
+    height: 64px;
+    margin-bottom: 30px;
+  }
+
 
   #campaignName{
 
@@ -249,12 +324,61 @@
     font-size: 60px;
   }
 
-  #dayHourMinute{
+  #clockDay, #clockHour, #clockMinute{
+
+    font-size: normal; 
+    font-weight: 200; 
+    font-size: 60px;
+    line-height: 88px;
+
+  }
+
+  #clockDay{
+
+    margin-left: 20px;
+    margin-right: 30px;
+  }
+  #clockHour{
+
+    margin-left: 30px;
+    margin-right: 40px;
+
+  }
+
+
+  #clockMinute{
+
+    margin-left: 10px;
+    margin-right: 28px;
+  }
+
+
+  #day, #hour, #minute{
 
     font-size: normal; 
     font-weight: normal; 
     font-size: 20px;
+    margin-bottom: 20px;
   }
+
+  #day{
+
+    margin-left: 50px;
+    margin-right: 30px;
+  }
+  #hour{
+
+    margin-left: 50px;
+    margin-right: 35px;
+
+  }
+
+
+  #minute{
+    margin-left: 20px;
+    margin-right: 38px;
+  }
+
 
   #progress{
 
@@ -275,4 +399,10 @@
     font-weight: 200;
   }
 
+  #abtTitle{
+    font-size: 60px; 
+    font-weight: 200; 
+    margin-bottom: 50px; 
+    text-align: center;
+  }
 }
