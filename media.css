@@ -1,21 +1,147 @@
-/* If the screen size is 400px wide or more, set the font-size of <div> to 80px */
-@media screen and (min-width: 400px) {
-    #slogan  {
-      font-size: 100px;
-      font-weight: 200;
-    }
+
+/* If the screen size is 450px wide or less*/
+@media screen and (max-width: 450px) {
+
+  section {
+
+    position: relative;
+    width: 100%;
+    height: 422px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+  }
+
+
+  section .content{
+
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    
+  }
+
+  section:before{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0 0 50% 50%/0 0 100% 100%;
+    transform: scaleX(3.5);
+    background-color: black;
+
+  }
+
+  #logostar{
+
+    height: 40px;
+
+  }
+
+  #schoolName{
+
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 28px;
+  }
+
+  #rallyName{
+
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 23px;
+
+  }
+
+  #slogan{
+
+    font-size: 45px;
+    font-weight: 200;
+    line-height: 60px;
+    font-style: normal;
+  }
+
+  #btn{
+
+    width: 202px;
+    height: 50px;
+  }
+
+  #campaignName{
+
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 28px;
+  }
+
+  #campaignClock{
+
+    font-size: normal; 
+    font-weight: normal; 
+    font-size: 30px;
+    line-height: 28px;
+  }
+
+  #dayHourMinute{
+
+    font-size: normal; 
+    font-weight: normal; 
+    font-size: 14px;
+    margin-right: 15px;
+    
   }
   
-  /* If the screen size is 400px wide or less, set the font-size of <div> to 30px */
-  @media screen and (max-width: 400px) {
-    #slogan {
-      font-size: 50px;
-      font-weight: 200;
-    }
 
-    #funds{
-      font-size: 14px;
-      margin-bottom: 5px;
-      line-height: 20px;
-    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* If the screen size is 450px wide or more*/
+@media screen and (min-width: 450px) {
+  #schoolName{
+    font-size: 20px;
+    font-weight: normal;
   }
+  
+
+  #campaignName{
+
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  #campaignClock{
+
+    font-size: normal; 
+    font-weight: normal; 
+    font-size: 60px;
+  }
+
+  #dayHourMinute{
+
+    font-size: normal; 
+    font-weight: normal; 
+    font-size: 20px;
+  }
+ 
+
+}
