@@ -186,6 +186,7 @@
     border-style: solid;
     border-color: #EC5582;
     border-radius: 30px;
+    background-color: white;
    
   }
 
@@ -220,6 +221,12 @@
     font-size: 14px;
     margin-right: -18px;
     color: white;
+  }
+
+  #abtNav{
+
+    font-weight: bold; 
+    margin-left: -15px;
   }
 
   #navbar{
@@ -282,6 +289,30 @@
 
     background-image: none;
   }
+
+
+  #tripled2{
+
+    font-size: 22px;
+    font-weight: normal;
+    color: red;
+  }
+
+  #one3{
+
+    color: red;
+    font-size: 45px;
+    font-weight: 500;
+
+
+  }
+
+  /*TEAMS SECTION ================================================================================*/
+
+
+
+
+
 }
 
 
