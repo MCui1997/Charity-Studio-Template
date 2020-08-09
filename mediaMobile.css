@@ -214,22 +214,37 @@
     border-style: none;
   }
 
+  /*NAVBAR==========================================================================================*/
   .nav-link{
 
     font-size: 14px;
-    margin:0 auto;
+    margin-right: -18px;
+    color: white;
   }
 
   #navbar{
-
-
-    overflow: hidden;
+    
     z-index: 1;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
     
   }
 
+  #navbtn{
 
+    width: 80px;
+    border-radius: 30px;
+    background-color: white;
+    color: #EC5582;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  /*ABOUT SECTION ================================================================================*/
+  
   #abtTitle{
     font-size: 30px; 
     font-weight: 200; 
@@ -237,9 +252,35 @@
     text-align: center;
   }
 
-  #navbtn{
+  #abtText{
+    font-size: 16px;
+  }
 
-    width: 100px;
+  #more {display: none;}
+
+  #dots {
+
+    opacity: .3;
+  }
+
+  #readBtn{
+
+    background-color: transparent;
+    border: none;
+    border-bottom-style: dashed;
+    color: #005BB9;
+  }
+
+
+  #howitWorks{
+
+    font-size: 16px;
+  }
+
+
+  #x3{
+
+    background-image: none;
   }
 }
 

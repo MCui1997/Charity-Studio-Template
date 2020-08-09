@@ -233,7 +233,60 @@
       margin-top: 25px;
       border-style: none;
     }
+
+      /*NAVBAR==========================================================================================*/
+    .nav-link{
+
+        font-size: 14px;
+        margin-right: -18px;
+        color: white;
+      }
+    
+      #navbar{
+        
+        z-index: 1;
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        border-radius: 30px;
+
+        display: flex;
+        justify-content: center;
+        
+      }
+    
+    
+      #abtTitle{
+        font-size: 30px; 
+        font-weight: 200; 
+        margin-bottom: 50px; 
+        text-align: center;
+      }
+    
+      #navbtn{
+    
+        width: 80px;
+        border-radius: 30px;
+        background-color: white;
+        color: #EC5582;
+        font-weight: normal;
+      }
+
+        /*ABOUT SECTION ================================================================================*/
+
+
+        #howitWorks{
+
+            font-size: 24px;
+          }
   
+          #x3{
+
+            background-image: url(assets/x3.png); 
+            background-repeat: no-repeat; 
+            background-position: bottom; 
+            background-size: contain;
+          }
   }
   
   

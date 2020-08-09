@@ -24,10 +24,7 @@ a.anchor {
   visibility: hidden;
 }
 
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
+
 
 .sticky {
   position: fixed;
@@ -62,7 +59,3 @@ section .content{
   
 }
 
-.nav-link{
-
-  color: white;
-}
