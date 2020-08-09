@@ -14,7 +14,8 @@
     
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <link rel = "stylesheet" href = "styles.css">
-<link rel = "stylesheet" href = "media.css">
+<link rel = "stylesheet" href = "mediaMobile.css">
+<link rel = "stylesheet" href = "mediaComputer.css">
 </head>
 
 
@@ -72,9 +73,9 @@
 
       <!--Bottom of Header Section-->
       <div class = "container-fluid"> 
-      <div class = "row" id = "centeredRow"> 
+      <div class = "row" id = "centeredRow"  style = "margin-top: 40px;"> 
   
-        <div class = "col-md-4">
+        <div class = "col-lg-6">
           <div class = "row" id = "centeredRow">
           <h4 id = "progress">Campaign Progress:</h4>
         </div>
@@ -85,17 +86,17 @@
           <progress id="progressBar" value="32" max="100"> 32% </progress>
         </div>
         <div class = "row" id = "centeredRow" style = "margin-top: 15px;">
-          <h4 id = "progressLabel">58%<span style = "margin-left: 185px;">$150 000</span></h4>
+          <h4 id = "progressLabel">58%<span id = "progressMargin">$150 000</span></h4>
         </div>
         <div class = "row" id = "centeredRow">
-          <h4 id = "progressLabel2">COMPLETE<span style = "margin-left: 140px;">CAMPAIGN GOAL</span></h4>
+          <h4 id = "progressLabel2">COMPLETE<span id = "progressMargin2">CAMPAIGN GOAL</span></h4>
         </div>
 
         </div>
 
           
-        <div class = "col-md-4">
-          <div class = "row" id = "centeredRow" style = "margin-top: 40px;">
+        <div class = "col-lg-6">
+          <div class = "row" id = "centeredRow">
           <h4 id = "tripled">All donations tripled!</h4>
         
         <div class = "row d-flex justify-content-center" style = " margin-left: 12px; justify-content: center; margin-top: 15px; text-align: center;">
@@ -138,7 +139,7 @@
             <a class="nav-link" href="#matchers">MATCHERS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#donateNow"><button id = "btn" type = "input">DONATE</button></a>
+            <a class="nav-link" href="#donateNow"><button id = "navbtn" type = "input">DONATE</button></a>
           </li>
       
           </ul>
