@@ -268,51 +268,75 @@
 
       }
 
-        /*ABOUT SECTION ================================================================================*/
+/*ABOUT SECTION ================================================================================*/
       
-        #abtTitle{
-          font-size: 60px; 
-          font-weight: 200; 
-          margin-bottom: 50px; 
-          text-align: center;
-        }
+        
+  #confetti{
 
-        #abtText{
-          font-size: 16px;
-        }
-      
+    position: absolute;
+    left: 0px;
+    margin-top: 100px;
+  }
 
-        #readBtn{
-          display: none;
-        }
+  #confetti2{
 
-        #howitWorks{
+    position: absolute;
+    right: 0px;
+    margin-top: 200px;
+  }
 
-            font-size: 24px;
-          }
-  
-        #x3{
+  #confetti3{
 
-          background-image: url(assets/x3.png); 
-          background-repeat: no-repeat; 
-          background-position: right; 
-          background-size: contain;
-          margin-top: 50px;
-        }
+    display: none;
+  }
+  #confetti4{
 
-        #tripled2{
+    display: none;
+  }
 
-          font-size: 30px; 
-          color: red;
-          margin-top: 130px;
+  #abtTitle{
+    font-size: 60px; 
+    font-weight: 200; 
+    margin-bottom: 50px; 
+    text-align: center;
+  }
 
-        }
+  #abtText{
+    font-size: 16px;
+  }
 
-        #one3{
 
-          font-size: 60px; 
-          color: red;
-        }
+  #readBtn{
+    display: none;
+  }
+
+  #howitWorks{
+
+      font-size: 24px;
+    }
+
+  #x3{
+
+    background-image: url(assets/x3.png); 
+    background-repeat: no-repeat; 
+    background-position: right; 
+    background-size: contain;
+    margin-top: 50px;
+  }
+
+  #tripled2{
+
+    font-size: 30px; 
+    color: red;
+    margin-top: 130px;
+
+  }
+
+  #one3{
+
+    font-size: 60px; 
+    color: red;
+  }
 
 
       /*TEAMS SECTION ================================================================================*/
@@ -541,6 +565,8 @@
  
 
   }
+
+
 }
   
   
