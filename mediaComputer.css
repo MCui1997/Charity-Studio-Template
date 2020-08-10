@@ -525,6 +525,22 @@
     margin-bottom: 30px; 
     margin-top: 80px;
   }
+
+  #backtoTop{
+
+    display: none;
+  }
+
+  #backtoTop2{
+
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 50px;
+    margin-top: 30px;
+ 
+
+  }
 }
   
   
