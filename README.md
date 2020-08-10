@@ -25,3 +25,5 @@ Some features still need some work
   -Read more in about section
   
   -Confetti
+  
+  -Scroll to top button in bottom section 
