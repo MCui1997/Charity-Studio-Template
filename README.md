@@ -16,36 +16,11 @@ Desktop version:
 https://www.figma.com/proto/TWvcHzxjz9zCaFiR3P5DDF/Live-Learn-Lead-Desktop?node-id=1%3A2&scaling=min-zoom
 
 
-## Rough Draft - Needs Fixing
+## Rough Draft
 
-<del> 1. Add logo to the top of header</del>
+All sections are completed and look great in both Iphone 11xPro (375 px width) and Macbook Pro (1280px width)
 
-<del >2. Jumbotron rounded picture does not look great on mobile </del>
+Some features still need some work
 
-<del> 3. Need to add progress bar for campaign </del>
-
-<del> 4. Buttons in header do not look great in mobile </del>
-
-<del>5. Navbar, need to vertically align the hrefs (looks bad in mobile)</del>
-
-6. About section - looks fine
-  - Need to add grafitti and <del>(x3) background</del>
-  
-<del> 7. Teams (cards could use some polishing)</del>
-
-
-8. Thank you Donors - Need to complete this section, haven't started
-
-<del>9. Matchers- looks fine (need to vertically center card)</del>
-  -Possible scroll back up button
-  
-<del>10. Footer - looks great (change color of upper button to same as navbar).</del>
-
-
-
-## To Do List for Next Work Session
-
-Finish the campaign header and section
-
-Start going from the top down, media query everything that needs to be done
-(Media queries for iphone x11 pro vs Desktop)
+  -Read more in about section
+  -Confetti
