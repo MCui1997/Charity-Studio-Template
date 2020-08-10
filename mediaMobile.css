@@ -443,6 +443,14 @@
     margin-left: 80px;
   }
 
+  #donorCard{
+
+    text-align: center;
+    border-style: none;
+    border-bottom-style: solid;
+    margin-bottom: 20px;
+  }
+
   /*Matcher section ====================================================================================*/
 
  
