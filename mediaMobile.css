@@ -373,6 +373,95 @@
     margin-left: 110px;
   }
 
+
+  /*Matcher section ====================================================================================*/
+
+ 
+  #matcherTitle{
+    
+    margin-top: 50px; 
+    margin-bottom: 24px; 
+    font-weight: 200; 
+    font-size: 30px; 
+    text-align: center;
+  }
+
+  #matcherText{
+
+    margin-top: 15px; 
+    margin-bottom: 30px;
+    font-weight: normal; 
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  #matcherCard{
+
+    background: white; 
+    text-align: center; 
+    height: 128px;
+    width: 160px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    justify-content: center;
+  }
+
+  #matcherLogo{
+
+    width: 35px; 
+    height: 31px;
+  }
+
+  #cardText{
+
+    font-size: 14px; 
+    font-weight: normal;
+    line-height: 18px;
+  }
+
+  #alsoText{
+    font-size: 22px; 
+    font-weight: 200; 
+    line-height: 30px;
+    border-bottom: solid; 
+    border-color:  #E95252; 
+    margin-top: 50px; 
+    padding-bottom: 40px; 
+    margin-bottom: 40px;
+  }
+
+  #funds{
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+
+  /*Footer Section====================================================================================*/
+
+  #footerImg{
+
+    width: 174px; 
+    height: 60px; 
+    margin-bottom: 30px; 
+    margin-top: 50px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
