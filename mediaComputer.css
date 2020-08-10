@@ -188,12 +188,6 @@
       font-weight: 200;
     }
   
-    #abtTitle{
-      font-size: 60px; 
-      font-weight: 200; 
-      margin-bottom: 50px; 
-      text-align: center;
-    }
   
     #dbtn{
   
@@ -262,12 +256,7 @@
 
       }
     
-      #abtTitle{
-        font-size: 30px; 
-        font-weight: 200; 
-        margin-bottom: 50px; 
-        text-align: center;
-      }
+
     
       #navbtn{
     
@@ -280,7 +269,18 @@
       }
 
         /*ABOUT SECTION ================================================================================*/
+      
+        #abtTitle{
+          font-size: 60px; 
+          font-weight: 200; 
+          margin-bottom: 50px; 
+          text-align: center;
+        }
 
+        #abtText{
+          font-size: 16px;
+        }
+      
 
         #readBtn{
           display: none;
