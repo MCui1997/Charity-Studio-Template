@@ -403,6 +403,64 @@
     text-align: center;
   }
 
+  #donorCount,  #donorCountGoal{
+
+    font-style: normal;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 28px;
+    margin-left: 60px 
+  }
+
+  #donorCountGoal{
+
+    margin-left: 45px;
+  }
+
+  #donorLabel{
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 50px;
+  }
+
+  #slash{
+
+    font-weight: 200;
+    font-size: 50px;
+    line-height: 60px;
+    margin-right: 20px;
+    color: #dadae1;
+
+  }
+
+  #donorName{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    margin-left: 15px;
+  }
+
+  #donorAmt{
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    margin-left: 80px;
+  }
+
+  #donorCard{
+
+    text-align: center;
+    border-style: none;
+    border-bottom-style: solid;
+    margin-bottom: 20px;
+  }
+
 
   /*Matchers Section=============================================================================*/
 
