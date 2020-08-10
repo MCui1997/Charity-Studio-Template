@@ -13,6 +13,7 @@ function stickyNav() {
 
 
 function readMore() {
+  var fade = document.getElementById("bottom_fade")
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
   var btnText = document.getElementById("readBtn");
@@ -21,7 +22,10 @@ function readMore() {
     dots.style.display = "inline";
     btnText.innerHTML = "Read more";
     moreText.style.display = "none";
+    fade.style.display = "block";
   } else {
+   
+    fade.style.display = "none";
     dots.style.display = "none";
     btnText.innerHTML = "Read less";
     moreText.style.display = "inline";

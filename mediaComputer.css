@@ -27,6 +27,7 @@
       color: white;
       border-style: solid;
       border-color: white;
+      outline: none;
     }
   
     
@@ -64,6 +65,7 @@
       width: 260px;
       height: 64px;
       margin-bottom: 30px;
+      outline: none;
     }
   
   
@@ -200,6 +202,7 @@
       border-color: #EC5582;
       border-radius: 30px;
       background-color: white;
+      outline: none;
      
     }
   
@@ -227,6 +230,7 @@
       color: white;
       margin-top: 25px;
       border-style: none;
+      outline: none;
     }
 
       /*NAVBAR==========================================================================================*/
@@ -265,6 +269,7 @@
         background-color: white;
         color: #EC5582;
         font-weight: normal;
+        outline: none;
 
       }
 
@@ -404,6 +409,7 @@
     border-style: solid;
     border-color: white;
     margin-left: 40px;
+    outline: none;
 
   }
 
@@ -562,7 +568,8 @@
     position: absolute;
     right: 50px;
     margin-top: 30px;
- 
+    outline: none;
+
 
   }
 
