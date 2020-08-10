@@ -20,10 +20,3 @@ https://www.figma.com/proto/TWvcHzxjz9zCaFiR3P5DDF/Live-Learn-Lead-Desktop?node-
 
 All sections are completed and look great in both Iphone 11xPro (375 px width) and Macbook Pro (1280px width)
 
-Some features still need some work
-
-  -Read more in about section
-  
-  -Confetti
-  
-  -Scroll to top button in bottom section 
