@@ -23,4 +23,5 @@ All sections are completed and look great in both Iphone 11xPro (375 px width) a
 Some features still need some work
 
   -Read more in about section
+  
   -Confetti
