@@ -1,6 +1,6 @@
 
 /* If the screen size is less than*/
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 600px){
 
   section:before{
 
@@ -218,6 +218,11 @@
     border-style: none;
     outline: none;
   }
+
+  #donateBtnCol{
+
+    width: 100%;
+}
 
   /*NAVBAR==========================================================================================*/
   .nav-link{
