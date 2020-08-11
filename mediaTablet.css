@@ -296,6 +296,14 @@
   
     #abtText{
       font-size: 16px;
+      line-height: 26px;
+    }
+
+    #abtTextBold{
+
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 26px;
     }
   
 
@@ -337,6 +345,31 @@
   
   
     }
+
+    #bannerTitle{
+
+      margin-top: 30px;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 26px;
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+  
+    #boldedBanner{
+  
+      font-weight: bold;
+    }
+  
+    #bannerText{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 26px;
+      
+  
+    }
+
   
     /*TEAMS SECTION ================================================================================*/
   

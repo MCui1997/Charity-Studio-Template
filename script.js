@@ -21,13 +21,13 @@ function readMore() {
   if (dots.style.display === "none") {
     dots.style.display = "inline";
     btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
+    moreText.display = "none";
     fade.style.display = "block";
   } else {
    
     fade.style.display = "none";
     dots.style.display = "none";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline";
+    btnText.style.display = "none";
+    moreText.style.display = "contents";
   }
 }

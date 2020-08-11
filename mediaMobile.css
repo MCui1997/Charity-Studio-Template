@@ -299,9 +299,25 @@
 
   #abtText{
     font-size: 16px;
+    line-height: 26px;
   }
 
-  #more {display: none;}
+  #abtTextBold{
+
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 26px;
+  }
+
+  #more {
+    display: none;
+    
+  }
+
+  #moreCol{
+
+    margin-top: -60px;
+  }
 
   #dots {
 
@@ -315,7 +331,8 @@
 	z-index: 1;
 	position: absolute;
 	bottom: 50px;
-	background: url("assets/bottom-fade.png");
+  background: url("assets/bottom-fade.png");
+  
 }
 
   #readBtn{
@@ -354,6 +371,30 @@
     font-size: 45px;
     font-weight: 500;
 
+
+  }
+
+  #bannerTitle{
+
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+
+  #boldedBanner{
+
+    font-weight: bold;
+  }
+
+  #bannerText{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    width: 90%;
 
   }
 
