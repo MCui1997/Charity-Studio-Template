@@ -1,3 +1,65 @@
+html {
+
+  overflow-x: hidden;
+}
+  
+button:hover{
+
+  opacity: .8;
+}
+
+
+#centeredRow{
+
+  display: flex;
+  justify-content: center;
+}
+
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -50px;
+  visibility: hidden;
+}
+
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  
+}
+
+body {
+  
+    margin: 0;
+    padding: 0;
+    background: #f3f5f9;
+    overflow-x: hidden;
+
+}
+  
+section {
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+}
+
+section .content{
+
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+
+  
+}
+
+
 
 /* If the screen size is less than*/
 @media screen and (max-width: 600px){
