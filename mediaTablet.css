@@ -280,7 +280,7 @@
   
     #navbar{
       
-      z-index: 100;
+      z-index: 50;
       width: 100%;
       margin: 0;
       padding: 0;
@@ -570,9 +570,16 @@
   
       text-align: center;
       border-style: none;
-      border-bottom-style: solid;
-      margin-bottom: 20px;
     }
+
+    #donorCard:after {
+      content: ""; /* This is necessary for the pseudo element to work. */ 
+      display: block; /* This will put the pseudo element on its own line. */
+      margin: 0 auto; /* This will center the border. */
+      padding-top: 1px;
+      width: 320px; /* Change this to whatever width you want. */
+      border-bottom: 1px solid #dadae1; /* This creates the border. Replace black with whatever color you want. */
+  }
   
     /*Matcher section ====================================================================================*/
   
