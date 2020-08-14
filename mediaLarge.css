@@ -274,7 +274,7 @@
         margin: 0;
         padding: 0;
         border-radius: 30px;
-
+        background: linear-gradient(90deg, #3D6186 0%, #6487AC 100%);
         display: flex;
         justify-content: center;
         
