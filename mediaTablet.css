@@ -202,10 +202,20 @@
       font-weight: 200;
       margin-top: 40px;
     }
+
+    #dbtnRow{
+
+      width: 90%;
+      margin-left: 12px; 
+      justify-content: center; 
+      margin-top: 15px; 
+      text-align: center;
+    }
+
   
     #dbtn{
   
-      height: 50px;
+      height: 60px;
       width: 130px;
       margin-bottom: 10px;
       margin-right: 30px;

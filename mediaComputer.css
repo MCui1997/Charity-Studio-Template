@@ -216,13 +216,23 @@
       font-weight: 200;
     }
   
+    #dbtnRow{
+
+      width: 90%;
+      margin-left: 12px; 
+      justify-content: center; 
+      margin-top: 15px; 
+      text-align: center;
+    }
+
+
   
     #dbtn{
   
-      height: 50px;
+      height: 60px;
       width: 150px;
       margin-bottom: 10px;
-      margin-right: 45px;
+      margin-right: 20px;
       line-height: 3px;
       border-style: solid;
       border-color: #EC5582;
@@ -231,18 +241,20 @@
       outline: none;
      
     }
+
+
   
     #dbtnLabel{
       font-size: 16px;
       font-weight: 500;
-      line-height: 10px;
+      line-height: 5px;
   
     }
   
     #dbtnLabel2{
       font-size: 12px;
       font-weight: normal;
-      line-height: 14px;
+      line-height: 0px;
     }
   
   
