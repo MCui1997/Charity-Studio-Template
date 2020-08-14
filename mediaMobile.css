@@ -61,6 +61,13 @@ section .content{
   
 }
 
+.nav-link:hover{
+
+  background-color: #3d6186;
+  color: white;
+  height: 100%;
+}
+
 
 
 /* If the screen size is less than*/
@@ -186,6 +193,30 @@ section .content{
     margin-right: 38px;
   }
 
+  progress {
+    border: 0;
+    background-color: #dadae1;
+    height: 16px;
+    border-radius: 10px;
+}
+progress::-webkit-progress-bar {
+    border: 0;
+    background-color: #dadae1;
+    height: 16px;
+    border-radius: 10px;
+}
+progress::-webkit-progress-value {
+    border: 0;
+    background: linear-gradient(94.88deg, #E95252 16.28%, #EC5582 81.93%);
+    height: 16px;
+    border-radius: 10px;
+}
+progress::-moz-progress-bar {
+    border: 0;
+    background: linear-gradient(94.88deg, #E95252 16.28%, #EC5582 81.93%);
+    height: 16px;
+    border-radius: 10px;
+}
   #progress{
 
     font-size: 22px; 
@@ -223,12 +254,12 @@ section .content{
 
   #progressMargin{
 
-    margin-left: 185px;
+    margin-left: 195px;
   }
 
   #progressMargin2{
 
-    margin-left: 140px;
+    margin-left: 165px;
   }
 
   #tripled{

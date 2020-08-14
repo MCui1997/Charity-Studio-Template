@@ -124,6 +124,32 @@
       margin-left: 15px;
       margin-right: 38px;
     }
+
+    progress {
+      border: 0;
+      background-color: #dadae1;
+      height: 16px;
+      border-radius: 10px;
+  }
+  progress::-webkit-progress-bar {
+      border: 0;
+      background-color: #dadae1;
+      height: 16px;
+      border-radius: 10px;
+  }
+  progress::-webkit-progress-value {
+      border: 0;
+      background: linear-gradient(94.88deg, #E95252 16.28%, #EC5582 81.93%);
+      height: 16px;
+      border-radius: 10px;
+  }
+  progress::-moz-progress-bar {
+      border: 0;
+      background: linear-gradient(94.88deg, #E95252 16.28%, #EC5582 81.93%);
+      height: 16px;
+      border-radius: 10px;
+  }
+
   
     #progress{
   
@@ -162,12 +188,12 @@
   
     #progressMargin{
   
-      margin-left: 185px;
+      margin-left: 205px;
     }
   
     #progressMargin2{
   
-      margin-left: 140px;
+      margin-left: 175px;
     }
   
     #tripled{
@@ -261,6 +287,8 @@
       font-weight: normal;
       outline: none;
     }
+
+
   
     /*ABOUT SECTION ================================================================================*/
     

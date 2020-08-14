@@ -194,12 +194,12 @@
   
     #progressMargin{
   
-      margin-left: 240px;
+      margin-left: 320px;
     }
   
     #progressMargin2{
   
-      margin-left: 250px;
+      margin-left: 338px;
     }
    
     #progressAmt{
@@ -297,6 +297,13 @@
         font-weight: normal;
         outline: none;
 
+      }
+
+      #headerGradient{
+
+        height:100px;
+        background-image: linear-gradient(#f3f5f9, white);
+        width: 100%;
       }
 
 /*ABOUT SECTION ================================================================================*/
