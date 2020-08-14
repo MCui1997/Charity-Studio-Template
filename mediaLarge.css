@@ -1,6 +1,6 @@
 
 /* If the screen size is more than*/
-@media screen and (max-width: 1500px) and (min-width: 1050px) {
+@media screen and (min-width: 1500px) {
 
 
     section:before{
@@ -634,5 +634,6 @@
 
 
 }
+
   
   

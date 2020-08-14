@@ -2,12 +2,19 @@ window.onscroll = function() {stickyNav()};
 
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
+var width = $(window).width();
 
 function stickyNav() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
+    if(width>"600px"){
+    $("#navbar").width("100%");
+    }
   } else {
     navbar.classList.remove("sticky");
+    if(width>"600px"){
+    $("#navbar").width("90%");
+    }
   }
 }
 
