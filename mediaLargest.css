@@ -1,6 +1,6 @@
 
 /* If the screen size is more than*/
-@media screen and (min-width: 1500px) and (max-width: 1850px) {
+@media screen and (min-width: 1850px) {
 
 
     section:before{
@@ -220,7 +220,7 @@
 
     #dbtnRow{
 
-      width: 70%;
+      width: 72%;
       margin-left: 12px; 
       justify-content: center; 
       margin-top: 15px; 
@@ -230,7 +230,7 @@
     #dbtn{
   
       height: 60px;
-      width: 150px;
+      width: 167px;
       margin-bottom: 10px;
       margin-right: 15px;
       line-height: 3px;
