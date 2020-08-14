@@ -260,23 +260,39 @@
     }
 
       /*NAVBAR==========================================================================================*/
-    .nav-link{
-
-        font-size: 14px;
+      .nav-link{
+      
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
         margin-right: 20px;
         color: white;
+        
+      }
+
+      #border{
+
+        border-bottom-style: dashed;
+        color: white;
+        border-width: 20px;
+
       }
     
       #navbar{
         
-        z-index: 1;
+        z-index: 100;
         width: 90%;
+        height: 50px;
         margin: 0;
         padding: 0;
         border-radius: 30px;
         background: linear-gradient(90deg, #3D6186 0%, #6487AC 100%);
         display: flex;
         justify-content: center;
+
+
         
       }
       
@@ -291,12 +307,20 @@
       #navbtn{
     
         width: 80px;
+        height: 30px;
+        margin-top: 10px;
+        margin-left: 150px;
         border-radius: 30px;
         background-color: white;
         color: #EC5582;
-        font-weight: normal;
+        font-weight: bold;
         outline: none;
 
+      }
+
+      #abtNav{
+
+        margin-left: 230px;
       }
 
       #headerGradient{
@@ -368,6 +392,7 @@
     background-position: right; 
     background-size: contain;
     margin-top: 50px;
+    text-align: center;
   }
 
   #tripled2{

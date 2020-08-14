@@ -454,6 +454,8 @@ progress::-moz-progress-bar {
   #x3{
 
     background-image: none;
+    text-align: center;
+    margin-top: 50px;
   }
 
 
