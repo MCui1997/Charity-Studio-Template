@@ -1,8 +1,11 @@
 window.onscroll = function() {stickyNav()};
+window.onscroll = function() {scrollFunction()};
+
 
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 var width = $(window).width();
+var backtoTop = document.getElementById("backtoTop");
 
 function stickyNav() {
   if (window.pageYOffset >= sticky) {
@@ -15,6 +18,20 @@ function stickyNav() {
     if(width>"600px"){
     $("#navbar").width("90%");
     }
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    backtoTop.style.display = "block";
+  } else {
+    backtoTop.style.display = "none";
   }
 }
 
