@@ -613,8 +613,9 @@
 
   #matcherLogo{
 
-    width: 44px; 
+    width: 52px; 
     height: 50px;
+    margin-bottom: 10px;
   }
 
   #cardText{

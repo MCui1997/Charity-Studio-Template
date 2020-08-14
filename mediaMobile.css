@@ -319,7 +319,10 @@ progress::-moz-progress-bar {
   /*NAVBAR==========================================================================================*/
   .nav-link{
 
+    padding-top: 0;
+    padding-bottom: 0;
     font-size: 14px;
+    line-height: 30px;
     margin-right: -18px;
     color: white;
   }
@@ -345,7 +348,9 @@ progress::-moz-progress-bar {
 
   #navbtn{
 
-    width: 80px;
+    margin-left: 10px;
+    margin-top: 2px;
+    width: 70px;
     border-radius: 30px;
     background-color: white;
     color: #EC5582;

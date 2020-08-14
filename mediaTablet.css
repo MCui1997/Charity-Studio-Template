@@ -253,7 +253,11 @@
     /*NAVBAR==========================================================================================*/
     .nav-link{
   
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-left: 20px;
       font-size: 14px;
+      line-height: 30px;
       margin-right: -18px;
       color: white;
     }
@@ -261,7 +265,7 @@
     #abtNav{
   
       font-weight: bold; 
-      margin-left: -15px;
+
     }
   
     #navbar{
@@ -281,6 +285,8 @@
     #navbtn{
   
       width: 80px;
+      margin-left: 40px;
+      margin-top: 2px;
       border-radius: 30px;
       background-color: white;
       color: #EC5582;

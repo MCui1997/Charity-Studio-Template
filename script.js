@@ -6,17 +6,23 @@ window.onscroll = function() {
 
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
-var width = $(window).width();
 var backtoTop = document.getElementById("backtoTop");
+windowWidth = $(window).width();
 
 function stickyNav() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
-    $("#navbar").width("100%");
+    if(windowWidth > 1000){
+      $("#navbar").width("100%");
+    }
+    
   
   } else {
     navbar.classList.remove("sticky");
-    $("#navbar").width("90%");
+    if (windowWidth > 1000){
+      $("#navbar").width("90%");
+    }
+    
   }
 }
 
