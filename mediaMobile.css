@@ -360,7 +360,7 @@ progress::-moz-progress-bar {
 
   #navbtn{
 
-    margin-left: 10px;
+    margin-left: 18px;
     margin-top: 4px;
     width: 70px;
     border-radius: 30px;
@@ -442,7 +442,7 @@ progress::-moz-progress-bar {
 	height: 200px;
 	z-index: 1;
 	position: absolute;
-	bottom: 50px;
+	bottom: 45px;
   background: url("assets/bottom-fade.png");
   
 }
@@ -451,11 +451,20 @@ progress::-moz-progress-bar {
 
     background-color: transparent;
     border: none;
-    border-bottom-style: dashed;
     color: #005BB9;
     z-index: 5;
     outline: none;
+    margin-bottom: 24px
   }
+
+  #readBtn:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    padding-top: 1px;
+    width: 67px; /* Change this to whatever width you want. */
+    border-bottom: .7px dashed #005BB9;; /* This creates the border. Replace black with whatever color you want. */
+}
 
 
   #howitWorks{
@@ -554,7 +563,7 @@ progress::-moz-progress-bar {
     font-weight: normal;
   }
 
-  #donorLabel{
+  #donorLabel1{
 
     margin-left: 45px; 
     margin-right: 40px;
@@ -620,7 +629,8 @@ progress::-moz-progress-bar {
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
-    margin-right: 50px;
+    margin-left: 45px; 
+    margin-right: 40px;
   }
 
   #slash{
