@@ -363,7 +363,7 @@ progress::-moz-progress-bar {
     background-color: white;
     color: #EC5582;
     font-size: 14px;
-    font-weight: normal;
+    font-weight: bold;
     outline: none;
     
   }

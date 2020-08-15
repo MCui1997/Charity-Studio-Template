@@ -12,15 +12,17 @@ windowWidth = $(window).width();
 function stickyNav() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
-    if(windowWidth > 1000){
+    if(windowWidth > 600){
       $("#navbar").width("100%");
+      $("#navbar").css("border-radius","0px");
     }
     
   
   } else {
     navbar.classList.remove("sticky");
-    if (windowWidth > 1000){
+    if (windowWidth > 600){
       $("#navbar").width("90%");
+      $("#navbar").css("border-radius","30px");
     }
     
   }
