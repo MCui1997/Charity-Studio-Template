@@ -272,7 +272,6 @@ progress::-moz-progress-bar {
   #dbtnRow{
 
     width: 90%;
-    margin-left: 12px; 
     justify-content: center; 
     margin-top: 15px; 
     text-align: center;
@@ -319,7 +318,7 @@ progress::-moz-progress-bar {
     margin-top: 25px;
     border-style: none;
     outline: none;
-    margin-left: 15px;
+    margin-right: 10px;
   }
 
   #donateBtnCol{
@@ -360,9 +359,10 @@ progress::-moz-progress-bar {
   #navbtn{
 
     margin-left: 10px;
-    margin-top: 2px;
+    margin-top: 4px;
     width: 70px;
     border-radius: 30px;
+    border:none;
     background-color: white;
     color: #EC5582;
     font-size: 14px;
@@ -744,8 +744,8 @@ progress::-moz-progress-bar {
 
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    bottom: 5px;
+    right: 5px;
     z-index: 99;
     font-size: 18px;
     border: none;
