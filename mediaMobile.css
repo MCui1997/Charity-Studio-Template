@@ -152,20 +152,17 @@ section .content{
 
   #clockDay{
 
-    margin-left: 75px;
-    margin-right: 10px;
+    margin-right:40px;
+ 
   }
   #clockHour{
 
-    margin-left: 10px;
-    margin-right: 20px;
+
+    margin-right: 40px;
+ 
 
   }
 
-
-  #clockMinute{
-    margin-right: 70px;
-  }
 
 
   #day, #hour, #minute{
@@ -174,26 +171,24 @@ section .content{
     font-weight: normal; 
     font-size: 14px;
     margin-bottom: 20px;
+    margin-top: -5px;
 
     
   }
 
   #day{
 
-    margin-left: 65px;
-    margin-right: 20px;
+    margin-right: 44px;
+    margin-left: 12px;
   }
   #hour{
 
-    margin-right: 20px;
+    margin-right: 30px;
 
   }
 
 
-  #minute{
 
-    margin-right: 38px;
-  }
 
   progress {
     border: 0;
@@ -704,7 +699,7 @@ progress::-moz-progress-bar {
     width: 160px;
     margin-right: 5px;
     margin-left: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     justify-content: center;
   }
 

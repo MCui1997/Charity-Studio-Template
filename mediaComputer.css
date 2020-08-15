@@ -110,7 +110,7 @@
     #clockMinute{
   
       margin-left: 0px;
-      margin-right: 108px;
+      margin-right: 103px;
     }
   
   
@@ -120,6 +120,7 @@
       font-weight: normal; 
       font-size: 20px;
       margin-bottom: 20px;
+      margin-top: -20px;
     }
   
     #day{
@@ -130,7 +131,7 @@
     #hour{
   
       margin-left: 35px;
-      margin-right: 30px;
+      margin-right: 20px;
   
     }
   
