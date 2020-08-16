@@ -190,35 +190,52 @@ section .content{
 
 
 
-  progress {
+#progressBar {
     border: 0;
     background-color: #dadae1;
-    height: 16px;
     border-radius: 10px;
+    width: 330px;
+    height: 16px;
+    
+    
+    
 }
-progress::-webkit-progress-bar {
+
+
+#progressBar::-webkit-progress-bar {
     border: 0;
     background-color: #dadae1;
-    height: 16px;
     border-radius: 10px;
+    
+    
 }
-progress::-webkit-progress-value {
+#progressBar::-webkit-progress-value {
     border: 0;
     background: linear-gradient(94.88deg, #E95252 16.28%, #EC5582 81.93%);
-    height: 16px;
     border-radius: 10px;
+    
+    
 }
-progress::-moz-progress-bar {
+#progressBar::-moz-progress-bar {
     border: 0;
     background: linear-gradient(94.88deg, #E95252 16.28%, #EC5582 81.93%);
-    height: 16px;
     border-radius: 10px;
+    
+    
 }
+
+
+
+
+
+
+
   #progress{
 
     font-size: 22px; 
     font-weight: 200;
     margin-top: 40px;
+
   }
 
   #progressAmt{
@@ -228,12 +245,8 @@ progress::-moz-progress-bar {
 
   }
 
-  #progressBar{
 
-    width: 330px;
-    height: 16px;
-    
-  }
+
 
   #progressLabel{
 
@@ -541,10 +554,41 @@ progress::-moz-progress-bar {
     font-weight: 500;
   }
 
-  #teamProgressBar{
+  
+#teamProgressbar::-webkit-progress-bar {
+  border: 0;
+  background-color: #dadae1;
+  border-radius: 10px;
+  
+  
+}
+#teamProgressbar::-webkit-progress-value {
+  border: 0;
+  background: linear-gradient(94.88deg, #E95252 16.28%, #EC5582 81.93%);
+  border-radius: 10px;
+  
+  
+}
+#teamProgressbar::-moz-progress-bar {
+  border: 0;
+  background: linear-gradient(94.88deg, #E95252 16.28%, #EC5582 81.93%);
+  border-radius: 10px;
+  
+  
+}
 
-    width: 178px;
-  }
+#teamProgressbar{
+
+  border: 0;
+  background-color: #dadae1;
+  border-radius: 10px;
+  width: 188px;
+  height: 6px;
+  margin-bottom: 10px;
+  
+}
+
+
 
   #progressLabelTeam{
 
@@ -560,18 +604,20 @@ progress::-moz-progress-bar {
 
   #donorLabel1{
 
-    margin-left: 45px; 
-    margin-right: 40px;
+    margin-left: 65px;
+    margin-right: 58px;
+  
   }
   #donorLabel2{
 
-    margin-left: 10px; 
-    margin-right: 30px;
+    margin-left: 33px; 
+    margin-right: 47px;
+
   }
 
   #teamBtn{
 
-    width: 178px;
+    width: 158px;
     height: 32px;
     background: linear-gradient(94.88deg, #E95252 16.28%, #EC5582 81.93%);
     border-radius: 30px;
@@ -580,8 +626,13 @@ progress::-moz-progress-bar {
     border-color: white;
     outline: none;
 
-    margin-left: 135px;
+    margin-left: 150px;
     margin-bottom: 10px;
+  }
+
+  #teamCard{
+
+    max-width: 350px;
   }
 
   /*Donors Section================================================================================*/
