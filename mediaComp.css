@@ -173,6 +173,11 @@
     font-weight: 200;
   }
 
+  #dbtnLabelRow {
+    display: flex;
+    justify-content: center;
+  }
+
   #dbtnRow {
     width: 90%;
     margin-left: 12px;

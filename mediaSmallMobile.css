@@ -155,6 +155,11 @@
     text-align: center;
   }
 
+  #dbtnLabelRow {
+    display: flex;
+    justify-content: center;
+  }
+
   #dbtn {
     height: 60px;
     width: 130px;

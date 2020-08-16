@@ -194,6 +194,11 @@
     outline: none;
   }
 
+  #dbtnLabelRow {
+    display: flex;
+    justify-content: center;
+  }
+
   #dbtnLabel {
     font-size: 16px;
     font-weight: 500;
