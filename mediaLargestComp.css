@@ -393,6 +393,7 @@
   #teamName {
     font-size: 20px;
     font-weight: normal;
+    margin-top: 10px;
   }
 
   #teamProgressbar::-webkit-progress-bar {
@@ -447,7 +448,7 @@
     border-style: solid;
     border-color: white;
     outline: none;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     margin-left: 40px;
   }
 
