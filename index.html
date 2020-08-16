@@ -1,521 +1,684 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1"
+    />
     <title>Charity Studios Template</title>
     <!-- Latest compiled and minified CSS ------------------------------------------------------------------>
-    
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
- 
-<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<link rel = "stylesheet" href = "mediaSmallMobile.css">
-<link rel = "stylesheet" href = "mediaMobile.css">
-<link rel = "stylesheet" href = "mediaTablet.css">
-<link rel = "stylesheet" href = "mediaComputer.css">
-<link rel = "stylesheet" href = "mediaLarge.css">
-<link rel = "stylesheet" href = "mediaLargest.css">
-</head>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="mediaSmallMobile.css" />
+    <link rel="stylesheet" href="mediaMobile.css" />
+    <link rel="stylesheet" href="mediaTablet.css" />
+    <link rel="stylesheet" href="mediaComp.css" />
+    <link rel="stylesheet" href="mediaLargeComp.css" />
+    <link rel="stylesheet" href="mediaLargestComp.css" />
+  </head>
 
-<body>
+  <body>
+    <button onclick="topFunction()" id="backtoTop">
+      <img src="assets/backtotop.png" />
+    </button>
 
-  <button onclick = "topFunction()" id = "backtoTop"><img src = "assets/backtotop.png"></button>
+    <!--Header Section-------------------------------------------------------------------------------------->
+    <section>
+      <div class="container-fluid">
+        <div class="content">
+          <img
+            id="logostar"
+            src="assets/logo star 1.png"
+            style="margin-top: 40px;"
+          />
+          <h6 id="schoolName">Farber Hebrew Day School</h6>
+          <h8 id="rallyName">CHARITY RALLY</h8>
+          <h1 id="slogan">Live, Learn, Lead!</h1>
+          <button id="btn" type="input">DONATE</button>
+          <h6 id="campaignName">CAMPAIGN ENDS IN:</h6>
 
-
-
-      <!--Header Section-------------------------------------------------------------------------------------->
-      <section>
-        <div class = "container-fluid">
-          <div class = "content">
-            
-            <img id = "logostar" src = "assets/logo star 1.png" style = "margin-top: 40px;">
-            <h6 id = "schoolName">Farber Hebrew Day School</h6>
-            <h8 id = "rallyName">CHARITY RALLY</h8>
-            <h1 id = "slogan">Live, Learn, Lead!</h1>
-            <button id = "btn" type = "input">DONATE</button>
-            <h6 id = "campaignName">CAMPAIGN ENDS IN: </h6>
-
-            <div class = "row" id = "centeredRow">
-              <div class = "col-xs-4">
-                <h3 id = "clockDay">02</h3>
-              </div>
-
-              <div class = "col-xs-4">
-                <h3 id = "clockHour">02</h3>
-              </div>
-
-              <div class = "col-xs-4">
-                <h3 id = "clockMinute">25</h3>
-              </div>
-
+          <div class="row" id="centeredRow">
+            <div class="col-xs-4">
+              <h3 id="clockDay">02</h3>
             </div>
 
-            <div class = "row" id = "centeredRow">
-              <div class = "col-xs-4">
-                <h6 id = "day">days</h6>
-              </div>
-
-              <div class = "col-xs-4">
-                <h6 id = "hour">hours</h6>
-              </div>
-
-              <div class = "col-xs-4">
-                <h6 id = "minute">minutes</h6>
-              </div>
-
+            <div class="col-xs-4">
+              <h3 id="clockHour">02</h3>
             </div>
-    
 
+            <div class="col-xs-4">
+              <h3 id="clockMinute">25</h3>
+            </div>
+          </div>
+
+          <div class="row" id="centeredRow">
+            <div class="col-xs-4">
+              <h6 id="day">days</h6>
+            </div>
+
+            <div class="col-xs-4">
+              <h6 id="hour">hours</h6>
+            </div>
+
+            <div class="col-xs-4">
+              <h6 id="minute">minutes</h6>
+            </div>
           </div>
         </div>
-       
-      </section>
+      </div>
+    </section>
 
-
-      <!--Bottom of Header Section------------------------------------------------------------------------>
-      <div class = "container-fluid" id = "donateBtnCol"> 
-      <div class = "row" id = "centeredRow"  style = "margin-top: 40px;"> 
-  
-        <div class = "col-lg-6">
-          <div class = "row" id = "centeredRow">
-          <h4 id = "progress">Campaign Progress:</h4>
-        </div>
-        <div class = "row" id = "centeredRow" style = "margin-top: 15px;">
-          <h2 id = "progressAmt">$87 630</h2>
-        </div>
-        <div class = "row" id = "centeredRow" style = "margin-top: 15px;">
-          <progress id="progressBar" value="32" max="100"> 32% </progress>
-        </div>
-        <div class = "row" id = "centeredRow" style = "margin-top: 15px;">
-          <h4 id = "progressLabel">58%<span id = "progressMargin">$150 000</span></h4>
-        </div>
-        <div class = "row" id = "centeredRow">
-          <h4 id = "progressLabel2">COMPLETE<span id = "progressMargin2">CAMPAIGN GOAL</span></h4>
-        </div>
-
-        </div>
-
-          
-        <div class = "col-lg-6" id = "dbtnCol">
-          <div class = "row" id = "centeredRow">
-          <h4 id = "tripled">All donations tripled!</h4>
-        
-        <div id = "dbtnRow" class = "row d-flex justify-content-center">
-
- 
-          <button id = "dbtn" type = "input"><h5 id = "dbtnLabel">$2500</h5><h8 id = "dbtnLabel2">= $7500</h8></button>
-          <button id = "dbtn" type = "input"><h5 id = "dbtnLabel">$1800</h5><h8 id = "dbtnLabel2">= $4800</h8></button>
-          <button id = "dbtn" type = "input"><h5 id = "dbtnLabel">$540</h5><h8 id = "dbtnLabel2">= $1620</h8></button>
-          <button id = "dbtn" type = "input"><h5 id = "dbtnLabel">$180</h5><h8 id = "dbtnLabel2">= $540</h8></button>
-          <button id = "dbtn" type = "input"><h5 id = "dbtnLabel">$100</h5><h8 id = "dbtnLabel2">= $300</h8></button>
-          <button id = "dbtn" type = "input"><h5 id = "dbtnLabel">OTHER</h5></button>
-   
+    <!--Bottom of Header Section------------------------------------------------------------------------>
+    <div class="container-fluid" id="donateBtnCol">
+      <div class="row" id="centeredRow" style="margin-top: 40px;">
+        <div class="col-lg-6">
+          <div class="row" id="centeredRow">
+            <h4 id="progress">Campaign Progress:</h4>
+          </div>
+          <div class="row" id="centeredRow" style="margin-top: 15px;">
+            <h2 id="progressAmt">$87 630</h2>
+          </div>
+          <div class="row" id="centeredRow" style="margin-top: 15px;">
+            <progress id="progressBar" value="32" max="100"> 32% </progress>
+          </div>
+          <div class="row" id="centeredRow" style="margin-top: 15px;">
+            <h4 id="progressLabel">
+              58%<span id="progressMargin">$150 000</span>
+            </h4>
+          </div>
+          <div class="row" id="centeredRow">
+            <h4 id="progressLabel2">
+              COMPLETE<span id="progressMargin2">CAMPAIGN GOAL</span>
+            </h4>
+          </div>
         </div>
 
+        <div class="col-lg-6" id="dbtnCol">
+          <div class="row" id="centeredRow">
+            <h4 id="tripled">All donations tripled!</h4>
 
-        <button id = "dbtnBig" type = "input">DONATE NOW</button>
+            <div id="dbtnRow" class="row d-flex justify-content-center">
+              <button id="dbtn" type="input">
+                <h5 id="dbtnLabel">$2500</h5>
+                <h8 id="dbtnLabel2">= $7500</h8>
+              </button>
+              <button id="dbtn" type="input">
+                <h5 id="dbtnLabel">$1800</h5>
+                <h8 id="dbtnLabel2">= $4800</h8>
+              </button>
+              <button id="dbtn" type="input">
+                <h5 id="dbtnLabel">$540</h5>
+                <h8 id="dbtnLabel2">= $1620</h8>
+              </button>
+              <button id="dbtn" type="input">
+                <h5 id="dbtnLabel">$180</h5>
+                <h8 id="dbtnLabel2">= $540</h8>
+              </button>
+              <button id="dbtn" type="input">
+                <h5 id="dbtnLabel">$100</h5>
+                <h8 id="dbtnLabel2">= $300</h8>
+              </button>
+              <button id="dbtn" type="input">
+                <h5 id="dbtnLabel">OTHER</h5>
+              </button>
+            </div>
 
+            <button id="dbtnBig" type="input">DONATE NOW</button>
+          </div>
         </div>
       </div>
-    
-      
 
-    </div>
+      <!--Navbar----------------------------------------------------------------------------------------------->
+      <div class="row" style="margin-top: 80px;" id="centeredRow">
+        <nav id="navbar">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" href="#about" id="abtNav"
+                >ABOUT <span id="border"></span
+              ></a>
+            </li>
 
-    
-    <!--Navbar----------------------------------------------------------------------------------------------->
-      <div class = "row" style = "margin-top: 80px;" id = "centeredRow"> 
-      <nav id="navbar">
-  
-        <ul class="nav nav-pills"> 
-    
-          <li class="nav-item">
-            <a class="nav-link" href="#about" id = "abtNav">ABOUT <span id = "border"></span></a>
-            
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" href="#teams">TEAMS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#donors">DONORS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#matchers">MATCHERS</a>
-          </li>
-        
-          <li class="nav-item">
-            <button id = "navbtn" type = "input">DONATE</button>
-          </li>
-      
+            <li class="nav-item">
+              <a class="nav-link" href="#teams">TEAMS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#donors">DONORS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#matchers">MATCHERS</a>
+            </li>
+
+            <li class="nav-item">
+              <button id="navbtn" type="input">DONATE</button>
+            </li>
           </ul>
-  
-      </nav>
+        </nav>
       </div>
-     
-      <div class = "row">
-        <div id = "headerGradient"></div>
-      </div>
-    
 
-    
+      <div class="row">
+        <div id="headerGradient"></div>
       </div>
-  
+    </div>
 
     <!--About Section-------------------------------------------------------------------------------------->
-    <div class = "row">
-    <div class = "container-fluid">
+    <div class="row">
+      <div class="container-fluid">
+        <img id="confetti" src="assets/Confetti.png" />
+        <img id="confetti2" src="assets/Right.png" />
+        <a class="anchor" id="about"></a>
+        <div
+          class="container-fluid"
+          style="padding-top: 50px; background-color: white;"
+        >
+          <div class="row" id="centeredRow">
+            <h3 id="abtTitle">About the Campaign</h3>
+          </div>
 
-    <img id = "confetti" src = "assets/Confetti.png">
-    <img id = "confetti2" src = "assets/Right.png">
-    <a class= "anchor" id="about"></a>
-    <div class = "container-fluid" style = " padding-top: 50px; background-color: white;">
-   
-      <div class = "row" id = "centeredRow">
-      <h3 id = "abtTitle">About the Campaign</h3>
-      </div>
+          <div class="row" id="centeredRow" style="padding-bottom: 60px;">
+            <div class="col-sm-4" style="margin-bottom: 50px;">
+              <p id="abtText">
+                <span id="abtTextBold">Farber Hebrew Day School </span> –
+                Yeshivat Akiva is an nursery through 12th grade Modern Orthodox
+                Zionist Jewish day school committed to providing both a
+                comprehensive Jewish as well as secular education in a vibrant
+                atmosphere of Torah values and academic challenge.
+              </p>
+              <p id="abtText">
+                FHDS seeks to imbue its students with a love for Jewish
+                heritage, <span id="dots">...</span>the State of Israel and its
+                people, together with an intense commitment to the Torah way of
+                life. The FHDS graduate will be invested with the desire to
+                contribute significantly to our society as an educated
+                productive citizen and an erudite Torah scholar, and display a
+                strong and real bond with the religious Zionist movement.
+              </p>
+              <div id="bottom_fade"></div>
 
-      <div class = "row" id = "centeredRow" style = "padding-bottom: 60px;">
-        <div class = "col-sm-4" style = "margin-bottom: 50px;">
-          
-          <p id = "abtText"><span id = "abtTextBold">Farber Hebrew Day School </span> – Yeshivat Akiva is an nursery through 12th grade Modern Orthodox Zionist Jewish day school committed to providing both a comprehensive Jewish as well as secular education in a vibrant atmosphere of Torah values and academic challenge.</p>
-          <p id = "abtText">FHDS seeks to imbue its students with a love for Jewish heritage, <span id = "dots">...</span>the State of Israel and its people, together with an intense commitment to the Torah way of life. The FHDS graduate will be invested with the desire to contribute significantly to our society as an educated productive citizen and an erudite Torah scholar, and display a strong and real bond with the religious Zionist movement.</p>
-          <div id="bottom_fade"></div>
+              <br />
+              <button onclick="readMore()" id="readBtn">Read more</button>
+            </div>
 
-          <br>
-          <button onclick = "readMore()" id="readBtn">Read more</button>
-          
+            <div class="col-sm-4" id="moreCol">
+              <div id="more">
+                <p id="abtText">
+                  FHDS strives to provide opportunities for each student to
+                  reach his or her maximum religious and intellectual potential
+                  as well as develop the highest standards of personal
+                  character.
+                </p>
+                <p id="abtText">
+                  FHDS ensures its students strive to LIVE a life filled with
+                  purpose and a steadfast commitment to the Torah way of life,
+                  LEARN in the classroom and beyond as committed life-long
+                  learners, and LEAD in our community and in the world.
+                </p>
+                <p id="abtTextBold">
+                  We credit our strong historical presence within Detroit’s
+                  educational landscape to our parents and students who remain
+                  committed to the FHDS mission as a Modern Orthodox, Zionist,
+                  college-preparatory Jewish Day School.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        
-        <div class = "col-sm-4" id = "moreCol">
-          <div id = "more">
-          <p id = "abtText">FHDS strives to provide opportunities for each student to reach his or her maximum religious and intellectual potential as well as develop the highest standards of personal character.</p>
-          <p id = "abtText">FHDS ensures its students strive to LIVE a life filled with purpose and a steadfast commitment to the Torah way of life, LEARN in the classroom and beyond as committed life-long learners, and LEAD in our community and in the world.</p>
-          <p id = "abtTextBold">We credit our strong historical presence within Detroit’s educational landscape to our parents and students who remain committed to the FHDS mission as a Modern Orthodox, Zionist, college-preparatory Jewish Day School.</p>
+        <!--Colorful Banner in about section-------------------------------------------------------------------->
+
+        <div
+          class="container-fluid"
+          style="
+            padding-top: 40px;
+            outline: 2px solid red;
+            outline-offset: 4px;
+            background: linear-gradient(
+              94.88deg,
+              #e95252 16.28%,
+              #ec5582 81.93%
+            );
+            color: white;
+            text-align: center;
+          "
+        >
+          <div class="row" id="centeredRow">
+            <div class="col-sm-6">
+              <div class="row" id="centeredRow">
+                <h4 id="bannerTitle">
+                  We are calling on you to support the Farber
+                  <span id="boldedBanner">Live, Learn, Lead </span>Matching
+                  Campaign!
+                </h4>
+              </div>
+
+              <div
+                class="row"
+                style="
+                  text-align: center;
+                  justify-content: center;
+                  margin-bottom: 60px;
+                "
+              >
+                <p id="bannerText">
+                  Your support will allow us to maximize every dollar raised in
+                  furtherance of our goal.
+                </p>
+                <p id="bannerText">
+                  A Campaign dollars are critical for FHDS to provide its
+                  students the tools they need to achieve their dreams.
+                </p>
+                <p id="bannerText">
+                  Your support will ensure our students are able to LIVE, LEARN,
+                  and LEAD.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!--How it Works Section-------------------------------------------------------------------------------->
+        <div class="container-fluid" style="background-color: white;">
+          <img id="confetti3" src="assets/Confetti.png" />
+          <img id="confetti4" src="assets/Right.png" />
+          <div class="row" id="centeredRow" style="padding-bottom: 80px;">
+            <div class="col-lg-4 my-auto">
+              <h6
+                id="howitWorks"
+                style="margin-top: 60px; margin-bottom: 30px;"
+              >
+                How It Works
+              </h6>
+              <p>
+                We are thrilled to announce that every dollar raised during this
+                campaign will be matched by generous matching donors. For just
+                36 hours you can partner with us in the Live, Learn, Lead:
+                Support Our Dreams Matching Campaign and help us raise $175,000
+                to support an enriching environment full of opportunities for
+                our students.
+              </p>
+              <p>
+                Every dollar you donate is TRIPLED! For $1 you give, Farber
+                Hebrew Day School - Yeshivat Akiva will get $3. Every Donation
+                is Tripled!
+              </p>
+            </div>
+
+            <div class="col-lg-4 my-auto" id="x3">
+              <div id="howitWorksWrapper">
+                <h5 id="tripled2">All donations tripled!</h5>
+                <h1 id="one3">$1 = 3!</h1>
+                <button id="btn" type="input">DONATE NOW</button>
+              </div>
+            </div>
+          </div>
         </div>
-        
-
-  
-
-
-      </div>
-  </div>
-
-    <!--Colorful Banner in about section-------------------------------------------------------------------->
-
-   
-    <div class = "container-fluid" style = "padding-top: 40px; outline: 2px solid red; outline-offset: 4px;background: linear-gradient(94.88deg, #E95252 16.28%, #EC5582 81.93%); color: white; text-align: center;">
-      <div class = "row" id = "centeredRow">
-      <div class = "col-sm-6">
-
-        <div class = "row" id = "centeredRow" >
-          <h4 id = "bannerTitle">We are calling on you to support the Farber <span id = "boldedBanner">Live, Learn, Lead </span>Matching Campaign!</h4>
-        </div>
- 
-        <div class = "row" style = "text-align: center; justify-content: center; margin-bottom: 60px;"> 
-          <p id = "bannerText">Your support will allow us to maximize every dollar raised in furtherance of our goal.</p>
-          <p id = "bannerText">A Campaign dollars are critical for FHDS to provide its students the tools they need to achieve their dreams.</p>
-          <p id = "bannerText">Your support will ensure our students are able to LIVE, LEARN, and LEAD.</p>
-        </div>
-      </div>
       </div>
     </div>
-
-
-
-    <!--How it Works Section-------------------------------------------------------------------------------->
-    <div class = "container-fluid" style = "background-color: white;">
-      <img id = "confetti3" src = "assets/Confetti.png">
-      <img id = "confetti4" src = "assets/Right.png">
-      <div class = "row" id = "centeredRow" style = "padding-bottom: 80px;">
-        <div class = "col-lg-4 my-auto">
-
-        <h6 id = "howitWorks" style = "margin-top: 60px; margin-bottom: 30px;">How It Works</h6>
-        <p>We are thrilled to announce that every dollar raised during this campaign will be matched by generous matching donors. For just 36 hours you can partner with us in the Live, Learn, Lead: Support Our Dreams Matching Campaign and help us raise $175,000 to support an enriching environment full of opportunities for our students.</p>
-        <p>Every dollar you donate is TRIPLED! For $1 you give, Farber Hebrew Day School - Yeshivat Akiva will get $3. Every Donation is Tripled!</p>
-      </div>
-
-      <div class = "col-lg-4 my-auto" id = "x3">
-        <div id ="howitWorksWrapper">
-        <h5 id = "tripled2">All donations tripled!</h5>
-        <h1 id = "one3">$1 = 3!</h1>
-        <button id = "btn" type = "input">DONATE NOW</button>
-        </div>
-      </div>
-
-      </div>
-      
-
-    </div>
-
-    </div>
-    </div>
-
 
     <!--Our Teams Section------------------------------------------------------------------------------------>
     <div class="container-fluid">
-      <a class= "anchor" id="teams"></a>
-      <div class = "row" id = "centeredRow">
-      <h3 id = "teamTitle">Our Teams</h3>
+      <a class="anchor" id="teams"></a>
+      <div class="row" id="centeredRow">
+        <h3 id="teamTitle">Our Teams</h3>
       </div>
 
-      <div class="row" id = "centeredRow" style = "margin-bottom: 80px;">
-        
-        <div class = "col-lg-6 d-flex justify-content-center" style = "max-width: 700px;">
-        <div class="card mb-3" id = "teamCard">
-          <div class="row no-gutters">
-            
-            <div class="col-xs-4">
-              <div class="img-square-wrapper">
-                <img id = "teamImg" src= "assets/team.png" alt="Card image cap">
-            </div>
-            </div>
-            
-            <div class="col-xs-5">
-              <div class = "card-body">
-                <div class = "row">
-                <h6 id = "teamName">Abenheim Family</h6>
+      <div class="row" id="centeredRow" style="margin-bottom: 80px;">
+        <div
+          class="col-lg-6 d-flex justify-content-center"
+          style="max-width: 700px;"
+        >
+          <div class="card mb-3" id="teamCard">
+            <div class="row no-gutters">
+              <div class="col-xs-4">
+                <div class="img-square-wrapper">
+                  <img
+                    id="teamImg"
+                    src="assets/team.png"
+                    alt="Card image cap"
+                  />
                 </div>
-                <div class = "row" id = "centeredRow">
-                  <progress id= "teamProgressbar" value="32" max="100"> 32% </progress>
-                </div>
-                <div class = "row" id = "centeredRow">
-                  <h7 id = "progressLabelTeam">10% <span id = "donorLabel1">1</span> <span>$360</span></h7>
-                </div>
-                <div class = "row"id = "centeredRow">
-                  <h8 id = "progressLabelTeam2">COMPLETE <span id = "donorLabel2">DONORS </span><span>GOAL</span></h8>
-                </div>
-        
-            </div>
-            </div>
+              </div>
 
-            <div class = "col-xs-2 my-auto">
-              <button  id = "teamBtn" type = "input">DONATE</button>
-            </div>
+              <div class="col-xs-5">
+                <div class="card-body">
+                  <div class="row">
+                    <h6 id="teamName">Abenheim Family</h6>
+                  </div>
+                  <div class="row" id="centeredRow">
+                    <progress id="teamProgressbar" value="32" max="100">
+                      32%
+                    </progress>
+                  </div>
+                  <div class="row" id="centeredRow">
+                    <h7 id="progressLabelTeam"
+                      >10% <span id="donorLabel1">1</span> <span>$360</span></h7
+                    >
+                  </div>
+                  <div class="row" id="centeredRow">
+                    <h8 id="progressLabelTeam2"
+                      >COMPLETE <span id="donorLabel2">DONORS </span
+                      ><span>GOAL</span></h8
+                    >
+                  </div>
+                </div>
+              </div>
 
-            
+              <div class="col-xs-2 my-auto">
+                <button id="teamBtn" type="input">DONATE</button>
+              </div>
+            </div>
           </div>
         </div>
-    
-      </div>
 
-      <div class = "col-lg-6 d-flex justify-content-center" style = "max-width: 700px;">
-        <div class="card mb-3" id = "teamCard">
-          <div class="row no-gutters">
-            
-            <div class="col-xs-4">
-              <div class="img-square-wrapper">
-                <img id = "teamImg" src= "assets/team.png" alt="Card image cap">
-            </div>
-            </div>
-            
-            <div class="col-xs-5">
-              <div class = "card-body">
-                <div class = "row"> 
-                <h6 id = "teamName">Abenheim Family</h6>
+        <div
+          class="col-lg-6 d-flex justify-content-center"
+          style="max-width: 700px;"
+        >
+          <div class="card mb-3" id="teamCard">
+            <div class="row no-gutters">
+              <div class="col-xs-4">
+                <div class="img-square-wrapper">
+                  <img
+                    id="teamImg"
+                    src="assets/team.png"
+                    alt="Card image cap"
+                  />
                 </div>
-                <div class = "row" id = "centeredRow">
-                  <progress id= "teamProgressbar" value="32" max="100"> 32% </progress>
-                </div>
-                <div class = "row" id = "centeredRow">
-                  <h7 id = "progressLabelTeam">10% <span id = "donorLabel1">1</span> <span>$360</span></h7>
-                </div>
-                <div class = "row"id = "centeredRow">
-                  <h8 id = "progressLabelTeam2">COMPLETE <span id = "donorLabel2">DONORS </span><span>GOAL</span></h8>
-                </div>
-        
-            </div>
-            </div>
+              </div>
 
-            <div class = "col-xs-2 my-auto">
-              <button  id = "teamBtn" type = "input">DONATE</button>
-            </div>
+              <div class="col-xs-5">
+                <div class="card-body">
+                  <div class="row">
+                    <h6 id="teamName">Abenheim Family</h6>
+                  </div>
+                  <div class="row" id="centeredRow">
+                    <progress id="teamProgressbar" value="32" max="100">
+                      32%
+                    </progress>
+                  </div>
+                  <div class="row" id="centeredRow">
+                    <h7 id="progressLabelTeam"
+                      >10% <span id="donorLabel1">1</span> <span>$360</span></h7
+                    >
+                  </div>
+                  <div class="row" id="centeredRow">
+                    <h8 id="progressLabelTeam2"
+                      >COMPLETE <span id="donorLabel2">DONORS </span
+                      ><span>GOAL</span></h8
+                    >
+                  </div>
+                </div>
+              </div>
 
-            
+              <div class="col-xs-2 my-auto">
+                <button id="teamBtn" type="input">DONATE</button>
+              </div>
+            </div>
           </div>
         </div>
-    
       </div>
-
-      </div>
-  </div>
+    </div>
 
     <!--Our Donors Section---------------------------------------------------------------------------------->
 
-    <div class = "container-fluid" style = "background-color: white;">
-      <a class= "anchor" id="donors"></a>
-      <div class = "row" id = "centeredRow">
-        <h3 id = "donorTitle">Thank You Donors!</h3>
+    <div class="container-fluid" style="background-color: white;">
+      <a class="anchor" id="donors"></a>
+      <div class="row" id="centeredRow">
+        <h3 id="donorTitle">Thank You Donors!</h3>
       </div>
-      <div class = "row" id = "centeredRow">
-        <h6 id = "donorText">The impact of each donation when it's multiplied by 3, as posted below, is tremendous and very much appreciated.</h6>
-      </div>
-
-      <div class = "row" id = "centeredRow">
-        <div class = "col-xs-2">
-          <h4 id = "donorCount">31</h4>
-          <h7 id = "donorLabel">DONORS</h7>
-        </div>
-
-        <div class = "col-xs-2">
-          <h1 id = "slash">/</h1>
-        </div>
-
-        <div class = "col-xs-2">
-          <h4 id = "donorCountGoal">100</h4>
-          <h7 id = "donorLabel">GOAL</h7>
-        </div>
-
+      <div class="row" id="centeredRow">
+        <h6 id="donorText">
+          The impact of each donation when it's multiplied by 3, as posted
+          below, is tremendous and very much appreciated.
+        </h6>
       </div>
 
-      <div class = "row" id = "centeredRow" style = "padding-bottom: 80px;">
-        <div class = "col-lg-5" style = "max-width: 440px;">
-        <div class = "card" id = "donorCard">
-        <span><img src = "assets/orange.png" id = "donorImg"><h7 id = "donorName">Ron & Liat Meisler</h7><img src ="assets/icon comment.png" id = "comment"><h7 id = "donorAmt">$3300</h7></span>
-
+      <div class="row" id="centeredRow">
+        <div class="col-xs-2">
+          <h4 id="donorCount">31</h4>
+          <h7 id="donorLabel">DONORS</h7>
         </div>
 
-        
-
-
-        <div class = "card" id = "donorCard">
-        <span><img src = "assets/green.png" id = "donorImg"><h7 id = "donorName">Ron & Liat Meisler</h7><img src ="assets/icon comment.png" id = "comment"><h7 id = "donorAmt">$3300</h7></span>
+        <div class="col-xs-2">
+          <h1 id="slash">/</h1>
         </div>
 
-        
-        <div class = "card" id = "donorCard">
-        <span><img src = "assets/cyan.png" id = "donorImg"><h7 id = "donorName">Ron & Liat Meisler</h7><img src ="assets/icon comment.png" id = "comment"><h7 id = "donorAmt">$3300</h7></span>
+        <div class="col-xs-2">
+          <h4 id="donorCountGoal">100</h4>
+          <h7 id="donorLabel">GOAL</h7>
         </div>
       </div>
 
-      <div class = "col-lg-5" style = "max-width: 440px;">
-        <div class = "card" id = "donorCard">
-        <span><img src = "assets/blue.png" id = "donorImg"><h7 id = "donorName">Ron & Liat Meisler</h7><img src ="assets/icon comment.png" id = "comment"><h7 id = "donorAmt">$3300</h7></span>
-        </div>
-  
+      <div class="row" id="centeredRow" style="padding-bottom: 80px;">
+        <div class="col-lg-5" style="max-width: 440px;">
+          <div class="card" id="donorCard">
+            <span
+              ><img src="assets/orange.png" id="donorImg" /><h7 id="donorName"
+                >Ron & Liat Meisler</h7
+              ><img src="assets/icon comment.png" id="comment" /><h7
+                id="donorAmt"
+                >$3300</h7
+              ></span
+            >
+          </div>
 
-     
-        <div class = "card" id = "donorCard">
-        <span><img src = "assets/purple.png" id = "donorImg"><h7 id = "donorName">Ron & Liat Meisler</h7><img src ="assets/icon comment.png" id = "comment"><h7 id = "donorAmt">$3300</h7></span>
-        </div>
-  
+          <div class="card" id="donorCard">
+            <span
+              ><img src="assets/green.png" id="donorImg" /><h7 id="donorName"
+                >Ron & Liat Meisler</h7
+              ><img src="assets/icon comment.png" id="comment" /><h7
+                id="donorAmt"
+                >$3300</h7
+              ></span
+            >
+          </div>
 
-      
-        <div class = "card" id = "donorCard">
-        <span><img src = "assets/purple.png" id = "donorImg"><h7 id = "donorName">Ron & Liat Meisler</h7><img src ="assets/icon comment.png" id = "comment"><h7 id = "donorAmt">$3300</h7></span>
-        </div>
- 
-      
+          <div class="card" id="donorCard">
+            <span
+              ><img src="assets/cyan.png" id="donorImg" /><h7 id="donorName"
+                >Ron & Liat Meisler</h7
+              ><img src="assets/icon comment.png" id="comment" /><h7
+                id="donorAmt"
+                >$3300</h7
+              ></span
+            >
+          </div>
         </div>
 
+        <div class="col-lg-5" style="max-width: 440px;">
+          <div class="card" id="donorCard">
+            <span
+              ><img src="assets/blue.png" id="donorImg" /><h7 id="donorName"
+                >Ron & Liat Meisler</h7
+              ><img src="assets/icon comment.png" id="comment" /><h7
+                id="donorAmt"
+                >$3300</h7
+              ></span
+            >
+          </div>
 
+          <div class="card" id="donorCard">
+            <span
+              ><img src="assets/purple.png" id="donorImg" /><h7 id="donorName"
+                >Ron & Liat Meisler</h7
+              ><img src="assets/icon comment.png" id="comment" /><h7
+                id="donorAmt"
+                >$3300</h7
+              ></span
+            >
+          </div>
+
+          <div class="card" id="donorCard">
+            <span
+              ><img src="assets/purple.png" id="donorImg" /><h7 id="donorName"
+                >Ron & Liat Meisler</h7
+              ><img src="assets/icon comment.png" id="comment" /><h7
+                id="donorAmt"
+                >$3300</h7
+              ></span
+            >
+          </div>
+        </div>
       </div>
-  
-  
     </div>
 
-    
     <!--Our Matchers Section---------------------------------------------------------------------------------->
 
-    <div class = "container-fluid">
-      <a class= "anchor" id="matchers"></a>
-      <div class = "row" id = "centeredRow">
-        <h3 id = "matcherTitle">Thank You Matchers!</h3>
+    <div class="container-fluid">
+      <a class="anchor" id="matchers"></a>
+      <div class="row" id="centeredRow">
+        <h3 id="matcherTitle">Thank You Matchers!</h3>
       </div>
 
-      <div class = "row" id = "centeredRow">
-        <div class = "col-sm-4">
-        <h6 id = "matcherText">In the 2019-2020 academic year, over 60% of Farber students receive tuition assistance. $1.7 million will be spent in financial aid, accounting for over 35% of tuition revenue. No child is denied the advantage of a Farber education due to financial hardship!</h6>
+      <div class="row" id="centeredRow">
+        <div class="col-sm-4">
+          <h6 id="matcherText">
+            In the 2019-2020 academic year, over 60% of Farber students receive
+            tuition assistance. $1.7 million will be spent in financial aid,
+            accounting for over 35% of tuition revenue. No child is denied the
+            advantage of a Farber education due to financial hardship!
+          </h6>
         </div>
 
-        <div class = "col-sm-4">
-          <h6 id = "matcherText">Without the incredible support of these matchers, the Farber Live, Learn, Lead: Support Our Dreams campaign would not be possible. Every dollar donated during this campaign is TRIPLED thanks to their generosity. </h6>
+        <div class="col-sm-4">
+          <h6 id="matcherText">
+            Without the incredible support of these matchers, the Farber Live,
+            Learn, Lead: Support Our Dreams campaign would not be possible.
+            Every dollar donated during this campaign is TRIPLED thanks to their
+            generosity.
+          </h6>
         </div>
       </div>
 
-      <div class = "row" id = "centeredRow">
-        <div class = "col-xs-3">
-          <div class = "card" id = "matcherCard">
-            <div class = "img-wrapper" style = "text-align: center;">
-            <img src = "assets/star.PNG" id = "matcherLogo">
-            </div> 
-            <h6 id = "cardTxt">BLUMENSTEIN FAMILY</h6>
-
+      <div class="row" id="centeredRow">
+        <div class="col-xs-3">
+          <div class="card" id="matcherCard">
+            <div class="img-wrapper" style="text-align: center;">
+              <img src="assets/star.PNG" id="matcherLogo" />
+            </div>
+            <h6 id="cardTxt">BLUMENSTEIN FAMILY</h6>
           </div>
         </div>
 
-        <div class = "col-xs-3">
-          <div class = "card" id = "matcherCard">
-            <div class = "img-wrapper" style = "text-align: center;">
-            <img src = "assets/star.PNG" id = "matcherLogo">
-            </div> 
-            <h6 id = "cardTxt">BLUMENSTEIN FAMILY</h6>
-
+        <div class="col-xs-3">
+          <div class="card" id="matcherCard">
+            <div class="img-wrapper" style="text-align: center;">
+              <img src="assets/star.PNG" id="matcherLogo" />
+            </div>
+            <h6 id="cardTxt">BLUMENSTEIN FAMILY</h6>
           </div>
         </div>
 
-        <div class = "col-xs-3">
-          <div class = "card" id = "matcherCard">
-            <div class = "img-wrapper" style = "text-align: center;">
-            <img src = "assets/star.PNG" id = "matcherLogo">
-            </div> 
-            <h6 id = "cardTxt">BLUMENSTEIN FAMILY</h6>
-
+        <div class="col-xs-3">
+          <div class="card" id="matcherCard">
+            <div class="img-wrapper" style="text-align: center;">
+              <img src="assets/star.PNG" id="matcherLogo" />
+            </div>
+            <h6 id="cardTxt">BLUMENSTEIN FAMILY</h6>
           </div>
         </div>
 
-        <div class = "col-xs-3">
-          <div class = "card" id = "matcherCard" >
-            <div class = "img-wrapper" style = "text-align: center;">
-            <img src = "assets/star.PNG" id = "matcherLogo">
-            </div> 
-            <h6 id = "cardTxt">BLUMENSTEIN FAMILY</h6>
-
+        <div class="col-xs-3">
+          <div class="card" id="matcherCard">
+            <div class="img-wrapper" style="text-align: center;">
+              <img src="assets/star.PNG" id="matcherLogo" />
+            </div>
+            <h6 id="cardTxt">BLUMENSTEIN FAMILY</h6>
           </div>
         </div>
-
       </div>
 
-      <div id = "matcherCont" class = "container" style = "text-align: center; border-bottom: solid; border-color:  #E95252; padding-bottom: 40px; margin-bottom: 100px;">
-        <h4 id = "alsoText">We also would like to express our gratitude for their ongoing contributions to tuition assistance and educational support at Farber Hebrew Day School to:</h4>
-        <h7 id = "funds">Jewish Federation of Metropolitan District</h7><br>
-        <h7 id = "funds">Samuel and Maly Cohn Millenium Fund</h7><br>
-        <h7 id = "funds">The Farber Family</h7><br>
-        <h7 id = "funds">Schostak Family Farber Hebrew Day School-Yeshivat Akiva Millennium Fund</h7><br>
-        <h7 id = "funds">Sherizen Family Yeshivat Akiva Millennium Fund</h7><br>
-        <h7 id = "funds">Shiffman Family Day School Tuition Assistance Fund</h7><br>
-        <h7 id = "funds">Gary and Malka Torgo</h7><br>
-        <h7 id = "funds">William Davidson Foundation</h7><br>
+      <div
+        id="matcherCont"
+        class="container"
+        style="
+          text-align: center;
+          border-bottom: solid;
+          border-color: #e95252;
+          padding-bottom: 40px;
+          margin-bottom: 100px;
+        "
+      >
+        <h4 id="alsoText">
+          We also would like to express our gratitude for their ongoing
+          contributions to tuition assistance and educational support at Farber
+          Hebrew Day School to:
+        </h4>
+        <h7 id="funds">Jewish Federation of Metropolitan District</h7><br />
+        <h7 id="funds">Samuel and Maly Cohn Millenium Fund</h7><br />
+        <h7 id="funds">The Farber Family</h7><br />
+        <h7 id="funds"
+          >Schostak Family Farber Hebrew Day School-Yeshivat Akiva Millennium
+          Fund</h7
+        ><br />
+        <h7 id="funds">Sherizen Family Yeshivat Akiva Millennium Fund</h7><br />
+        <h7 id="funds">Shiffman Family Day School Tuition Assistance Fund</h7
+        ><br />
+        <h7 id="funds">Gary and Malka Torgo</h7><br />
+        <h7 id="funds">William Davidson Foundation</h7><br />
       </div>
-  
     </div>
 
-
-
-
     <!--Footer Section------------------------------------------------------------------------------------->
-    <footer style = "background-color: #DDE3EF; width: 100%;">
-
-
-      <div class = "wrapper" style = "text-align: center;">
-        <img id = "footerImg" src = "assets/logo.PNG">
-        <br>
-        <button id = "btn" type = "input" style=" border-style: none; width:280px; height: 60px; margin-bottom: 30px; background: linear-gradient(90deg, #3D6186 0%, #6487AC 100%)">FARBERHDS.ORG</button>
-        <br>
-        <button id = "btn" type = "input" style = "border-style: none; width: 280px; height: 60px; margin-bottom: 80px;">DONATE NOW</button>
+    <footer style="background-color: #dde3ef; width: 100%;">
+      <div class="wrapper" style="text-align: center;">
+        <img id="footerImg" src="assets/logo.PNG" />
+        <br />
+        <button
+          id="btn"
+          type="input"
+          style="
+            border-style: none;
+            width: 280px;
+            height: 60px;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, #3d6186 0%, #6487ac 100%);
+          "
+        >
+          FARBERHDS.ORG
+        </button>
+        <br />
+        <button
+          id="btn"
+          type="input"
+          style="
+            border-style: none;
+            width: 280px;
+            height: 60px;
+            margin-bottom: 80px;
+          "
+        >
+          DONATE NOW
+        </button>
       </div>
-
     </footer>
 
-    <script src = "script.js"></script>   
-
-   </body>
-   </html>
+    <script src="script.js"></script>
+  </body>
+</html>
