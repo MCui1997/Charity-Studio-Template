@@ -73,7 +73,7 @@ section .content{
 
 
 /* If the screen size is less than*/
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) and (min-width: 374px){
 
   section:before{
 
