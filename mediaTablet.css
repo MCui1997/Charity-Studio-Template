@@ -20,6 +20,8 @@
     font-size: 16px;
     font-weight: normal;
     line-height: 28px;
+    margin-top: 16px;
+    margin-bottom: -2px;
   }
 
   #rallyName {
@@ -180,7 +182,7 @@
   }
 
   #dbtnLabel {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 5px;
   }
@@ -189,6 +191,7 @@
     font-size: 10px;
     font-weight: normal;
     line-height: 0px;
+    color: #828282;
   }
 
   #dbtnBig {
@@ -308,12 +311,12 @@
 
   #tripled2 {
     font-size: 22px;
-    font-weight: normal;
-    color: red;
+    font-weight: 200;
+    color: #ea2554;
   }
 
   #one3 {
-    color: red;
+    color: #ea2554;
     font-size: 45px;
     font-weight: 500;
   }
@@ -334,7 +337,7 @@
   #bannerText {
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 26px;
   }
 
@@ -386,13 +389,14 @@
   }
 
   #progressLabelTeam {
-    font-size: 14px;
-    font-weight: normal;
+    font-size: 16px;
+    font-weight: 800;
   }
 
   #progressLabelTeam2 {
     font-size: 10px;
     font-weight: normal;
+    color: #828282;
   }
 
   #donorLabel1 {
@@ -443,7 +447,7 @@
   #donorCountGoal {
     font-style: normal;
     font-weight: 800;
-    font-size: 22px;
+    font-size: 36px;
     line-height: 28px;
     margin-left: 60px;
   }
@@ -455,10 +459,11 @@
   #donorLabel {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     margin-left: 45px;
     margin-right: 50px;
+    color: #828282;
   }
 
   #slash {
@@ -472,7 +477,7 @@
   #donorName {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 30px;
     margin-left: 15px;
   }
@@ -480,7 +485,7 @@
   #donorAmt {
     font-style: normal;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 25px;
     margin-left: 80px;
   }
@@ -515,6 +520,7 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 26px;
+    color: #4f4f4f;
   }
 
   #matcherCard {

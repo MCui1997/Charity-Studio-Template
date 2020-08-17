@@ -31,6 +31,8 @@
   #schoolName {
     font-size: 20px;
     font-weight: normal;
+    margin-top: 16px;
+    margin-bottom: -2px;
   }
 
   #rallyName {
@@ -198,7 +200,7 @@
   }
 
   #dbtnLabel {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 5px;
   }
@@ -207,6 +209,7 @@
     font-size: 12px;
     font-weight: normal;
     line-height: 0px;
+    color: #828282;
   }
 
   #dbtnBig {
@@ -331,14 +334,16 @@
   }
 
   #tripled2 {
-    font-size: 30px;
-    color: red;
+    font-size: 36px;
+    color: #ea2554;
     margin-top: 130px;
+    font-weight: 200;
   }
 
   #one3 {
-    font-size: 60px;
-    color: red;
+    font-size: 80px;
+    color: #ea2554;
+    font-weight: 650;
   }
 
   #bannerTitle {
@@ -357,7 +362,7 @@
   #bannerText {
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 36px;
   }
 
@@ -408,13 +413,14 @@
     margin-bottom: 10px;
   }
   #progressLabelTeam {
-    font-size: 14px;
-    font-weight: normal;
+    font-size: 16px;
+    font-weight: 800;
   }
 
   #progressLabelTeam2 {
     font-size: 10px;
     font-weight: normal;
+    color: #828282;
   }
 
   #donorLabel1 {
@@ -445,8 +451,8 @@
   /*Donors Section================================================================================*/
 
   #donorTitle {
-    margin-top: 100px;
-    margin-bottom: 60px;
+    margin-top: 120px;
+    margin-bottom: 50px;
     font-weight: 200;
     font-size: 60px;
     text-align: center;
@@ -454,7 +460,7 @@
 
   #donorText {
     margin-top: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     font-weight: normal;
     font-size: 20px;
     text-align: center;
@@ -464,7 +470,7 @@
   #donorCountGoal {
     font-style: normal;
     font-weight: 800;
-    font-size: 22px;
+    font-size: 36px;
     line-height: 28px;
     margin-left: 60px;
   }
@@ -476,10 +482,11 @@
   #donorLabel {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     margin-left: 45px;
     margin-right: 50px;
+    color: #828282;
   }
 
   #slash {
@@ -493,7 +500,7 @@
   #donorName {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 30px;
     margin-left: 15px;
   }
@@ -501,7 +508,7 @@
   #donorAmt {
     font-style: normal;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 25px;
     margin-left: 80px;
   }
@@ -516,7 +523,7 @@
     content: ""; /* This is necessary for the pseudo element to work. */
     display: block; /* This will put the pseudo element on its own line. */
     margin: 0 auto; /* This will center the border. */
-    padding-top: 1px;
+    padding-top: 0px;
     width: 320px; /* Change this to whatever width you want. */
     border-bottom: 1px solid #dadae1; /* This creates the border. Replace black with whatever color you want. */
   }
@@ -535,7 +542,9 @@
     margin-top: 24px;
     margin-bottom: 30px;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #4f4f4f;
   }
 
   #matcherCard {

@@ -74,6 +74,8 @@ section .content {
     font-size: 16px;
     font-weight: normal;
     line-height: 28px;
+    margin-top: 16px;
+    margin-bottom: -2px;
   }
 
   #rallyName {
@@ -228,7 +230,7 @@ section .content {
   }
 
   #dbtnLabel {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 5px;
   }
@@ -237,6 +239,7 @@ section .content {
     font-size: 10px;
     font-weight: normal;
     line-height: 0px;
+    color: #828282;
   }
 
   #dbtnBig {
@@ -386,12 +389,12 @@ section .content {
 
   #tripled2 {
     font-size: 22px;
-    font-weight: normal;
-    color: red;
+    font-weight: 200;
+    color: #ea2554;
   }
 
   #one3 {
-    color: red;
+    color: #ea2554;
     font-size: 45px;
     font-weight: 500;
   }
@@ -466,13 +469,14 @@ section .content {
   }
 
   #progressLabelTeam {
-    font-size: 14px;
-    font-weight: normal;
+    font-size: 16px;
+    font-weight: 800;
   }
 
   #progressLabelTeam2 {
     font-size: 10px;
     font-weight: normal;
+    color: #828282;
   }
 
   #donorLabel1 {
@@ -540,6 +544,7 @@ section .content {
     line-height: 20px;
     margin-left: 45px;
     margin-right: 50px;
+    color: #828282;
   }
 
   #slash {
@@ -596,6 +601,7 @@ section .content {
     font-weight: normal;
     font-size: 16px;
     line-height: 26px;
+    color: #4f4f4f;
   }
 
   #matcherCard {
