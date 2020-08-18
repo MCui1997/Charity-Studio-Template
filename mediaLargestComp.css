@@ -542,6 +542,9 @@
     border-bottom: 1px solid #dadae1; /* This creates the border. Replace black with whatever color you want. */
   }
 
+  #sortCont {
+    margin-left: 172px;
+  }
   /*Matchers Section=============================================================================*/
 
   #matcherTitle {

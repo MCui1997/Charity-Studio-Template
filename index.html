@@ -473,130 +473,129 @@
         </div>
       </div>
 
-      <div class="row" id="centeredRow">
-        <div class="col-lg-5" style="max-width: 440px; width: 440px;">
-          <div class="container" style="width: 500px;">
-            <img
-              src="assets/Icon sort.png"
-              style="
-                margin-right: 16px;
-                height: 16px;
-                width: 16px;
-                margin-top: 3px;
-              "
-            />
-            <h7
-              style="
-                font-size: 16px;
-                color: #2f80ed;
-                border-bottom-style: dashed;
-                border-width: 1px;
-              "
-              >Sort by Donation</h7
-            >
-            <div class="dropdown show">
+      <div class="row">
+        <div class="container">
+          <div
+            class="row"
+            id="centeredRow"
+            style="margin-bottom: 30px; margin-top: 30px;"
+          >
+            <div class="container" id="sortCont">
+              <img
+                src="assets/Icon sort.png"
+                style="margin-right: 16px; height: 16px; width: 16px;"
+              />
+              <h7
+                style="
+                  font-size: 16px;
+                  color: #2f80ed;
+                  border-bottom-style: dashed;
+                  border-width: 1px;
+                "
+                >Sort by Donation</h7
+              >
+
               <a
                 ><img
                   src="assets/Icon arrow.png"
-                  style="
-                    height: 8px;
-                    width: 12px;
-                    margin-left: 9px;
-                    margin-top: 7px;
-                  "
+                  style="height: 8px; width: 12px; margin-left: 9px;"
               /></a>
             </div>
+
+            <div class="col-lg-5" style="width: 440px;"></div>
+          </div>
+
+          <div class="row" id="centeredRow" style="padding-bottom: 30px;">
+            <div class="col-lg-5" style="max-width: 440px;">
+              <div class="card" id="donorCard">
+                <span
+                  ><img src="assets/orange.png" id="donorImg" /><h7
+                    id="donorName"
+                    >Ron & Liat Meisler</h7
+                  ><img src="assets/icon comment.png" id="comment" /><h7
+                    id="donorAmt"
+                    >$3300</h7
+                  ></span
+                >
+              </div>
+
+              <div class="card" id="donorCard">
+                <span
+                  ><img src="assets/green.png" id="donorImg" /><h7
+                    id="donorName"
+                    >Ron & Liat Meisler</h7
+                  ><img src="assets/icon comment.png" id="comment" /><h7
+                    id="donorAmt"
+                    >$3300</h7
+                  ></span
+                >
+              </div>
+
+              <div class="card" id="donorCard">
+                <span
+                  ><img src="assets/cyan.png" id="donorImg" /><h7 id="donorName"
+                    >Ron & Liat Meisler</h7
+                  ><img src="assets/icon comment.png" id="comment" /><h7
+                    id="donorAmt"
+                    >$3300</h7
+                  ></span
+                >
+              </div>
+            </div>
+
+            <br />
+            <div class="col-lg-5" style="max-width: 440px;">
+              <div class="card" id="donorCard">
+                <span
+                  ><img src="assets/blue.png" id="donorImg" /><h7 id="donorName"
+                    >Ron & Liat Meisler</h7
+                  ><img src="assets/icon comment.png" id="comment" /><h7
+                    id="donorAmt"
+                    >$3300</h7
+                  ></span
+                >
+              </div>
+
+              <div class="card" id="donorCard">
+                <span
+                  ><img src="assets/purple.png" id="donorImg" /><h7
+                    id="donorName"
+                    >Ron & Liat Meisler</h7
+                  ><img src="assets/icon comment.png" id="comment" /><h7
+                    id="donorAmt"
+                    >$3300</h7
+                  ></span
+                >
+              </div>
+
+              <div class="card" id="donorCard">
+                <span
+                  ><img src="assets/purple.png" id="donorImg" /><h7
+                    id="donorName"
+                    >Ron & Liat Meisler</h7
+                  ><img src="assets/icon comment.png" id="comment" /><h7
+                    id="donorAmt"
+                    >$3300</h7
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="centeredRow" style="padding-bottom: 80px;">
+            <button
+              type="button"
+              data-toggle="modal"
+              data-target="#donorModal"
+              id="modalBtn"
+              ;
+            >
+              <h7 style="font-size: 16px; font-weight: normal; color: #ea2554;"
+                >All Donors (568)</h7
+              >
+            </button>
           </div>
         </div>
-
-        <div class="col-lg-5" style="width: 440px;"></div>
-      </div>
-
-      <div class="row" id="centeredRow" style="padding-bottom: 30px;">
-        <div class="col-lg-5" style="max-width: 440px;">
-          <div class="card" id="donorCard">
-            <span
-              ><img src="assets/orange.png" id="donorImg" /><h7 id="donorName"
-                >Ron & Liat Meisler</h7
-              ><img src="assets/icon comment.png" id="comment" /><h7
-                id="donorAmt"
-                >$3300</h7
-              ></span
-            >
-          </div>
-
-          <div class="card" id="donorCard">
-            <span
-              ><img src="assets/green.png" id="donorImg" /><h7 id="donorName"
-                >Ron & Liat Meisler</h7
-              ><img src="assets/icon comment.png" id="comment" /><h7
-                id="donorAmt"
-                >$3300</h7
-              ></span
-            >
-          </div>
-
-          <div class="card" id="donorCard">
-            <span
-              ><img src="assets/cyan.png" id="donorImg" /><h7 id="donorName"
-                >Ron & Liat Meisler</h7
-              ><img src="assets/icon comment.png" id="comment" /><h7
-                id="donorAmt"
-                >$3300</h7
-              ></span
-            >
-          </div>
-        </div>
-
-        <br />
-        <div class="col-lg-5" style="max-width: 440px;">
-          <div class="card" id="donorCard">
-            <span
-              ><img src="assets/blue.png" id="donorImg" /><h7 id="donorName"
-                >Ron & Liat Meisler</h7
-              ><img src="assets/icon comment.png" id="comment" /><h7
-                id="donorAmt"
-                >$3300</h7
-              ></span
-            >
-          </div>
-
-          <div class="card" id="donorCard">
-            <span
-              ><img src="assets/purple.png" id="donorImg" /><h7 id="donorName"
-                >Ron & Liat Meisler</h7
-              ><img src="assets/icon comment.png" id="comment" /><h7
-                id="donorAmt"
-                >$3300</h7
-              ></span
-            >
-          </div>
-
-          <div class="card" id="donorCard">
-            <span
-              ><img src="assets/purple.png" id="donorImg" /><h7 id="donorName"
-                >Ron & Liat Meisler</h7
-              ><img src="assets/icon comment.png" id="comment" /><h7
-                id="donorAmt"
-                >$3300</h7
-              ></span
-            >
-          </div>
-        </div>
-      </div>
-
-      <div class="row" id="centeredRow" style="padding-bottom: 80px;">
-        <button
-          type="button"
-          data-toggle="modal"
-          data-target="#donorModal"
-          id="modalBtn"
-          ;
-        >
-          <h7 style="font-size: 16px; font-weight: normal; color: #ea2554;"
-            >All Donors (568)</h7
-          >
-        </button>
       </div>
 
       <!-- Modal -->
