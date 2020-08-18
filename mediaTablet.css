@@ -508,6 +508,10 @@
   #sortCont {
     text-align: center;
   }
+
+  .modal-header {
+    justify-content: center;
+  }
   /*Matcher section ====================================================================================*/
 
   #matcherTitle {
