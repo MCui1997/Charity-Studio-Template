@@ -626,6 +626,10 @@ section .content {
     justify-content: center;
   }
 
+  .dropdown-toggle:after {
+    content: none;
+  }
+
   /*Matcher section ====================================================================================*/
 
   #matcherTitle {
