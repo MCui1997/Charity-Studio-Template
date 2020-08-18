@@ -48,14 +48,40 @@ section .content {
 
 .nav-link:hover {
   background-color: #3d6186;
+  font-style: bold;
   color: white;
   height: 100%;
 }
 
-.nav-link:checked {
-  color: red;
+#modalBtn {
+  width: 154px;
+  height: 40px;
+  background: #ffffff;
+  color: #ea2554;
+  border: 2px solid #ea2554;
+  box-sizing: border-box;
+  border-radius: 20px;
+  outline: none;
 }
 
+#modalBtn:hover {
+  background: linear-gradient(94.88deg, #e95252 16.28%, #ec5582 81.93%);
+  color: white;
+}
+
+.modal-body {
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+#donorModalTitle {
+  font-family: Mukta;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 36px;
+  line-height: 50px;
+  color: #333333;
+}
 /* If the screen size is less than*/
 @media screen and (max-width: 600px) and (min-width: 374px) {
   section:before {
@@ -273,7 +299,6 @@ section .content {
   }
 
   #abtNav {
-    font-weight: bold;
     margin-left: -15px;
   }
 
