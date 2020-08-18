@@ -265,9 +265,10 @@ section .content {
   .nav-link {
     padding-top: 0;
     padding-bottom: 0;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 30px;
     margin-right: -18px;
+    margin-left: 10px;
     color: white;
   }
 
@@ -287,8 +288,8 @@ section .content {
   }
 
   #navbtn {
-    margin-left: 18px;
-    margin-top: 4px;
+    margin-left: 20px;
+    margin-top: 3px;
     width: 70px;
     border-radius: 30px;
     border: none;
