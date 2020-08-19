@@ -53,10 +53,6 @@ section .content {
   height: 100%;
 }
 
-.nav-item a:visited {
-  font-weight: bold;
-}
-
 #modalBtn {
   width: 154px;
   height: 40px;
