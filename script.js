@@ -61,3 +61,88 @@ function readMore() {
     moreText.style.display = "contents";
   }
 }
+
+//Functions to bold nav links
+$("#abtNav").on("click", function () {
+  $(".nav-link").css("font-weight", "normal");
+  $("#abtNav").css("font-weight", "bold");
+
+  $("#abtNavText").css("border", "none");
+  $("#teamNavText").css({
+    "border-bottom-style": "dashed",
+    "border-width": "1px",
+  });
+
+  $("#donorNavText").css({
+    "border-bottom-style": "dashed",
+    "border-width": "1px",
+  });
+
+  $("#matcherNavText").css({
+    "border-bottom-style": "dashed",
+    "border-width": "1px",
+  });
+});
+
+$("#teamNav").on("click", function () {
+  $(".nav-link").css("font-weight", "normal");
+  $("#teamNav").css("font-weight", "bold");
+
+  $("#teamNavText").css("border", "none");
+  $("#abtNavText").css({
+    "border-bottom-style": "dashed",
+    "border-width": "1px",
+  });
+
+  $("#donorNavText").css({
+    "border-bottom-style": "dashed",
+    "border-width": "1px",
+  });
+
+  $("#matcherNavText").css({
+    "border-bottom-style": "dashed",
+    "border-width": "1px",
+  });
+});
+
+$("#donorNav").on("click", function () {
+  $(".nav-link").css("font-weight", "normal");
+  $("#donorNav").css("font-weight", "bold");
+
+  $("#donorNavText").css("border", "none");
+  $("#teamNavText").css({
+    "border-bottom-style": "dashed",
+    "border-width": "1px",
+  });
+
+  $("#abtNavText").css({
+    "border-bottom-style": "dashed",
+    "border-width": "1px",
+  });
+
+  $("#matcherNavText").css({
+    "border-bottom-style": "dashed",
+    "border-width": "1px",
+  });
+});
+
+$("#matcherNav").on("click", function () {
+  $(".nav-link").css("font-weight", "normal");
+  $("#matcherNav").css("font-weight", "bold");
+
+  $("#matcherNavText").css("border", "none");
+  $("#teamNavText").css({
+    "border-bottom-style": "dashed",
+    "border-width": "1px",
+  });
+
+  $("#donorNavText").css({
+    "border-bottom-style": "dashed",
+    "border-width": "1px",
+  });
+
+  $("#abtNavText").css({
+    "border-bottom-style": "dashed",
+    "border-width": "1px",
+  });
+});
