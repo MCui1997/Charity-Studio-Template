@@ -69,6 +69,11 @@ section .content {
   color: white;
 }
 
+#modalBtn:focus {
+  background-color: #ea2554;
+  color: white;
+}
+
 .modal-body {
   max-height: calc(100vh - 80px);
   overflow-y: auto;
