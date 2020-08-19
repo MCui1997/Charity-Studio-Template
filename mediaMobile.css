@@ -48,9 +48,12 @@ section .content {
 
 .nav-link:hover {
   background-color: #3d6186;
-  font-style: bold;
   color: white;
   height: 100%;
+}
+
+#abtNavText:hover {
+  border: none;
 }
 
 #modalBtn {
