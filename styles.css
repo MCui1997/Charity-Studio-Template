@@ -791,3 +791,252 @@ a.anchor {
     font-size: 18px;
   }
 }
+
+/* If the screen size is less than*/
+@media screen and (min-width: 600px) {
+  section:before {
+    clip-path: ellipse(125% 100% at 50% 0%);
+    background-image: url("assets/header.png");
+  }
+
+  #day,
+  #hour,
+  #minute {
+    margin-top: -10px;
+  }
+
+  #day {
+    margin-right: 44px;
+    margin-left: 50px;
+  }
+  #hour {
+    margin-right: 13px;
+  }
+
+  #minute {
+    margin-left: 15px;
+    margin-right: 38px;
+  }
+
+  #progressBar {
+    width: 330px;
+  }
+
+  #progressLabel {
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  #progressLabel2 {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  #progressMargin {
+    margin-left: 205px;
+  }
+
+  #progressMargin2 {
+    margin-left: 175px;
+  }
+
+  #dbtnRow {
+    margin-left: 12px;
+  }
+
+  #dbtnLabelRow {
+    width: 100%;
+  }
+
+  #dbtn {
+    margin-right: 30px;
+  }
+
+  #dbtnCol {
+    width: 80%;
+  }
+
+  /*NAVBAR==========================================================================================*/
+  .nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 30px;
+    margin-right: -18px;
+    color: white;
+  }
+
+  #abtNav {
+    font-weight: bold;
+  }
+
+  #navbar {
+    z-index: 50;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #3d6186 0%, #6487ac 100%);
+  }
+
+  #navbtn {
+    width: 80px;
+    margin-left: 40px;
+    margin-top: 4px;
+    border-radius: 30px;
+    background-color: white;
+    color: #ec5582;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+  }
+
+  /*ABOUT SECTION ================================================================================*/
+
+  #confetti {
+    position: absolute;
+    left: 0px;
+    margin-top: 100px;
+    height: 80%;
+    margin-top: 450px;
+  }
+
+  #confetti2 {
+    position: absolute;
+    right: 0px;
+    margin-top: 200px;
+    height: 80%;
+    margin-top: 450px;
+  }
+
+  #confetti3 {
+    display: none;
+  }
+  #confetti4 {
+    display: none;
+  }
+
+  #bottom_fade {
+    display: none;
+  }
+
+  #readBtn {
+    display: none;
+  }
+
+  #bannerTitle {
+    font-size: 26px;
+  }
+
+  #boldedBanner {
+    font-weight: bold;
+  }
+
+  #bannerText {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  /*TEAMS SECTION ================================================================================*/
+
+  #teamImg {
+    height: 140px;
+    width: 160px;
+    margin-right: 50px;
+  }
+
+  #teamName {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+
+  #teamProgressbar {
+    width: 188px;
+  }
+
+  #donorLabel1 {
+    margin-left: 65px;
+    margin-right: 58px;
+  }
+  #donorLabel2 {
+    margin-left: 38px;
+    margin-right: 52px;
+  }
+
+  #teamBtn {
+    width: 100px;
+
+    margin-left: 50px;
+  }
+
+  #teamCard {
+    min-width: 616px;
+  }
+
+  /*Donors Section================================================================================*/
+
+  #donorCount,
+  #donorCountGoal {
+    font-size: 36px;
+  }
+
+  #donorCountGoal {
+    margin-left: 41px;
+  }
+
+  #donorLabel {
+    font-size: 16px;
+
+    margin-left: 50px;
+    margin-right: 59px;
+  }
+
+  #donorName {
+    font-size: 16px;
+  }
+
+  #donorAmt {
+    font-size: 22px;
+  }
+
+  #donorCard {
+    text-align: center;
+    border-style: none;
+  }
+
+  #donorCard:after {
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    padding-top: 1px;
+    width: 320px; /* Change this to whatever width you want. */
+    border-bottom: 1px solid #dadae1; /* This creates the border. Replace black with whatever color you want. */
+  }
+
+  #sortCont {
+    text-align: center;
+  }
+
+  .modal-header {
+    justify-content: center;
+  }
+  /*Matcher section ====================================================================================*/
+
+  #matcherCard {
+    margin-bottom: 5px;
+  }
+
+  /*Footer Section====================================================================================*/
+
+  #backtoTop {
+    bottom: 20px;
+    right: 30px;
+  }
+}
