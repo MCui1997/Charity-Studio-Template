@@ -792,7 +792,7 @@ a.anchor {
   }
 }
 
-/* If the screen size is less than*/
+/* 03 Tablet*/
 @media screen and (min-width: 600px) {
   section:before {
     clip-path: ellipse(125% 100% at 50% 0%);
@@ -1036,6 +1036,465 @@ a.anchor {
   /*Footer Section====================================================================================*/
 
   #backtoTop {
+    bottom: 20px;
+    right: 30px;
+  }
+}
+
+/*04 Small Laptop*/
+@media screen and (min-width: 1050px) {
+  section:before {
+    clip-path: ellipse(100% 100% at 50% 0%);
+    background-image: url("assets/header.png");
+    background-size: cover;
+  }
+
+  #btn {
+    width: 202px;
+    height: 50px;
+    background: linear-gradient(94.88deg, #e95252 16.28%, #ec5582 81.93%);
+    border-radius: 40px;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    outline: none;
+    font-size: 24px;
+  }
+
+  #logostar {
+    height: 80px;
+  }
+
+  #schoolName {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  #rallyName {
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  #slogan {
+    font-size: 100px;
+    font-weight: 200;
+    line-height: 120px;
+  }
+
+  #btn {
+    width: 260px;
+    height: 64px;
+    margin-bottom: 30px;
+  }
+
+  #campaignName {
+    font-size: 20px;
+  }
+
+  #campaignClock {
+    font-size: normal;
+    font-weight: normal;
+    font-size: 60px;
+  }
+
+  #clockDay,
+  #clockHour,
+  #clockMinute {
+    font-size: normal;
+    font-weight: 200;
+    font-size: 60px;
+    line-height: 88px;
+  }
+
+  #clockDay {
+    margin-left: 100px;
+    margin-right: 25px;
+  }
+  #clockHour {
+    margin-left: 10px;
+    margin-right: 40px;
+  }
+
+  #clockMinute {
+    margin-left: 0px;
+    margin-right: 103px;
+  }
+
+  #day,
+  #hour,
+  #minute {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+  }
+
+  #day {
+    margin-left: 53px;
+    margin-right: 20px;
+  }
+  #hour {
+    margin-left: 35px;
+    margin-right: 20px;
+  }
+
+  #minute {
+    margin-left: 20px;
+    margin-right: 38px;
+  }
+
+  #progressBar {
+    width: 520px;
+    height: 16px;
+  }
+
+  #progress {
+    font-size: 36px;
+    font-weight: 200;
+  }
+
+  #progressLabel {
+    font-size: 36px;
+    font-weight: 500;
+  }
+
+  #progressLabel2 {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  #progressMargin {
+    margin-left: 320px;
+  }
+
+  #progressMargin2 {
+    margin-left: 338px;
+  }
+
+  #progressAmt {
+    font-size: 100px;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  #tripled {
+    font-size: 36px;
+    font-weight: 200;
+  }
+
+  #dbtnLabelRow {
+    display: flex;
+    justify-content: center;
+  }
+
+  #dbtnRow {
+    width: 90%;
+    margin-left: 12px;
+  }
+
+  #dbtn {
+    height: 60px;
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+  }
+
+  #dbtnLabel2 {
+    font-size: 12px;
+  }
+
+  #dbtnBig {
+    margin-left: 10px;
+  }
+
+  /*NAVBAR==========================================================================================*/
+  .nav-link {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    margin-right: 20px;
+    color: white;
+  }
+
+  #border {
+    border-bottom-style: dashed;
+    color: white;
+    border-width: 20px;
+  }
+
+  #navbar {
+    z-index: 50;
+    width: 90%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #3d6186 0%, #6487ac 100%);
+    display: flex;
+    justify-content: center;
+  }
+
+  #abtNav {
+    margin-left: 270px;
+  }
+
+  #navbtn {
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 150px;
+
+    border: none;
+  }
+
+  #headerGradient {
+    height: 100px;
+    background-image: linear-gradient(#f3f5f9, white);
+    width: 100%;
+  }
+
+  /*ABOUT SECTION ================================================================================*/
+
+  #confetti {
+    position: absolute;
+    left: 0px;
+    margin-top: 100px;
+  }
+
+  #confetti2 {
+    position: absolute;
+    right: 0px;
+    margin-top: 200px;
+  }
+
+  #confetti3 {
+    display: none;
+  }
+  #confetti4 {
+    display: none;
+  }
+
+  #abtTitle {
+    font-size: 60px;
+  }
+
+  #readBtn {
+    display: none;
+  }
+
+  #howitWorks {
+    font-size: 24px;
+  }
+
+  #x3 {
+    background-image: url(assets/x3.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  #tripled2 {
+    font-size: 36px;
+    color: #ea2554;
+    margin-top: 130px;
+    font-weight: 200;
+  }
+
+  #one3 {
+    font-size: 80px;
+    color: #ea2554;
+    font-weight: 650;
+  }
+
+  #bannerTitle {
+    margin-top: 60px;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 36px;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+
+  #bannerText {
+    line-height: 36px;
+  }
+
+  /*TEAMS SECTION ================================================================================*/
+
+  #teamTitle {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    font-weight: 200;
+    font-size: 60px;
+    text-align: center;
+  }
+
+  #teamImg {
+    height: 140px;
+    width: 160px;
+    margin-right: 40px;
+  }
+
+  #teamName {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 10px;
+  }
+
+  #teamProgressbar {
+    border: 0;
+    background-color: #dadae1;
+    border-radius: 10px;
+    width: 188px;
+    height: 6px;
+    margin-right: 12px;
+    margin-bottom: 10px;
+  }
+
+  #donorLabel1 {
+    margin-left: 65px;
+    margin-right: 58px;
+  }
+  #donorLabel2 {
+    margin-left: 38px;
+    margin-right: 52px;
+  }
+
+  #teamBtn {
+    width: 120px;
+
+    margin-bottom: 10px;
+    margin-left: 40px;
+  }
+
+  #teamCard {
+    min-width: 616px;
+  }
+  /*Donors Section================================================================================*/
+
+  #donorTitle {
+    margin-top: 120px;
+    margin-bottom: 50px;
+    font-weight: 200;
+    font-size: 60px;
+    text-align: center;
+  }
+
+  #donorText {
+    margin-top: 24px;
+    margin-bottom: 50px;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #donorCount,
+  #donorCountGoal {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 28px;
+    margin-left: 60px;
+  }
+
+  #donorCountGoal {
+    margin-left: 37px;
+  }
+
+  #donorLabel {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 49px;
+    margin-right: 59px;
+    color: #828282;
+  }
+
+  #donorName {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 15px;
+  }
+
+  #donorAmt {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 25px;
+    margin-left: 80px;
+  }
+
+  #donorCard {
+    text-align: center;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  #donorCard:after {
+    padding-top: 0px;
+  }
+
+  #sortCont {
+    margin-left: 165px;
+  }
+
+  /*Matchers Section=============================================================================*/
+
+  #matcherTitle {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    font-weight: 200;
+    font-size: 60px;
+    text-align: center;
+  }
+
+  #matcherText {
+    margin-top: 24px;
+  }
+
+  #matcherCard {
+    background: white;
+    text-align: center;
+    height: 180px;
+    width: 212px;
+    justify-content: center;
+    margin-right: 30px;
+  }
+
+  #matcherLogo {
+    width: 52px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  #cardText {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  #alsoText {
+    font-size: 36px;
+    font-weight: 200;
+
+    margin-top: 80px;
+  }
+
+  /*Footer Section======================================================================================*/
+
+  #footerImg {
+    width: 300px;
+    height: 103px;
+    margin-bottom: 30px;
+    margin-top: 80px;
+  }
+
+  #backtoTop {
+    display: none;
+    position: fixed;
     bottom: 20px;
     right: 30px;
   }
