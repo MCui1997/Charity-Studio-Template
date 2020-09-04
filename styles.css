@@ -69,14 +69,6 @@ section:before {
   height: 40px;
 }
 
-#schoolName {
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 28px;
-  margin-top: 16px;
-  margin-bottom: -2px;
-}
-
 #rallyName {
   font-size: 14px;
   font-weight: normal;
@@ -1500,18 +1492,8 @@ a.anchor {
   }
 }
 
-/* If the screen size is more than*/
+/* 05 Desktop*/
 @media screen and (min-width: 1500px) {
-  #schoolName {
-    font-size: 20px;
-  }
-
-  #rallyName {
-    font-size: 12px;
-    font-weight: 800;
-    font-weight: normal;
-  }
-
   #slogan {
     font-size: 100px;
     font-weight: 200;
@@ -1839,7 +1821,7 @@ a.anchor {
   }
 }
 
-/* If the screen size is more than*/
+/* 06 Large Desktop*/
 @media screen and (min-width: 1850px) {
   #dbtnRow {
     width: 72%;
@@ -1864,23 +1846,6 @@ a.anchor {
     border-color: white;
     outline: none;
     font-size: 24px;
-  }
-
-  #logostar {
-    height: 80px;
-  }
-
-  #schoolName {
-    font-size: 20px;
-    font-weight: normal;
-    margin-top: 16px;
-    margin-bottom: -2px;
-  }
-
-  #rallyName {
-    font-size: 12px;
-    font-weight: 800;
-    font-weight: normal;
   }
 
   #slogan {
