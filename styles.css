@@ -2,10 +2,10 @@
 Sections for Styling
     01 Global 
     02 Larger Mobile (>370px)
-    03 Tablet
-    04 Small Laptop
-    05 Desktop
-    06 Large Desktops*/
+    03 Tablet (>600px)
+    04 Small Laptop (>1050px)
+    05 Desktop (>1500px)
+    06 Large Desktops (>2000px)*/
 
 /*01 Global styles*/
 html {
