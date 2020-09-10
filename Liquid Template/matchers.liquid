@@ -1,0 +1,52 @@
+{% assign donor_campaigns = campaign | donor_campaigns -%} {% assign
+sponsorLevel = campaign | sponsor_levels | first %} {% assign sponsors =
+sponsorLevel.sponsors %}
+
+<div class="container-fluid" style="padding-bottom: 80px">
+  <a class="anchor" id="matchers"></a>
+  <div class="row" id="centeredRow">
+    <h3 id="matcherTitle">Thank You Matchers!</h3>
+  </div>
+
+  <div class="row" id="centeredRow">
+    <div
+      style="
+        column-count: 2;
+        column-gap: 40px;
+        width: 90%;
+
+        column-width: 400px;
+        margin-left: 20px;
+        margin-right: 20px;
+      "
+    >
+      <h6 id="matcherText">
+        {{ campaign | term_by_name: "Cstm8" }}
+      </h6>
+    </div>
+  </div>
+
+  <div class="row" style="text-align: center; justify-content: center">
+    <div
+      class="row"
+      id="centeredRow"
+      style="max-width: 1000px; text-align: center"
+    >
+      {% for sponsor in sponsors %}
+
+      <div class="col-xs-3">
+        <div class="card" id="matcherCard">
+          <div class="img-wrapper" style="text-align: center">
+            <img
+              id="matcherLogo"
+              src="{{ Campaign | first_image: 'Usertouserimages', 100, 216 }}"
+            />
+          </div>
+          <h6 id="cardTxt">{{ sponsor.Name }}</h6>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>

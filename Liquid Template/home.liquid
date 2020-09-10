@@ -1,0 +1,40 @@
+<button id="backtoTop" onclick="(topFunction()">
+  <img src="https://charity.studio/wp-content/uploads/2020/08/backtotop.png" />
+</button>
+
+<div class="container-fluid" id="donateBtnCol">
+  <div class="row" id="centeredRow" style="margin-top: 40px">
+    {%Widget progressbar%} {%Widget donatebuttons%}
+  </div>
+</div>
+
+<!--Navbar<temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp>---->
+<div class="row" id="centeredRow" style="margin-top: 80px">
+  <nav id="navbar">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="#about" id="abtNav">
+          <h7 id="abtNavText">ABOUT</h7>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#matchers" id="matcherNav">
+          <h7 id="matcherNavText">MATCHERS</h7>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="{{ campaign.url }}/donate">
+          <button id="navbtn" type="input">DONATE</button>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="row">
+  <div id="headerGradient"></div>
+</div>
+
+{%Widget homemain%} {%Widget matchers%}

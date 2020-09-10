@@ -1,0 +1,77 @@
+{% assign pageControllerDowncased = Page.Controller | downcase -%}
+<div class="header-image-container">
+    <section class="mobile-hidden" style="background-image:url({{ Campaign | first_image: 'StandaloneTopTitle', 1500, 578 }})">
+
+        <div class="container-fluid">
+            <div class="content">
+
+                <img class="logo" src="https://charity.studio/wp-content/uploads/2020/08/logo-star-1.png" style="margin-top: 40px; visibility: hidden"/>
+                <h6 class="title" style="visibility: hidden">
+                    Farber Hebrew Day School
+                </h6>
+                <h8 class="title-2" style="visibility: hidden">CHARITY RALLY</h8>
+                <h1 class="slogan" style="visibility: hidden">Live, Learn, Lead!</h1>
+                {% if pageControllerDowncased <> 'home' %}
+                    <div style="visibility: hidden">
+                    {% endif %}
+                    <a href="{{ campaign.url }}/donate">
+                        <button class="btn" type="input">DONATE</button>
+                    </a>
+                    {%Widget countdown%}
+                    {% if pageControllerDowncased <> 'home' %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <section class="desktop-hidden" style="background-image:url({{ Campaign | first_image: 'MobileLogo', 1400, 700 }})">
+
+        <div class="container-fluid">
+            <div class="content">
+
+                <img class="logo" src="https://charity.studio/wp-content/uploads/2020/08/logo-star-1.png" style="margin-top: 40px; visibility: hidden"/>
+                <h6 class="schoolName" style="visibility: hidden">
+                    Farber Hebrew Day School
+                </h6>
+                <h8 class="rallyName" style="visibility: hidden">CHARITY RALLY</h8>
+                <h1 class="slogan" style="visibility: hidden">Live, Learn, Lead!</h1>
+                {% if pageControllerDowncased <> 'home' %}
+                    <div style="visibility: hidden">
+                    {% endif %}
+                    <a href="{{ campaign.url }}/donate">
+                        <button class="btn" type="input">DONATE</button>
+                    </a>
+                    {%Widget countdown%}
+                    {% if pageControllerDowncased <> 'home' %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    {% if pageControllerDowncased <> 'home' %}
+        <a class="back-link" href="{{campaign.url}}/"><img src="https://www.friendshipcircle.org/wp-content/uploads/endofyear/back.png">
+            <span>Back to Campaign</span>
+        </a>
+    {% endif %}
+
+    {% if pageControllerDowncased <> 'home' and pageControllerDowncased <> 'donate' %}
+        <div class="subheader-image-container">
+            Donors<br/>
+            <div class="lds-ring" id="donors-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        {{campaign | term_by_name: 'Cstm5'}}
+    {% endif %}
+
+    {% if pageControllerDowncased == 'donate' %}
+        <div class="subheader-image-container">
+            Donate<br/>
+        </div>
+        {{campaign | term_by_name: 'Cstm4'}}
+    {% endif %}
+</div>

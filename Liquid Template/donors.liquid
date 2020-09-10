@@ -1,0 +1,199 @@
+<!--Our Donors Section<temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp></temp></temp><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore>-------</temp></temp></temp></temp></temp></temp></temp>----->
+
+<div class="container-fluid" style="background-color: white; margin-top: 30px; padding-top: 60px; padding-bottom: 60px;">
+  <a class="anchor" id="donors"></a>
+  <div class="row" id="centeredRow">
+    <h3 id="donorTitle" style="margin-top: 0;">Thank You Donors!</h3>
+  </div>
+
+
+  <div class="row" id="centeredRow">
+    <div class="col-xs-2">
+      <h4 id="donorCount">{{campaign | donation_count}}</h4>
+      <h7 id="donorLabel">DONORS</h7>
+    </div>
+
+    <div class="col-xs-2">
+      <h1 id="slash">/</h1>
+    </div>
+
+    <div class="col-xs-2">
+      <h4 id="donorCountGoal" class="donor-goal">100</h4>
+      <h7 id="donorLabel">GOAL</h7>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="container">
+  
+
+      <div class="row" id="centeredRow" style="padding-bottom: 30px;">
+        {% assign donations = campaign | donations -%}
+        {% assign tiers = campaign | term_by_name: 'Cstm10' %}
+        {% assign tiers = tiers | split: ", " %}
+        {% assign tiersSize = tiers | size %}
+        {% assign donorCount = 0 %}
+
+        {% if tiersSize < 4 %}
+          {% assign tiers = '5000, 1000, 360, 100' | split: ", " %}
+        {% endif %}
+
+        <div class="col-lg-5" style="max-width: 440px;">
+    		{% for displayed_Donation_Info in donations limit:16 -%}
+    			{% assign msg = displayed_Donation_Info.Message -%}
+    			{% assign tier = 'hex-yellow' -%}
+    			{% assign amount = displayed_Donation_Info.Amount -%}
+    			{% if displayed_Donation_Info.Amount == null -%}
+    				{% assign amount = 0 -%}
+    			{% endif -%}
+    			{% if displayed_Donation_Info.Matched_Times > 1 -%}
+    				{% assign amount = amount | times: displayed_Donation_Info.Matched_Times -%}
+    			{% endif -%}
+    			{% if amount >= tiers[0]-%}
+    				{% assign tier = 'dukeorange' -%}
+    			{% elsif amount >= tiers[1] -%}
+    				{% assign tier = 'dukegreen' -%}
+    			{% elsif amount >= tiers[2] -%}
+    				{% assign tier = 'duketeal' -%}
+    			  {% elsif amount >= tiers[3] -%}
+    				{% assign tier = 'dukeblue' -%}
+    			  {% else %}
+    				{% assign tier = 'dukepurple' -%}
+    			{% endif -%}
+            <div class="card" id="donorCard">
+              <span style="height: 40px;"><img src="https://charity.studio/wp-content/uploads/2020/08/{{tier}}.png" id="donorImg" style="max-height: 30px;" /><h7
+                id="donorName">{% if displayed_Donation_Info.Donor_Name != "" and displayed_Donation_Info.Donor_Name != nil %}{{displayed_Donation_Info.Donor_Name}}{% else %}Anonymous{% endif %}</h7>
+
+                {%if msg and msg != '' %}
+                  <img src="https://charity.studio/wp-content/uploads/2020/08/icon-comment.png" id="comment" />
+                {% else %}
+                  <img src="https://charity.studio/wp-content/uploads/2020/08/icon-comment.png" id="comment" style="visibility: hidden;" />
+                {% endif %}
+
+                <h7 id="donorAmt" style="margin-left: 0;">{% if amount == 0 %}{% else %}{{amount | money: 2}}{% endif %}</h7></span>
+                {%if msg and msg != '' %}<div class="donor-message" style="display: none;"><div>{{msg}}</div></div>{% endif %}
+            </div>
+            {% assign donorCount = donorCount | plus: 1 %}
+
+            {% if donorCount == 8 %}
+              </div>
+              <div class="col-lg-5" style="max-width: 440px;">
+            {% endif %}
+          {% endfor %}
+
+          </div>
+      </div>
+
+      <div class="row" id="centeredRow">
+        <button
+          type="button"
+          data-toggle="modal"
+          data-target="#donorModal"
+          id="modalBtn"
+          ;
+        >
+          <h7 style="font-size: 16px; font-weight: normal;"
+            >All Donors ({{campaign | donation_count}})
+          </h7>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+
+  <div class="container">
+    <div class="modal fade" id="donorModal">
+      <div class="modal-dialog modal-xl" role="document" style="height: 70%;">
+        <div class="modal-content" style="padding-top: 70px;height: 100%;">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            style="
+              position: absolute;
+              top: 15px;
+              right: 15px;
+              outline: none;
+              transform: scale(1.3);
+            "
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="wrapper" style="text-align: center;">
+            <h4
+              class="modal-title w-100"
+              id="donorModalTitle"
+              style="font-size: 36px;"
+            >
+              Donors <span style="color: #828282;">({{campaign | donation_count}})</span>
+            </h4>
+          </div>
+        
+
+          <div class="modal-body">
+            <div class="row" id="centeredRow">
+              {% assign donations = campaign | donations -%}
+              {% assign tiers = campaign | term_by_name: 'Cstm10' %}
+              {% assign tiers = tiers | split: ", " %}
+              {% assign tiersSize = tiers | size %}
+              {% assign donorCount = 0 %}
+              {% assign halfTotal = campaign | donation_count | divided_by: 2 %}
+
+              {% if tiersSize < 4 %}
+                {% assign tiers = '5000, 1000, 360, 100' | split: ", " %}
+              {% endif %}
+              <div class="col-lg-5" style="max-width: 440px;">
+
+
+                {% for displayed_Donation_Info in donations limit:2000 -%}
+            			{% assign msg = displayed_Donation_Info.Message -%}
+            			{% assign tier = 'hex-yellow' -%}
+            			{% assign amount = displayed_Donation_Info.Amount -%}
+            			{% if displayed_Donation_Info.Amount == null -%}
+            				{% assign amount = 0 -%}
+            			{% endif -%}
+            			{% if displayed_Donation_Info.Matched_Times > 1 -%}
+            				{% assign amount = amount | times: displayed_Donation_Info.Matched_Times -%}
+            			{% endif -%}
+            			{% if amount >= tiers[0]-%}
+            				{% assign tier = 'dukeorange' -%}
+            			{% elsif amount >= tiers[1] -%}
+            				{% assign tier = 'dukegreen' -%}
+            			{% elsif amount >= tiers[2] -%}
+            				{% assign tier = 'duketeal' -%}
+            			  {% elsif amount >= tiers[3] -%}
+            				{% assign tier = 'dukeblue' -%}
+            			  {% else %}
+            				{% assign tier = 'dukepurple' -%}
+            			{% endif -%}
+                    <div class="card" id="donorCard">
+                      <span><img src="https://charity.studio/wp-content/uploads/2020/08/{{tier}}.png" id="donorImg" style="max-height: 30px;" /><h7
+                      id="donorName">{% if displayed_Donation_Info.Donor_Name != "" and displayed_Donation_Info.Donor_Name != nil %}{{displayed_Donation_Info.Donor_Name}}{% else %}Anonymous{% endif %}</h7>
+
+                      {%if msg and msg != '' %}
+                        <img src="https://charity.studio/wp-content/uploads/2020/08/icon-comment.png" id="comment" />
+                      {% else %}
+                        <img src="https://charity.studio/wp-content/uploads/2020/08/icon-comment.png" id="comment" style="visibility: hidden;" />
+                      {% endif %}
+
+                      <h7 id="donorAmt">{% if amount == 0 %}{% else %}{{amount | money: 2}}{% endif %}</h7></span>
+                      {%if msg and msg != '' %}<div class="donor-message" style="display: none;"><div>{{msg}}</div></div>{% endif %}
+                    </div>
+                    {% assign donorCount = donorCount | plus: 1 %}
+
+                    {% if donorCount == halfTotal %}
+                      </div>
+                      <div class="col-lg-5" style="max-width: 440px;">
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
