@@ -35,7 +35,7 @@
 @donors-button-font-color: #212b61;
 @donors-button-font-color-hover: #ffffff;
 @donors-header-font-color: #ffffff;
-@donors-list-font-color: #ffffff;
+@donors-list-font-color: black;
 @donors-list-border-bottom-color: #ffffff;
 @donors-list-header-border-bottom-color: #ffffff;
 @donors-list-tier-one-color: @donor-color-1;
@@ -109,6 +109,168 @@
 @wrapper-background-size: cover;
 @wrapper-width: 100%;
 
+.match-multiplier.tier-one,
+.card__front.tier-zero {
+  color: @match-tier-one-color;
+}
+
+.match-multiplier.tier-two,
+.card__front.tier-one {
+  color: @match-tier-two-color;
+}
+.match-multiplier.tier-three,
+.card__front.tier-two {
+  color: @match-tier-three-color;
+}
+
+.match-multiplier.tier-four,
+.card__front.tier-three {
+  color: @match-tier-four-color;
+}
+
+.match-multiplier.tier-five,
+.card__front.tier-four {
+  color: @match-tier-five-color;
+}
+
+.card__front.tier-zero {
+  background-color: @match-tier-one-color;
+}
+
+.card__front.tier-one {
+  background-color: @match-tier-two-color;
+}
+
+.card__front.tier-two {
+  background-color: @match-tier-three-color;
+}
+
+.card__front.tier-three {
+  background-color: @match-tier-four-color;
+}
+
+.card__front.tier-four {
+  background-color: @match-tier-five-color;
+}
+
+.donor-container-tier1:hover {
+  background-color: @donors-list-tier-one-color;
+}
+
+.donor-container-tier2:hover {
+  background-color: @donors-list-tier-two-color;
+}
+
+.donor-container-tier3:hover {
+  background-color: @donors-list-tier-three-color;
+}
+
+.donor-container-tier4:hover {
+  background-color: @donors-list-tier-four-color;
+}
+
+.donor-container-tier5:hover {
+  background-color: @donors-list-tier-five-color;
+}
+
+.card {
+  display: inline-block;
+  height: 160px;
+  margin: 1%;
+  min-width: 240px;
+  max-width: 240px;
+  position: relative;
+  text-align: center;
+}
+
+.card__front {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: 0.15s;
+  width: 100%;
+}
+
+.card__text {
+  color: black;
+  display: inline-block;
+  font-size: 20px;
+  left: 0;
+  line-height: 1.5;
+  padding: 10%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(0, 0);
+}
+
+.card__back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-color: @card-back-background-color;
+  color: @card-back-font-color;
+  cursor: pointer;
+  height: 160px;
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  transition: 0.15s;
+}
+
+.card__back .card__text {
+  color: @card-back-font-color;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.card.effect__click.flipped .card__front {
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+}
+
+.card.effect__click.flipped .card__back {
+  transform: rotateY(0);
+  -webkit-transform: rotateY(0);
+}
+
+.msg {
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+.message-container {
+  background-color: @message-background-color;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 20px 30px;
+}
+
+.message-container h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0 0 20px;
+  padding: 0 20px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.message-container p {
+  line-height: 1.5;
+  margin: 0 0 20px;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.message-container img {
+  margin: 0 0 20px;
+  width: 100%;
+}
+
 .desktop-hidden {
   display: block;
   background-position: center;
@@ -123,21 +285,9 @@
   background-size: cover;
   clip-path: ellipse(200% 100% at 50% 0%);
 }
-@media screen and (min-width: 993px) {
-  .desktop-hidden {
-    display: block;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    clip-path: ellipse(125% 100% at 50% 0%);
-  }
-  .mobile-hidden {
-    display: none;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    clip-path: ellipse(250% 100% at 50% 0%);
-  }
+
+.body-donate {
+  text-align: center;
 }
 
 #my-canvas {
@@ -184,6 +334,10 @@ button:hover {
   opacity: 0.8;
 }
 
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
 #centeredRow {
   display: flex;
   justify-content: center;
@@ -226,6 +380,12 @@ section .content {
   line-height: 60px;
   font-style: normal;
   margin-bottom: 40px;
+}
+
+.recentRow {
+  margin-left: 75px;
+  font-style: italic;
+  font-size: small;
 }
 
 .btn {
@@ -336,7 +496,7 @@ section .content {
   margin-left: 165px;
 }
 
-#tripled {
+.buttonTitle {
   font-size: 22px;
   font-weight: 200;
   margin-top: 40px;
@@ -406,6 +566,15 @@ section .content {
   margin-left: 10px;
   color: white;
 }
+.nav-link2 {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 10px;
+  line-height: 40px;
+  margin-left: 30px;
+
+  color: white;
+}
 
 #abtNav {
   margin-left: -15px;
@@ -435,6 +604,20 @@ section .content {
   font-weight: bold;
   outline: none;
 }
+
+.navbtn2 {
+  color: white;
+  background: linear-gradient(94.88deg, #e95252 16.28%, #ec5582 81.93%);
+  margin-right: 5px;
+  margin-top: 11px;
+  width: 62px;
+  height: 18px;
+  border-radius: 30px;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
+  outline: none;
+}
 a.anchor {
   display: block;
   position: relative;
@@ -445,11 +628,15 @@ a.anchor {
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
 }
 
 .nav-link:hover {
   background-color: #3d6186;
+  color: white;
+  height: 100%;
+}
+
+.nav-link2:hover {
   color: white;
   height: 100%;
 }
@@ -459,7 +646,7 @@ a.anchor {
 }
 
 #headerGradient {
-  height: 100px;
+  height: 80px;
   background-image: linear-gradient(#f3f5f9, white);
   width: 100%;
 }
@@ -655,7 +842,7 @@ a.anchor {
 }
 
 /*Donor Section*/
-#donorTitle {
+.donorTitle {
   margin-top: 40px;
   margin-bottom: 30px;
   font-weight: 200;
@@ -664,7 +851,7 @@ a.anchor {
   text-align: center;
 }
 
-#donorText {
+.donorText {
   margin-bottom: 30px;
   font-weight: normal;
   font-size: 14px;
@@ -741,7 +928,7 @@ a.anchor {
 .modal-header {
   justify-content: center;
 }
-#modalBtn {
+.modalBtn {
   width: 154px;
   height: 40px;
   background: #ffffff;
@@ -752,12 +939,12 @@ a.anchor {
   outline: none;
 }
 
-#modalBtn:hover {
+.modalBtn:hover {
   background: linear-gradient(94.88deg, #e95252 16.28%, #ec5582 81.93%);
   color: white;
 }
 
-#modalBtn:focus {
+.modalBtn:focus {
   background-color: #ea2554;
   color: white;
 }
@@ -786,15 +973,6 @@ a.anchor {
   text-align: center;
 }
 
-#matcherText {
-  margin-top: 15px;
-  margin-bottom: 30px;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
-  color: #4f4f4f;
-}
-
 #matcherCard {
   background: white;
   text-align: center;
@@ -803,6 +981,8 @@ a.anchor {
   margin-right: 5px;
   margin-left: 5px;
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -842,10 +1022,11 @@ a.anchor {
   margin-top: 50px;
 }
 
-#backtoTop {
+.backtoTop {
   position: fixed;
-  bottom: 5px;
-  right: 5px;
+  bottom: -5px;
+  left: -5px;
+
   z-index: 1000;
   font-size: 18px;
   border: none;
@@ -860,6 +1041,12 @@ a.anchor {
 /* 02: Larger Mobile*/
 /* If the screen size is greater than*/
 @media screen and (min-width: 370px) {
+  .recentRow {
+    margin-left: 85px;
+    font-style: italic;
+    font-size: small;
+  }
+
   section:before {
     clip-path: ellipse(150% 100% at 50% 0%);
   }
@@ -877,11 +1064,26 @@ a.anchor {
     font-size: 12px;
   }
 
+  .nav-link2 {
+    font-size: 12px;
+  }
+
   #navbtn {
     margin-left: 20px;
     margin-top: 9px;
     width: 70px;
     font-size: 14px;
+  }
+
+  .navbtn2 {
+    margin-right: 5px;
+    height: 15px;
+    margin-top: 11px;
+    width: 70px;
+    height: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
   }
 
   /*ABOUT SECTION ================================================================================*/
@@ -918,6 +1120,11 @@ a.anchor {
 
 /* 03 Tablet*/
 @media screen and (min-width: 600px) {
+  .recentRow {
+    margin-left: 87px;
+    font-style: italic;
+    font-size: small;
+  }
   section:before {
     clip-path: ellipse(125% 100% at 50% 0%);
     background-image: url("assets/header.png");
@@ -959,11 +1166,11 @@ a.anchor {
   }
 
   .progressMargin {
-    margin-left: 205px;
+    margin-left: 185px;
   }
 
   .progressMargin2 {
-    margin-left: 175px;
+    margin-left: 155px;
   }
 
   .donate-amountRow {
@@ -988,19 +1195,17 @@ a.anchor {
 
   /*NAVBAR==========================================================================================*/
   .nav-link {
+    font-size: 14px;
+  }
+
+  .nav-link2 {
+    margin-top: 5px;
     padding-top: 0;
     padding-bottom: 0;
-    margin-left: 20px;
     font-size: 14px;
     line-height: 30px;
-    margin-right: -18px;
     color: white;
   }
-
-  #abtNav {
-    font-weight: bold;
-  }
-
   #navbar {
     z-index: 50;
     width: 100%;
@@ -1014,8 +1219,9 @@ a.anchor {
 
   #navbtn {
     width: 80px;
+    height: 20px;
     margin-left: 40px;
-    margin-top: 4px;
+    margin-top: 10px;
     border-radius: 30px;
     background-color: white;
     color: #ec5582;
@@ -1025,6 +1231,16 @@ a.anchor {
     outline: none;
   }
 
+  .navbtn2 {
+    width: 80px;
+    height: 20px;
+    margin-top: 5px;
+    border-radius: 30px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+  }
   /*ABOUT SECTION ================================================================================*/
 
   #confetti {
@@ -1149,15 +1365,25 @@ a.anchor {
   }
 
   /*Footer Section====================================================================================*/
-
-  #backtoTop {
-    bottom: 20px;
-    right: 30px;
-  }
 }
 
 /*04 Small Laptop*/
 @media screen and (min-width: 1050px) {
+  .desktop-hidden {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: ellipse(125% 100% at 50% 0%);
+  }
+  .mobile-hidden {
+    display: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: ellipse(250% 100% at 50% 0%);
+  }
+
   section:before {
     clip-path: ellipse(100% 100% at 50% 0%);
     background-image: url("assets/header.png");
@@ -1264,7 +1490,15 @@ a.anchor {
     height: 16px;
   }
 
-  #progress {
+  #progressBar {
+    border: 0;
+    background-color: #dadae1;
+    border-radius: 10px;
+    width: 500px;
+    height: 16px;
+  }
+
+  .progress-header {
     font-size: 36px;
     font-weight: 200;
   }
@@ -1280,11 +1514,11 @@ a.anchor {
   }
 
   .progressMargin {
-    margin-left: 320px;
+    margin-left: 325px;
   }
 
   .progressMargin2 {
-    margin-left: 338px;
+    margin-left: 325px;
   }
 
   .progressAmt {
@@ -1293,7 +1527,7 @@ a.anchor {
     font-style: normal;
   }
 
-  #tripled {
+  .buttonTitle {
     font-size: 36px;
     font-weight: 200;
   }
@@ -1331,6 +1565,13 @@ a.anchor {
     margin-right: 20px;
     color: white;
   }
+  .nav-link2 {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+
+    color: white;
+  }
 
   #border {
     border-bottom-style: dashed;
@@ -1359,12 +1600,17 @@ a.anchor {
     height: 30px;
     margin-top: 10px;
     margin-left: 150px;
-
+    border: none;
+  }
+  .navbtn2 {
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
     border: none;
   }
 
   #headerGradient {
-    height: 100px;
+    height: 50px;
     background-image: linear-gradient(#f3f5f9, white);
     width: 100%;
   }
@@ -1477,7 +1723,7 @@ a.anchor {
   }
   /*Donors Section================================================================================*/
 
-  #donorTitle {
+  .donorTitle {
     margin-top: 120px;
     margin-bottom: 50px;
     font-weight: 200;
@@ -1485,7 +1731,7 @@ a.anchor {
     text-align: center;
   }
 
-  #donorText {
+  .donorText {
     margin-top: 24px;
     margin-bottom: 50px;
     font-weight: normal;
@@ -1556,10 +1802,6 @@ a.anchor {
     text-align: center;
   }
 
-  #matcherText {
-    margin-top: 24px;
-  }
-
   #matcherCard {
     background: white;
     text-align: center;
@@ -1595,10 +1837,10 @@ a.anchor {
     margin-top: 80px;
   }
 
-  #backtoTop {
+  .backtoTop {
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    bottom: -5px;
+    left: -5px;
   }
 }
 
@@ -1686,8 +1928,12 @@ a.anchor {
     height: 16px;
   }
 
+  .dbtnCol {
+    width: 100%;
+  }
+
   .donate-amountRow {
-    width: 90%;
+    width: 80%;
     margin-left: 12px;
     justify-content: center;
     margin-top: 15px;
@@ -1735,8 +1981,14 @@ a.anchor {
     color: white;
   }
 
-  #abtNav {
-    font-weight: bold;
+  .nav-link2 {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+
+    color: white;
   }
 
   #navbtn {
@@ -1752,12 +2004,20 @@ a.anchor {
     border: none;
   }
 
+  .navbtn2 {
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+  }
   #abtNav {
     margin-left: 430px;
   }
 
   #headerGradient {
-    height: 100px;
+    height: 70px;
     background-image: linear-gradient(#f3f5f9, white);
     width: 100%;
   }
@@ -1859,29 +2119,11 @@ a.anchor {
     color: #dadae1;
   }
 
-  #donorCard:after {
-    content: ""; /* This is necessary for the pseudo element to work. */
-    display: block; /* This will put the pseudo element on its own line. */
-    margin: 0 auto; /* This will center the border. */
-    padding-top: 1px;
-    width: 320px; /* Change this to whatever width you want. */
-    border-bottom: 1px solid #dadae1; /* This creates the border. Replace black with whatever color you want. */
-  }
-
   #sortCont {
     margin-left: 165px;
   }
 
   /*Matchers Section=============================================================================*/
-
-  #matcherText {
-    margin-top: 24px;
-    margin-bottom: 30px;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
-    color: #4f4f4f;
-  }
 
   #matcherLogo {
     height: 50px;
@@ -1911,17 +2153,21 @@ a.anchor {
     margin-top: 80px;
   }
 
-  #backtoTop {
+  .backtoTop {
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    bottom: -5px;
+    left: -5px;
   }
 }
 
 /* 06 Large Desktop*/
 @media screen and (min-width: 1850px) {
+  .buttonTitle {
+    margin-left: 40%;
+    width: 200%;
+  }
   .donate-amountRow {
-    width: 100%;
+    width: 72%;
     margin-left: 12px;
     justify-content: center;
     margin-top: 15px;
@@ -2051,6 +2297,10 @@ a.anchor {
     margin-left: 10px;
   }
 
+  .dbtnCol {
+    width: 80%;
+  }
+
   /*NAVBAR==========================================================================================*/
   .nav-link {
     padding-top: 0;
@@ -2062,8 +2312,17 @@ a.anchor {
     color: white;
   }
 
+  .nav-link2 {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+
+    color: white;
+  }
+
   #abtNav {
-    font-weight: bold;
     margin-left: 430px;
   }
 
@@ -2081,7 +2340,7 @@ a.anchor {
   }
 
   #headerGradient {
-    height: 100px;
+    height: 80px;
     background-image: linear-gradient(#f3f5f9, white);
     width: 100%;
   }
@@ -2247,10 +2506,10 @@ a.anchor {
 
   /*Footer Section======================================================================================*/
 
-  #backtoTop {
+  .backtoTop {
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    bottom: -5px;
+    left: -5px;
     z-index: 99;
     font-size: 18px;
     border: none;
@@ -2264,8 +2523,11 @@ a.anchor {
 }
 
 @media screen and (min-width: 2001px) {
+  .buttonTitle {
+    width: 200%;
+  }
   .donate-amountRow {
-    width: 100%;
+    width: 72%;
     margin-left: 12px;
     justify-content: center;
     margin-top: 15px;

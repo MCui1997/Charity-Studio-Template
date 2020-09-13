@@ -8,14 +8,14 @@
 
     <head>
         <!-- Google Tag Manager -->
-                                            <!-- <temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                            <!-- <temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','{{campaign | field_by_api_name: 'facebookpixelid' | default: 'GTM-5JJSW9S'}}');</script></temp></temp></temp></temp></temp> -->
-                                            <!-- End Google Tag Manager -->
-                                        
-                                            <!-- Facebook Pixel Code -->
+  })(window,document,'script','dataLayer','{{campaign | field_by_api_name: 'facebookpixelid' | default: 'GTM-5JJSW9S'}}');</script></temp></temp></temp></temp></temp></temp></temp> -->
+                                                            <!-- End Google Tag Manager -->
+                                                        
+                                                            <!-- Facebook Pixel Code -->
         <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -47,7 +47,9 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800&display=swap" rel="stylesheet">
         <link href="https://use.typekit.net/dov3vrb.css" rel="stylesheet">
 
+        <div class = "row" id = "centeredRow">
         {{ 'rbInclude' | header }}
+        </div>
 
         <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script>
@@ -96,7 +98,7 @@ $.noConflict();
 
     </div>
 
-    <!--Footer Section<temp data-prettydiff-ignore>-------</temp><temp data-prettydiff-ignore>-------</temp><temp data-prettydiff-ignore>-------</temp><temp data-prettydiff-ignore>-------</temp><temp data-prettydiff-ignore>-------</temp><temp data-prettydiff-ignore>-------</temp><temp data-prettydiff-ignore>-------</temp><temp data-prettydiff-ignore>-------</temp><temp data-prettydiff-ignore>-------</temp><temp data-prettydiff-ignore>-------</temp><temp data-prettydiff-ignore>-------</temp><temp data-prettydiff-ignore>-------</temp>->
+   
 <footer style="background-color: #dde3ef; width: 100%; padding-top: 80px;">
   <div class="wrapper" style="text-align: center">
     <div class = "row" id = "centeredRow">
@@ -118,60 +120,23 @@ $.noConflict();
       </button></a
     >
     </div>
-    <div class = "row" id = "centeredRow">
+    
 
  
-    {% endif %} {% if pageTitleDowncased != 'home' %}
-    <a class="footer-button button" href="{{ campaign.url }}/">
-      <button
-        class="btn"
-        type="input"
-        style="
-          border-style: none;
-          width: 280px;
-          height: 60px;
-          margin-bottom: 80px;
-          font-size: 20px;
-        "
-      >
-        HOME
-      </button></a
-    >
-  </div>
+    {% endif %} 
 
-  <div class = "row" id = "centeredRow">
-    {% endif %} {% if pageTitleDowncased != 'donors' %}
-    <a class="footer-button button" href="{{ campaign.url }}/p/donors">
-      <button
-        class="btn"
-        type="input"
-        style="
-          border-style: none;
-          width: 280px;
-          height: 60px;
-          margin-bottom: 80px;
-          font-size: 20px;
-        "
-      >
-        DONORS
-      </button></a
-    >
-
-    {% endif %}
-  </div>
 </div>
+<div class = "row" id = "centeredRow">
+  {{ 'rbInclude' | footer }}
+  <img src="https://charity.studio/wp-content/uploads/2019/09/CS_Matching_logoArtboard-15.png" style="margin-left: 40px; max-width: 250px;" />
+  </div>
 </footer>
 
 
 
 
-    <div style="clear:both;"></div>
 
-    <p style="color:#aaa;width:80%;display:block;margin:20px auto; text-align:center;">
-      <!--<i>Area for non-profit status</i>-->
-    </p>
-
-    {{ 'rbInclude' | footer }}
+  
 
     {% assign campaignGoal = campaign.Goal_Amount -%}
     {% assign campaignRaised = campaign.Amount_Raised -%}
@@ -245,13 +210,5 @@ $.noConflict();
 
   </body>
 </html> 
-    </head>
-</html> 
-    </head>
-</html> 
-    </head>
-</html> 
-    </head>
-</html> 
-    </head>
-</html>
+   
+ 
