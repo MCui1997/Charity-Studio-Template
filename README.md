@@ -1,12 +1,5 @@
 # Charity-Studio-Template
 
-## Deadlines
+## Description
 
-- 1st Draft for review by August 15th
-- Ready to be connected to Liquid August 22nd
-- Ready for full testing August 28th
-- Implemented into the first campaign on September 7th
-
-## Rough Draft
-
-All sections are completed and look great in both Iphone 11xPro (375 px width) and Macbook Pro (1280px width)
+This is a new template created for fundraising campaigns under copyright of Charity Studio. Template was first outlined in plain html and then converted to liquid with utilization of Rallybound. If you would like to see the finished product, please contact me at cuimichael500@gmail.com.
