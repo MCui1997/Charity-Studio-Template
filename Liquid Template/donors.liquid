@@ -4,7 +4,9 @@
             <ul class="nav nav-pills">
                 <li class="nav-item">
                     <a class="nav-link2" href="{{campaign.url}}/">
+                        
                         <button style="background-color: transparent; border: none">
+                            <img src = "https://charity.studio/wp-content/uploads/2020/09/Icon-home.png" style = "height: 90%; margin-right: 5px; margin-bottom: 5px">
                             <h7 style="color: #EA2554;">MAIN CAMPAIGN PAGE</h7>
                         </button>
                     </a>
@@ -88,15 +90,20 @@
                             {% assign amount = amount | times: displayed_Donation_Info.Matched_Times -%}
                         {% endif -%}
                         {% if amount >= tiers[0]-%}
-                            {% assign tier = 'purple' -%}
-                        {% elsif amount >= tiers[1] -%}
-                            {% assign tier = 'cyan' -%}
-                        {% elsif amount >= tiers[2] -%}
-                            {% assign tier = 'orange' -%}
-                        {% elsif amount >= tiers[3] -%}
-                            {% assign tier = 'lightorange' -%}
-                        {% else %}
-                            {% assign tier = 'red' -%}
+                        {% assign tier = 'red' -%}
+                        {% assign cardColor = "#F53457"%}
+                    {% elsif amount >= tiers[1] -%}
+                        {% assign tier = 'lightorange' -%}
+                        {%assign cardColor = "#FFA72C"%}
+                    {% elsif amount >= tiers[2] -%}
+                        {% assign tier = 'orange' -%}
+                        {%assign cardColor = "#FF6C25"%}
+                    {% elsif amount >= tiers[3] -%}
+                        {% assign tier = 'cyan' -%}
+                        {%assign cardColor = "#27AAE1"%}
+                    {% else %}
+                        {% assign tier = 'purple' -%}
+                        {%assign cardColor = "#414E93"%}
                         {% endif -%}
                            
                             <div class="card {%if msg and msg != ''%} effect__click{%endif%}">
@@ -111,7 +118,7 @@
                                 <div style = "margin-right: 7px; color: #C2C9E2; position:absolute; bottom: 0; right: 0" class= "match-multiplier {{tier}}">{%if displayed_Donation_Info.Matched_Times > 1 %}X{{displayed_Donation_Info.Matched_Times}}{% else %}X1{% endif %}</div>
                                 
                               </div>
-                              {%if msg and msg != '' %}<div class="card__back"><span class="card__text">{{msg}}</span></div>{%endif%}
+                              {%if msg and msg != '' %}<div class="card__back" style = "overflow-y:scroll; background-color:  {{cardColor}};"><span class="card__text">{{msg}}</span></div>{%endif%}
                             </div>
                         {% endfor -%}
                             
@@ -126,6 +133,7 @@
 
 
 <script>
+
 
     window.onscroll = function () {
         stickyNav();

@@ -28,7 +28,7 @@
         <div class="row">
             <div class="container">
 
-                <div class="row" id="centeredRow" style="margin-top:40px; margin-bottom: 40px; padding-bottom: 30px; padding-top:30px">
+                <div class="row" id="centeredRow" style="margin-top:20px; margin-bottom: 20px; padding-bottom: 50px; padding-top:30px">
                     {% assign donations = campaign | donations -%}
                     {% assign tiers = campaign | term_by_name: 'Cstm10' %}
                     {% assign tiers = tiers | split: ", " %}
@@ -51,22 +51,23 @@
                                 {% assign amount = amount | times: displayed_Donation_Info.Matched_Times -%}
                             {% endif -%}
                             {% if amount >= tiers[0]-%}
-                                {% assign tier = 'purple' -%}
+                                {% assign tier = 'red' -%}
                             {% elsif amount >= tiers[1] -%}
-                                {% assign tier = 'cyan' -%}
+                                {% assign tier = 'lightorange' -%}
                             {% elsif amount >= tiers[2] -%}
                                 {% assign tier = 'orange' -%}
                             {% elsif amount >= tiers[3] -%}
-                                {% assign tier = 'lightorange' -%}
+                                {% assign tier = 'cyan' -%}
                             {% else %}
-                                {% assign tier = 'red' -%}
+                                {% assign tier = 'purple' -%}
                             {% endif -%}
-                            <div class="donorWrapper" style=" border-bottom: 1px solid #dadae1;">
-                                <div class="row" id="centeredRow">
-                                    <div class="col-2" style = "vertical-align: middle;">
-                                        <img id="donorImg" src="https://charity.studio/wp-content/uploads/2020/09/{{tier}}.png" style="vertical-align: middle; max-height: 30px;"/>
+                            <div class="donorWrapper" style=" border-bottom: 1px solid #dadae1; padding-top: 10px; width: 100%; margin-bottom: 10px;">
+                                <div class="row" id="centeredRow" >
+                                    <div class="col-1" style = "vertical-align: middle;">
+                                        <img id="donorImg" src="https://charity.studio/wp-content/uploads/2020/09/{{tier}}.png" style="margin-bottom:5px"/>
                                     </div>
 
+                                    
                                     <div class="col-5" style="text-align: left;">
 
                                         <h7 id="donorName">
@@ -74,10 +75,16 @@
                                                 {{displayed_Donation_Info.Donor_Name}}{% else %}Anonymous
                                             {% endif %}
                                         </h7>
+
+                                        {%if msg and msg != '' %}
+                                        <div class = "row recentRow">
+                                            {{msg}}
+                                        </div>
+                                    {%endif%}
                                     </div>
 
 
-                                    <div class="col-5" style="text-align: right;">
+                                    <div class="col-6" style="text-align: right;">
                                         <h7 id="donorAmt" style="margin-left: 0;">
                                             {% if amount == 0 %}
                                                 {% else %}
@@ -88,11 +95,7 @@
 
 
                                 </div>
-                                {%if msg and msg != '' %}
-                                    <div class = "row recentRow">
-                                        {{msg}}
-                                    </div>
-                                {%endif%}
+                            
                             </div>
                             {% assign donorCount = donorCount | plus: 1 %}
 

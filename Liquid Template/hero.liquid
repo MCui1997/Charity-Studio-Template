@@ -1,8 +1,20 @@
 {% assign pageControllerDowncased = Page.Controller | downcase -%}
 
-<section class="desktop-hidden" style="background-image:url({{ Campaign | first_image: 'MobileLogo', 1400, 700 }})">
+{% if pageControllerDowncased == 'donate' %}
+
+    <a href="{{ campaign.url }}/">
+        <button class="backtoTop">
+            <img src="https://www.friendshipcircle.org/wp-content/uploads/endofyear/back.png"/>
+        </button>
+    </a>
+
+
+{% endif %}
+
+<section class="desktop-hidden" style=" background-image:url({{ Campaign | first_image: 'MobileLogo', 1400, 700 }})">
     <div class="container-fluid">
         <div class="content">
+
 
             <img class="logo" src="https://charity.studio/wp-content/uploads/2020/08/logo-star-1.png" style="margin-top: 40px; visibility: hidden"/>
             <h6 class="title" style="visibility: hidden">
@@ -18,9 +30,7 @@
                 </a>
 
                 {%Widget countdown%}
-                {% if pageControllerDowncased <> 'home' %}
-                </div>
-            {% endif %}
+
+            </div>
         </div>
-    </div>
-</section>
+    </section> 
