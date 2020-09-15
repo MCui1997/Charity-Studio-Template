@@ -1,10 +1,9 @@
 {% assign amounts = campaign | donation_button_amounts -%}
 
+
 <div class="col-lg-6" id="dbtnCol">
     <div class="row donate-amountLabelRow" style="margin-top: 40px">
-
         <h4 class="buttonTitle">All donations!</h4>
-
 
         <div class="donate-amountRow row">
             {% for amount in amounts -%}

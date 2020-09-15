@@ -290,6 +290,29 @@
   text-align: center;
 }
 
+.teamMiddleCol {
+  margin-left: 45px;
+}
+
+.teamBtn {
+  border-radius: 30px;
+  width: 85px;
+  height: 32px;
+  color: white;
+  border-style: solid;
+  border-color: white;
+  outline: none;
+  background: linear-gradient(94.88deg, #e95252 16.28%, #ec5582 81.93%);
+  margin-left: 190px;
+}
+.teamRightCol {
+  text-align: right;
+  margin-left: 40px;
+}
+.teamRow {
+  font-size: 12px;
+}
+
 #my-canvas {
   height: 100%;
   left: 0;
@@ -406,6 +429,18 @@ section .content {
   font-style: normal;
   line-height: 28px;
   margin-top: 30px;
+}
+
+.aboutRows {
+  width: 90%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.matcherRows {
+  width: 90%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #clockDay,
@@ -577,7 +612,7 @@ section .content {
   color: white;
 }
 
-#abtNav {
+#donorNav {
   margin-left: -15px;
 }
 
@@ -642,7 +677,7 @@ a.anchor {
   height: 100%;
 }
 
-#abtNavText:hover {
+#donorNavText:hover {
   border: none;
 }
 
@@ -654,6 +689,9 @@ a.anchor {
 
 /*About Section*/
 
+.bigThree {
+  display: none;
+}
 #confetti {
   display: none;
 }
@@ -1089,15 +1127,6 @@ a.anchor {
     width: 188px;
   }
 
-  #donorLabel1 {
-    margin-left: 65px;
-    margin-right: 58px;
-  }
-  #donorLabel2 {
-    margin-left: 38px;
-    margin-right: 52px;
-  }
-
   #teamBtn {
     width: 158px;
   }
@@ -1115,6 +1144,10 @@ a.anchor {
 
 /* 03 Tablet*/
 @media screen and (min-width: 600px) {
+  .teamBtn {
+    margin-left: 40px;
+  }
+
   .recentRow {
     margin-left: 14px;
     font-style: italic;
@@ -1366,6 +1399,20 @@ a.anchor {
 
 /*04 Small Laptop*/
 @media screen and (min-width: 1050px) {
+  .aboutRows {
+    column-count: 2;
+    column-gap: 40px;
+    max-width: 1000px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .matcherRows {
+    column-count: 2;
+    column-gap: 40px;
+    max-width: 1200px;
+  }
+
   .desktop-hidden {
     display: block;
     background-position: center;
@@ -1588,7 +1635,7 @@ a.anchor {
     justify-content: center;
   }
 
-  #abtNav {
+  #donorNav {
     margin-left: 270px;
   }
 
@@ -1843,6 +1890,9 @@ a.anchor {
 
 /* 05 Desktop*/
 @media screen and (min-width: 1500px) {
+  .bigThree {
+    display: block;
+  }
   .slogan {
     font-size: 100px;
     font-weight: 200;
@@ -2009,7 +2059,7 @@ a.anchor {
     outline: none;
     border: none;
   }
-  #abtNav {
+  #donorNav {
     margin-left: 430px;
   }
 
@@ -2319,7 +2369,7 @@ a.anchor {
     color: white;
   }
 
-  #abtNav {
+  #donorNav {
     margin-left: 430px;
   }
 

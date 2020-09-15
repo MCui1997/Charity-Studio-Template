@@ -1,52 +1,154 @@
 <a href="#">
-    <button class="backtoTop">
-        <img src="https://charity.studio/wp-content/uploads/2020/08/backtotop.png"/>
-    </button>
+  <button class="backtoTop">
+    <img
+      src="https://charity.studio/wp-content/uploads/2020/08/backtotop.png"
+    />
+  </button>
 </a>
 
 <div class="container-fluid" id="donateBtnCol">
-    <div class="row" id="centeredRow" style="margin-top: 40px">
-        {%Widget progressbar%}
-        {%Widget donatebuttons%}
-    </div>
+  <div class="row" id="centeredRow" style="margin-top: 40px">
+    {%Widget progressbar%} {%Widget donatebuttons%}
+  </div>
 </div>
 
 <div class="row" id="centeredRow" style="margin-top: 80px">
-    <nav id="navbar">
-        <ul class="nav nav-pills">
-            <li class="nav-item">
-                <a class="nav-link" href="#about" id="abtNav">
-                    <h7 id="abtNavText">ABOUT</h7>
-                </a>
-            </li>
+  <nav id="navbar">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="#donors" id="donorNav">
+          <h7 id="matcherNavText">DONORS</h7>
+        </a>
+      </li>
 
+      <li class="nav-item">
+        <a class="nav-link" href="#matchers" id="matcherNav">
+          <h7 id="matcherNavText">MATCHERS</h7>
+        </a>
+      </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#matchers" id="matcherNav">
-                    <h7 id="matcherNavText">MATCHERS</h7>
-                </a>
-            </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about" id="abtNav">
+          <h7 id="abtNavText">ABOUT</h7>
+        </a>
+      </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#donors" id="donorNav">
-                    <h7 id="matcherNavText">DONORS</h7>
-                </a>
-            </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#teams" id="teamNav">
+          <h7 id="abtNavText">TEAMS</h7>
+        </a>
+      </li>
 
-            <li class="nav-item">
-                <a href="{{ campaign.url }}/donate">
-                    <button id="navbtn" type="input">DONATE</button>
-                </a>
-            </li>
-        </ul>
-    </nav>
+      <li class="nav-item">
+        <a href="{{ campaign.url }}/donate">
+          <button id="navbtn" type="input">DONATE</button>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
 
 <div class="row">
-    <div id="headerGradient"></div>
+  <div id="headerGradient"></div>
 </div>
 
-{%Widget homemain%}
+{%Widget recentdonations%} {%Widget matchers%} {%Widget homemain%} {% assign
+fundraisers = campaign | fundraisers_with_displayed_donation_infos%}
 
-{%Widget matchers%}
-{%Widget recentdonations%}
+<div class="container-fluid">
+  <a class="anchor" id="teams"></a>
+  <div class="row" id="centeredRow">
+    <h3 id="teamTitle">Our Teams</h3>
+  </div>
+
+  <div class="row" id="centeredRow" style="margin-bottom: 80px">
+    {% for fundraiser in fundraisers %}
+    <div
+      class="col-lg-6 d-flex justify-content-center"
+      style="max-width: 700px"
+    >
+      <div class="card mb-3" id="teamCard">
+        <div class="row no-gutters">
+          <div class="col-xs-4">
+            <div class="img-square-wrapper">
+              <img
+                id="teamImg"
+                src="https://charity.studio/wp-content/uploads/2020/09/02.png"
+              />
+            </div>
+          </div>
+
+          <div class="col-xs-5">
+            <div class="card-body">
+              <div class="row">
+                <h6 id="teamName">
+                  {{ fundraiser.Campaign_Name }}
+                </h6>
+              </div>
+              <div class="row" id="centeredRow">
+                <progress
+                  id="teamProgressbar"
+                  value="{{
+                    fundraiser.Amount_Raised
+                      | times: 3
+                      | divided_by: fundraiser.Goal_Amount
+                      | times: 100
+                      | round
+                  }}"
+                  max="100"
+                ></progress>
+              </div>
+              <div
+                class="row teamRow"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 12px;
+                "
+              >
+                <h7 style>
+                  {{
+                    fundraiser.Amount_Raised
+                      | times: 3
+                      | divided_by: fundraiser.Goal_Amount
+                      | times: 100
+                      | round
+                  }}%
+                </h7>
+
+                <h7>{{ fundraiser.Displayed_Donation_Infos | size }}</h7>
+
+                <h7>${{ fundraiser.Goal_Amount | round }}</h7>
+              </div>
+
+              <div
+                class="row"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 12px;
+                "
+              >
+                <h8 style="display: inline-block">COMPLETE</h8>
+                <h8 style="display: inline-block">DONORS</h8>
+                <h8 style="display: inline-block">GOAL</h8>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-2 my-auto">
+            <a
+              href="{{
+                fundraiser.Direct_Donate_Link
+              }}&submit=Continue&selectors=true"
+            >
+              <button class="teamBtn" type="input">DONATE</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
