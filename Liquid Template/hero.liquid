@@ -1,7 +1,11 @@
 {% assign pageControllerDowncased = Page.Controller | downcase -%}
+{%assign pageTitleDowncased = Page.Action | downcase -%}
 
-
-<section class="desktop-hidden" style=" background-image:url({{ Campaign | first_image: 'MobileLogo', 1400, 700 }})">
+{% if pageControllerDowncased != "donate" and pageControllerDowncased != "p/donors" and pageControllerDowncased != "home" %}
+<div style = "display: none">
+    {% endif %}
+{% if pageControllerDowncased != 'mypage' %}
+<section class="desktop-hidden">
     <div class="container-fluid">
         <div class="content">
 
@@ -12,7 +16,7 @@
             </h6>
             <h8 class="title-2" style="visibility: hidden">CHARITY RALLY</h8>
             <h1 class="slogan" style="visibility: hidden">Live, Learn, Lead!</h1>
-            {% if pageControllerDowncased <> 'home' %}
+            {% if pageControllerDowncased <> 'home'  %}
                 <div style="visibility: hidden">
                 {% endif %}
                 <a href="{{ campaign.url }}/donate">
@@ -25,19 +29,21 @@
 
             </div>
         </div>
-    </section> 
+    </section>
+    {% endif %}
+</div>
+
 
     {% if pageControllerDowncased == 'donate' %}
 
     <div class = "container" style = "justify-content: left; text-align: left; margin-left: 10px">
     <a href="{{ campaign.url }}/">
-        <button style = "background-color: transparent; justify-content: center; border: none;">
+        <button style = "outline: none; box-shadow: none;background-color: transparent; justify-content: center; border: none;">
             <img src="https://www.friendshipcircle.org/wp-content/uploads/endofyear/back.png" style = "vertical-align: middle; margin-bottom: 7px"/>
             <span style="font-size: 20px; color: #c1c1bf ">Back to Campaign</span>
-     
+
         </button>
     </a>
 </div>
-
 
 {% endif %}

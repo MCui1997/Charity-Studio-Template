@@ -3,18 +3,19 @@
     {%assign pageTitleDowncased = Page.Action | downcase -%}
 
     {% if pageTitleDowncased == 'index' -%}
+    
         {%assign pageTitleDowncased = Page.Controller | downcase -%}
     {% endif %}
 
     <head>
         <!-- Google Tag Manager -->
-                                                            <!-- <temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                            <!-- <temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','{{campaign | field_by_api_name: 'facebookpixelid' | default: 'GTM-5JJSW9S'}}');</script></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp> -->
+  })(window,document,'script','dataLayer','{{campaign | field_by_api_name: 'facebookpixelid' | default: 'GTM-5JJSW9S'}}');</script></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp> -->
                                                             <!-- End Google Tag Manager -->
-                                                        
+
                                                             <!-- Facebook Pixel Code -->
         <script>
       !function(f,b,e,v,n,t,s)
@@ -47,10 +48,9 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800&display=swap" rel="stylesheet">
         <link href="https://use.typekit.net/dov3vrb.css" rel="stylesheet">
 
-        <div class = "row" id = "centeredRow">
+      
         {{ 'rbInclude' | header }}
-        </div>
-
+     
 
   <script
     src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -71,20 +71,39 @@
     id = "bootstrapPage"
   />
 
-    {{ 'variables, style' | less }}
+
 
   </head>
 
   {% if pageTitleDowncased == 'donate' %}<body class="{{ Page.BodyClasses }} body-donate">
+    
+    {{ 'variables, style' | less }}
     <script>
       var sheet = document.getElementById("bootstrapPage");
   sheet.disabled = true;
   sheet.parentNode.removeChild(sheet);
   </script>
-    
+
     {% endif %}
 
-  {% if pageTitleDowncased == 'donors' %}<body class="{{ Page.BodyClasses }} body-donors">{% endif %}
+    {% if pageTitleDowncased != 'donate' and pageTitleDowncased != 'donors' and pageTitleDowncased != 'home' %}<body class="{{ Page.BodyClasses }} body-donate">
+      
+        <script>
+        var sheet = document.getElementById("bootstrapPage");
+    sheet.disabled = true;
+    sheet.parentNode.removeChild(sheet);
+
+
+
+    </script>
+
+      {% endif %}
+
+
+  {% if pageTitleDowncased == 'donors' %}<body class="{{ Page.BodyClasses }} body-donors">
+    {{ 'variables, style' | less }}
+    {% endif %}
+
   {% if pageTitleDowncased == 'home' %}<body class="{{ Page.BodyClasses }}">{% endif %}
   <body class="{{ Page.BodyClasses }}" style="background-image: url('{{ Campaign | first_image: 'HomePage', 1500, 2706 }}');">
 
@@ -95,17 +114,55 @@
     {%Widget hero%}
 
     <div class="entry-content">
+      {% if pageTitleDowncased != 'mypage' %}
       <canvas id="my-canvas"></canvas>
+      {% else %}
+      <style>
+        .selectContWrap {
+          display: none;
+        }
+
+        #topBannerHeaderHolder .imageContainer#topTitleImage {
+          width: auto;
+        }
+      </style>
+      {% endif %}
       {{ Content }}
 
     </div>
 
-   
+
+
+    {% if pageTitleDowncased != 'donate' and pageTitleDowncased != 'donors' and pageTitleDowncased != 'home' %}<body class="{{ Page.BodyClasses }} body-donate">
+    <div style = "display:none">
+
+
+      {% endif %}
 <footer style="background-color: #dde3ef; width: 100%; padding-top: 80px;">
   <div class="wrapper" style="text-align: center">
     <div class = "row" id = "centeredRow">
-  
+
     {% if pageTitleDowncased != 'donate' %}
+
+    <a class="footer-button button" href="https://www.friendshipcirclemiami.org/" target = "_blank">
+      <button
+        class="btn"
+        type="input"
+        style="
+          background: linear-gradient(90deg, #3d6186 0%, #6487ac 100%);
+          border-style: none;
+          width: 280px;
+          height: 60px;
+          margin-bottom: 80px;
+          font-size: 20px;
+        "
+      >
+        FCMIAMI.ORG
+      </button></a
+    >
+    </div>
+    <div class = "row" id = "centeredRow">
+
     <a class="footer-button button" href="{{ campaign.url }}/donate">
       <button
         class="btn"
@@ -122,23 +179,27 @@
       </button></a
     >
     </div>
-    
 
- 
-    {% endif %} 
+
+
+    {% endif %}
 
 </div>
-<div class = "row" id = "centeredRow">
-  {{ 'rbInclude' | footer }}
-  <img src="https://charity.studio/wp-content/uploads/2019/09/CS_Matching_logoArtboard-15.png" style="margin-left: 40px; max-width: 250px;" />
+<div class = "wrapper" style = "text-align: center;">
+    {{ 'rbInclude' | footer }}
+    <br>
+  <img src="https://charity.studio/wp-content/uploads/2019/09/CS_Matching_logoArtboard-15.png" style= "max-width: 250px;" />
   </div>
 </footer>
+</div>
 
 
 
 
+{% if pageTitleDowncased == 'home' or pageTitleDowncased == 'donors'%}<body class="{{ Page.BodyClasses }}">
 
-  
+
+
 
     {% assign campaignGoal = campaign.Goal_Amount -%}
     {% assign campaignRaised = campaign.Amount_Raised -%}
@@ -209,6 +270,8 @@
     <script src="https://charity.studio/wp-content/themes/twentynineteen-child/js/confetti.js"></script>
 
     {{ 'campaign' | js }}
+    {{ 'variables, style' | less }}
 
+    {% endif %}
   </body>
 </html>

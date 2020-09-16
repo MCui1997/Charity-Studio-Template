@@ -1,5 +1,9 @@
-<div class="row" id="centeredRow" style="margin-top: 80px">
-    <nav id="navbar2" style=" width: 100%;z-index: 50; width: 100%; background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0.9) 50%, #FFFFFF 100%); opacity: .8">
+<div class="row" id="centeredRow">
+    <img src = "https://cdn3.rallybound.com/Content/images/img/18040/header-desktop3.png" class = "donorHeader" style = " object-position: top; object-fit: cover; width: 100%;">
+    <img src = "https://cdn3.rallybound.com/Content/images/img/18040/header-mobile2.png" class = "donorHeaderMobile" style = " object-position: top; object-fit: cover; width: 100%;">
+    
+
+    <nav id="navbar2" style="z-index: 50; width: 100%; background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0.9) 50%, #FFFFFF 100%); opacity: .8">
         <div class="container" style="position:relative">
             <ul class="nav nav-pills">
                 <li class="nav-item">
@@ -39,7 +43,7 @@
     <div class="row" id="centeredRow">
         <h3 class="donorTitle" style="margin-top: 0;">Thank You Donors!</h3>
     </div>
-    <div class="row" id="centeredRow" style="margin-bottom: 40px">
+    <div class="row" id="centeredRow" style="margin-top: 20px; margin-bottom: 40px">
         <p class="donorText">
             {{campaign | term_by_name: 'Cstm4'}}
         </p>
@@ -61,7 +65,7 @@
         </div>
     </div>
 
-    <div class="row" >
+    <div class="row" id = "centeredRow" >
         <div class="container" style = "text-align: center;">
             
 
@@ -111,12 +115,12 @@
                                     <img id="donorImg" src="https://charity.studio/wp-content/uploads/2020/09/{{tier}}.png" style="max-height: 30px; margin-bottom: 10px"/>
                                   
                                   <br>  {% if amount == 0 %}{% else %}{{amount | money: 2}}{% endif %}
-                                  <div class="donorName">{% if displayed_Donation_Info.Donor_Name != "" and displayed_Donation_Info.Donor_Name != nil %}{{displayed_Donation_Info.Donor_Name}}{% else %}Anonymous{% endif %}</div>
+                                  <div class="donorName">{% if displayed_Donation_Info.Donor_Name != "" and displayed_Donation_Info.Donor_Name != nil %}{{displayed_Donation_Info.Donor_Name | truncate: 38}}{% else %}Anonymous{% endif %}</div>
                                 </div>
                                 <div style = "margin-right: 7px; color: #C2C9E2; position:absolute; bottom: 0; right: 0" class= "match-multiplier {{tier}}">{%if displayed_Donation_Info.Matched_Times > 1 %}X{{displayed_Donation_Info.Matched_Times}}{% else %}X1{% endif %}</div>
                                 
                               </div>
-                              {%if msg and msg != '' %}<div class="card__back" style = "overflow-y:scroll; background-color:  {{cardColor}};"><span class="card__text">{{msg}}</span></div>{%endif%}
+                              {%if msg and msg != '' %}<div class="card__back" style = "background-color:  {{cardColor}};"><span class="card__text">{{msg | truncate: 125}}</span></div>{%endif%}
                             </div>
                         {% endfor -%}
                             

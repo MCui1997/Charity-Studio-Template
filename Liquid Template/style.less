@@ -109,6 +109,24 @@
 @wrapper-background-size: cover;
 @wrapper-width: 100%;
 
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .match-multiplier.tier-one,
 .card__front.tier-zero {
   color: @match-tier-one-color;
@@ -176,9 +194,7 @@
 .card {
   display: inline-block;
   height: 160px;
-  margin: 1%;
-  min-width: 240px;
-  max-width: 240px;
+  width: 240px;
   position: relative;
   text-align: center;
 }
@@ -186,6 +202,7 @@
 .card__front {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
   height: 100%;
   left: 0;
   position: absolute;
@@ -205,15 +222,17 @@
   right: 0;
   top: 0;
   transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
 }
 
 .card__back {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
   background-color: @card-back-background-color;
   color: @card-back-font-color;
   cursor: pointer;
-  height: 160px;
+  height: 159px;
   transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
   transition: 0.15s;
@@ -222,24 +241,40 @@
 .card__back .card__text {
   color: @card-back-font-color;
   font-size: 16px;
-  overflow: hidden;
 }
 
 .card.effect__click.flipped .card__front {
   transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
 }
 
 .card.effect__click.flipped .card__back {
   transform: rotateY(0);
   -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
 }
 
 .msg {
   top: 0;
-  right: 0;
   cursor: pointer;
+  opacity: 0.5;
   position: absolute;
+  right: 0;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  width: 25px;
+}
+
+.match-multiplier {
+  background-color: @match-background-color;
+  border-radius: 100px;
+  bottom: 10px;
+  height: 25px;
+  left: 10px;
+  line-height: 1.5;
+  position: absolute;
+  width: 25px;
 }
 
 .message-container {
@@ -253,7 +288,7 @@
 .message-container h2 {
   font-size: 1.2rem;
   font-weight: 800;
-  margin: 0 0 20px;
+
   padding: 0 20px;
   text-align: left;
   text-transform: uppercase;
@@ -261,29 +296,22 @@
 
 .message-container p {
   line-height: 1.5;
-  margin: 0 0 20px;
+
   padding: 0 20px;
   text-align: left;
 }
 
 .message-container img {
-  margin: 0 0 20px;
   width: 100%;
 }
 
 .desktop-hidden {
   display: block;
-  background-position: center;
+  background-image: url("https://cdn3.rallybound.com/Content/images/img/18040/header-mobile2.png");
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   clip-path: ellipse(150% 100% at 50% 0%);
-}
-.mobile-hidden {
-  display: none;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  clip-path: ellipse(200% 100% at 50% 0%);
 }
 
 .body-donate {
@@ -294,6 +322,16 @@
   margin-left: 45px;
 }
 
+.visitBtn {
+  border-radius: 30px;
+  width: 85px;
+  height: 32px;
+  color: white;
+  border-style: solid;
+  border-color: white;
+  outline: none;
+  background: linear-gradient(90deg, #3d6186 0%, #6487ac 100%);
+}
 .teamBtn {
   border-radius: 30px;
   width: 85px;
@@ -303,7 +341,7 @@
   border-color: white;
   outline: none;
   background: linear-gradient(94.88deg, #e95252 16.28%, #ec5582 81.93%);
-  margin-left: 190px;
+  margin-left: 135px;
 }
 .teamRightCol {
   text-align: right;
@@ -320,10 +358,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-}
-
-.countdown-container {
-  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.7);
 }
 
 ul {
@@ -687,6 +721,10 @@ a.anchor {
   width: 100%;
 }
 
+.donorHeaderMobile {
+  height: 40vh;
+}
+
 /*About Section*/
 
 .bigThree {
@@ -863,19 +901,6 @@ a.anchor {
   margin-right: 33px;
 }
 
-#teamBtn {
-  width: 108px;
-  height: 32px;
-  background: linear-gradient(94.88deg, #e95252 16.28%, #ec5582 81.93%);
-  border-radius: 30px;
-  color: white;
-  border-style: solid;
-  border-color: white;
-  outline: none;
-  margin-left: 155px;
-  margin-bottom: 10px;
-}
-
 #teamCard {
   min-width: 320px;
 }
@@ -883,7 +908,6 @@ a.anchor {
 /*Donor Section*/
 .donorTitle {
   margin-top: 40px;
-  margin-bottom: 30px;
   font-weight: 200;
   font-size: 30px;
   line-height: 40px;
@@ -891,7 +915,6 @@ a.anchor {
 }
 
 .donorText {
-  margin-bottom: 30px;
   font-weight: normal;
   font-size: 14px;
   text-align: center;
@@ -933,7 +956,7 @@ a.anchor {
 #donorName {
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 30px;
   margin-left: 15px;
 }
@@ -943,7 +966,6 @@ a.anchor {
   font-weight: 300;
   font-size: 14px;
   line-height: 25px;
-  margin-left: 80px;
 }
 
 #donorCard {
@@ -1077,9 +1099,16 @@ a.anchor {
   border-radius: 4px;
 }
 
+.donorHeader {
+  display: none;
+}
+
 /* 02: Larger Mobile*/
 /* If the screen size is greater than*/
 @media screen and (min-width: 370px) {
+  .teamBtn {
+    margin-left: 155px;
+  }
   section:before {
     clip-path: ellipse(150% 100% at 50% 0%);
   }
@@ -1127,10 +1156,6 @@ a.anchor {
     width: 188px;
   }
 
-  #teamBtn {
-    width: 158px;
-  }
-
   #teamCard {
     min-width: 360px;
   }
@@ -1144,8 +1169,19 @@ a.anchor {
 
 /* 03 Tablet*/
 @media screen and (min-width: 600px) {
+  .donorHeaderMobile {
+    display: none;
+  }
+  .donorHeader {
+    display: block;
+    height: 40vh;
+  }
+
   .teamBtn {
-    margin-left: 40px;
+    margin: 0;
+  }
+  .teamCardCont {
+    width: 70%;
   }
 
   .recentRow {
@@ -1157,7 +1193,6 @@ a.anchor {
 
   section:before {
     clip-path: ellipse(125% 100% at 50% 0%);
-    background-image: url("assets/header.png");
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -1331,12 +1366,6 @@ a.anchor {
     margin-right: 52px;
   }
 
-  #teamBtn {
-    width: 100px;
-
-    margin-left: 50px;
-  }
-
   #teamCard {
     min-width: 616px;
   }
@@ -1399,6 +1428,10 @@ a.anchor {
 
 /*04 Small Laptop*/
 @media screen and (min-width: 1050px) {
+  .donorHeader {
+    height: 60vh;
+  }
+
   .aboutRows {
     column-count: 2;
     column-gap: 40px;
@@ -1408,32 +1441,16 @@ a.anchor {
   }
 
   .matcherRows {
-    column-count: 2;
-    column-gap: 40px;
-    max-width: 1200px;
+    max-width: 600px;
   }
 
   .desktop-hidden {
     display: block;
-    background-position: center;
+    background-image: url("https://cdn3.rallybound.com/Content/images/img/18040/header-desktop3.png");
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     clip-path: ellipse(125% 100% at 50% 0%);
-  }
-  .mobile-hidden {
-    display: none;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    clip-path: ellipse(250% 100% at 50% 0%);
-  }
-
-  section:before {
-    clip-path: ellipse(100% 100% at 50% 0%);
-    background-image: url("assets/header.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
   }
 
   .btn {
@@ -1755,13 +1772,6 @@ a.anchor {
     margin-right: 52px;
   }
 
-  #teamBtn {
-    width: 120px;
-
-    margin-bottom: 10px;
-    margin-left: 40px;
-  }
-
   #teamCard {
     min-width: 616px;
   }
@@ -1769,15 +1779,12 @@ a.anchor {
 
   .donorTitle {
     margin-top: 120px;
-    margin-bottom: 50px;
     font-weight: 200;
     font-size: 60px;
     text-align: center;
   }
 
   .donorText {
-    margin-top: 24px;
-    margin-bottom: 50px;
     font-weight: normal;
     font-size: 20px;
     text-align: center;
@@ -1819,7 +1826,6 @@ a.anchor {
     font-weight: 300;
     font-size: 22px;
     line-height: 25px;
-    margin-left: 80px;
   }
 
   #donorCard {
@@ -1890,6 +1896,10 @@ a.anchor {
 
 /* 05 Desktop*/
 @media screen and (min-width: 1500px) {
+  .donorHeader {
+    height: 70vh;
+  }
+
   .bigThree {
     display: block;
   }
@@ -2139,19 +2149,6 @@ a.anchor {
     color: #828282;
   }
 
-  #teamBtn {
-    width: 120px;
-    height: 32px;
-    background: linear-gradient(94.88deg, #e95252 16.28%, #ec5582 81.93%);
-    border-radius: 30px;
-    color: white;
-    border-style: solid;
-    border-color: white;
-    outline: none;
-    margin-bottom: 10px;
-    margin-left: 40px;
-  }
-
   #teamCard {
     min-width: 616px;
   }
@@ -2209,6 +2206,10 @@ a.anchor {
 
 /* 06 Large Desktop*/
 @media screen and (min-width: 1850px) {
+  .donorHeader {
+    height: 70vh;
+  }
+
   .buttonTitle {
     margin-left: 40%;
     width: 200%;
@@ -2471,19 +2472,6 @@ a.anchor {
     margin-right: 52px;
   }
 
-  #teamBtn {
-    width: 120px;
-    height: 32px;
-    background: linear-gradient(94.88deg, #e95252 16.28%, #ec5582 81.93%);
-    border-radius: 30px;
-    color: white;
-    border-style: solid;
-    border-color: white;
-    outline: none;
-    margin-bottom: 10px;
-    margin-left: 40px;
-  }
-
   #teamCard {
     min-width: 616px;
   }
@@ -2521,7 +2509,6 @@ a.anchor {
     font-weight: 300;
     font-size: 22px;
     line-height: 25px;
-    margin-left: 80px;
   }
 
   #donorCard {

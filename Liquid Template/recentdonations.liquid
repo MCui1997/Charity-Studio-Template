@@ -1,9 +1,9 @@
 <a class="anchor" id="donors"></a>
-    <div class="container-fluid" style="background-color: white; padding-top: 80px; padding-bottom: 80px">
+    <div class="container-fluid" style="background-color: white; padding-top: 40px; padding-bottom: 80px">
         <div class="row" id="centeredRow">
             <h3 class="donorTitle" style="margin-top: 0;">Thank You Donors!</h3>
         </div>
-        <div class="row" id="centeredRow" style="margin-bottom: 20px">
+        <div class="row" id="centeredRow" style="margin-top: 20px; margin-bottom: 20px">
             <p class="donorText">
                 {{campaign | term_by_name: 'Cstm4'}}
             </p>
@@ -28,7 +28,7 @@
         <div class="row">
             <div class="container">
 
-                <div class="row" id="centeredRow" style="margin-top:20px; margin-bottom: 20px; padding-bottom: 50px; padding-top:30px">
+                <div class="row" id="centeredRow" style=" margin-bottom: 20px; padding-bottom: 50px; padding-top:20px">
                     {% assign donations = campaign | donations -%}
                     {% assign tiers = campaign | term_by_name: 'Cstm10' %}
                     {% assign tiers = tiers | split: ", " %}
@@ -63,16 +63,16 @@
                             {% endif -%}
                             <div class="donorWrapper" style=" border-bottom: 1px solid #dadae1; padding-top: 10px; width: 100%; margin-bottom: 10px;">
                                 <div class="row" id="centeredRow" >
-                                    <div class="col-1" style = "vertical-align: middle;">
+                                    <div class="col-1 my-auto" style = "vertical-align: middle;">
                                         <img id="donorImg" src="https://charity.studio/wp-content/uploads/2020/09/{{tier}}.png" style="margin-bottom:5px"/>
                                     </div>
 
                                     
-                                    <div class="col-5" style="text-align: left;">
+                                    <div class="col-9" style="text-align: left;">
 
                                         <h7 id="donorName">
                                             {% if displayed_Donation_Info.Donor_Name != "" and displayed_Donation_Info.Donor_Name != nil %}
-                                                {{displayed_Donation_Info.Donor_Name}}{% else %}Anonymous
+                                                {{displayed_Donation_Info.Donor_Name | truncate: 30}}{% else %}Anonymous
                                             {% endif %}
                                         </h7>
 
@@ -84,8 +84,8 @@
                                     </div>
 
 
-                                    <div class="col-6" style="text-align: right;">
-                                        <h7 id="donorAmt" style="margin-left: 0;">
+                                    <div class="col-2" style="text-align: left;">
+                                        <h7 id="donorAmt" style = "margin-left: -55px">
                                             {% if amount == 0 %}
                                                 {% else %}
                                                     {{amount | money: 2}}

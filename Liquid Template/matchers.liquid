@@ -9,7 +9,7 @@ sponsorLevel.sponsors %}
   </div>
 
   <div class="row" id="centeredRow">
-    <div class="matcherRows">
+    <div class="matcherRows" style="text-align: center">
       <p>
         {{ campaign | term_by_name: "Cstm8" }}
       </p>
@@ -35,8 +35,8 @@ sponsorLevel.sponsors %}
         >
           <div class="img-wrapper" style="text-align: center">
             <img
+              src="{{ Campaign | first_image: 'Usertouserimages', 100%, 100%}}"
               id="matcherLogo"
-              src="{{ Campaign | first_image: 'Usertouserimages', 100, 216 }}"
             />
           </div>
           <h6 id="cardTxt">{{ sponsor.Name }}</h6>
